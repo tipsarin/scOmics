@@ -73,5 +73,12 @@ execute:
   message: false
   cache: true
 
+knitr:
+  opts_knit:
+    root.dir: "/home/shared/Git/scOmics/sc-omics-book"
+  opts_chunk:
+    R.options:
+      .libPaths: ["/home/sarintip/R/x86_64-pc-linux-gnu-library/4.5.1"]
+
 bibliography: references.bib
 csl: nature.csl
