@@ -1,6 +1,11 @@
+:root {
+  --quarto-body-width: 1100px; /* (normally 900px) */
+  --quarto-sidebar-width: 250px;
+}
+
+
 /* Center and limit content width without touching grid */
 main.content {
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }

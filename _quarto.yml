@@ -52,7 +52,7 @@ format:
     code-tools: true
     code-copy: true
     code-line-numbers: true
-    code-block-bg: true
+    code-block-bg: false
     smooth-scroll: true
     html-math-method: katex
     include-after-body: assets/fix-codefold.html
