@@ -32,31 +32,15 @@ book:
       chapters:
         - tutorials/scrna/01-qc-filtering.qmd
         - tutorials/scrna/02-normalization.qmd
-        - tutorials/scrna/03-dim-reduction.qmd
-        - tutorials/scrna/04-clustering.qmd
-        - tutorials/scrna/05-annotation.qmd
-        - tutorials/scrna/06-deg.qmd
         - tutorials/scrna/07-trajectory.qmd
-        - tutorials/scrna/08-integration.qmd
 
     - part: "**scATAC-seq**"
-      chapters:
-        - tutorials/scatac/01-qc.qmd
-        - tutorials/scatac/02-dim-reduction.qmd
-        - tutorials/scatac/03-peak-annotation.qmd
-        - tutorials/scatac/04-motif.qmd
 
     - part: "**Spatial Transcriptomics**"
-      chapters:
-        - tutorials/spatial/01-loading.qmd
-        - tutorials/spatial/02-svg.qmd
-        - tutorials/spatial/03-deconvolution.qmd
 
     - part: "**Multi-omics & Genotyping**"
       chapters:
-        - tutorials/multiomics/01-wnn.qmd
         - tutorials/multiomics/02-signac.qmd
-        - tutorials/multiomics/03-genotyping.qmd
 
     - references.qmd
 
