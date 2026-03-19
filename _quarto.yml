@@ -5,7 +5,7 @@ project:
 book:
   title: "Single-Cell Omics Tutorials"
   subtitle: "End-to-end workflows for multi-omics analysis in R"
-  author: "Sarintip Nguanthanee"
+  author: "Sarintip Nguantad"
   date: today
   date-format: "MMMM YYYY"
   doi: ""
@@ -21,7 +21,7 @@ book:
     logo: assets/logo.png
 
   page-footer:
-    left: "© 2025 Sarintip Nguanthanee"
+    left: "© 2025 Sarintip Nguantad"
     right: "Built with [Quarto](https://quarto.org)"
 
   chapters:
@@ -47,6 +47,7 @@ book:
 format:
   html:
     theme: cosmo 
+    css: assets/custom.css
     max-width: 1000px 
     code-fold: true
     code-tools: true
