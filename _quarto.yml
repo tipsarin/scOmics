@@ -18,7 +18,7 @@ book:
   sidebar:
     style: docked
     background: dark
-    logo: assets/vclabsysbio-logo.png
+    logo: assets/VClabLogo.png
 
   page-footer:
     left: "© 2025 Sarintip Nguantad"
@@ -48,7 +48,6 @@ format:
   html:
     theme: cosmo 
     css: assets/custom.css
-    max-width: 1000px 
     code-fold: true
     code-tools: true
     code-copy: true
