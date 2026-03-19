@@ -63,9 +63,6 @@ format:
     fig-height: 6
     link-external-newwindow: true
 
-  pdf:
-    documentclass: scrbook
-    include-in-header: latex/preamble.tex
 
 execute:
   freeze: auto
