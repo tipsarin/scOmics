@@ -1,35 +1,6 @@
-/* ── Main content width + centering ── */
-.page-columns .content {
-  max-width: 740px !important;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* ── Match r4ds layout grid ── */
-.page-columns {
-  grid-template-columns:
-    [screen-start] 1em
-    [page-start] minmax(0, 250px)
-    [body-start] minmax(0, 740px)
-    [body-end] minmax(0, 200px)
-    [page-end] 1em
-    [screen-end] !important;
-}
-
-/* ── Responsive: tablet ── */
-@media (max-width: 1200px) {
-  #quarto-margin-sidebar {
-    display: none !important;
-  }
-  .page-columns .content {
-    max-width: 100% !important;
-  }
-}
-
-/* ── Responsive: mobile ── */
-@media (max-width: 768px) {
-  .page-columns .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+/* Center and limit content width without touching grid */
+main.content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
