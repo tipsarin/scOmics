@@ -69,6 +69,7 @@ format:
 
 execute:
   freeze: auto
+  eval: false
   echo: true
   warning: false
   message: false
