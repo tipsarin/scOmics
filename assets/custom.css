@@ -1,49 +1,35 @@
-/* Match r4ds.hadley.nz layout */
-
-/* Main content max width + centered */
-.page-columns .content,
-.page-columns .page-columns-wide .content {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+/* ── Main content width + centering ── */
+.page-columns .content {
+  max-width: 740px !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-/* Body text size */
-body {
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-/* Sidebar width */
-#quarto-sidebar {
-  width: 250px !important;
-}
-
-/* TOC width */
-#quarto-margin-sidebar {
-  width: 200px !important;
-}
-
-/* Full layout grid */
-.page-layout-full .page-columns {
+/* ── Match r4ds layout grid ── */
+.page-columns {
   grid-template-columns:
-    [screen-start] 1.5rem
-    [page-start] 250px
-    [body-start] 1fr
-    [body-end] 200px
-    [page-end] 1.5rem
-    [screen-end];
+    [screen-start] 1em
+    [page-start] minmax(0, 250px)
+    [body-start] minmax(0, 740px)
+    [body-end] minmax(0, 200px)
+    [page-end] 1em
+    [screen-end] !important;
 }
 
-/* Hide right TOC on smaller screens */
-@media (max-width: 1100px) {
+/* ── Responsive: tablet ── */
+@media (max-width: 1200px) {
   #quarto-margin-sidebar {
-    display: none;
+    display: none !important;
+  }
+  .page-columns .content {
+    max-width: 100% !important;
   }
 }
 
+/* ── Responsive: mobile ── */
 @media (max-width: 768px) {
-  #quarto-sidebar {
-    display: none;
+  .page-columns .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
