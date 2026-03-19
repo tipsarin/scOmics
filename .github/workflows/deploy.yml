@@ -27,7 +27,11 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render Quarto book
-        run: quarto render --no-execute --execute-dir .
+        run: quarto render
+        env:
+          QUARTO_FREEZE: true
+
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

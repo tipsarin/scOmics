@@ -66,8 +66,8 @@ format:
 
 
 execute:
-  freeze: auto
-  eval: false
+  freeze: true
+  eval: true
   echo: true
   warning: false
   message: false
