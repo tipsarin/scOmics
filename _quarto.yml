@@ -18,7 +18,7 @@ book:
   sidebar:
     style: docked
     background: dark
-    logo: assets/logo.png
+    logo: assets/vclabsysbio-logo.png
 
   page-footer:
     left: "© 2025 Sarintip Nguantad"
@@ -54,6 +54,9 @@ format:
     code-copy: true
     code-line-numbers: true
     code-block-bg: true
+    smooth-scroll: true
+    html-math-method: katex
+    include-after-body: assets/fix-codefold.html
     toc: true
     toc-depth: 3
     number-sections: true
