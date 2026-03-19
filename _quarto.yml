@@ -46,9 +46,9 @@ book:
 
 format:
   html:
-    theme:
-      light: [cosmo, custom.scss]
-    code-fold: show
+    theme: cosmo 
+    max-width: 1000px 
+    code-fold: true
     code-tools: true
     code-copy: true
     code-line-numbers: true
