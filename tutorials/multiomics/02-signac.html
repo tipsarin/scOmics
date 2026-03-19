@@ -107,6 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="../../assets/custom.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -499,6 +500,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 24.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Asia/Bangkok
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] patchwork_1.3.2                   ggplot2_4.0.1                    
+ [3] BSgenome.Hsapiens.UCSC.hg38_1.4.5 BSgenome_1.78.0                  
+ [5] rtracklayer_1.70.0                BiocIO_1.20.0                    
+ [7] Biostrings_2.78.0                 XVector_0.50.0                   
+ [9] GenomeInfoDb_1.46.2               EnsDb.Hsapiens.v86_2.99.0        
+[11] ensembldb_2.34.0                  AnnotationFilter_1.34.0          
+[13] GenomicFeatures_1.62.0            AnnotationDbi_1.72.0             
+[15] Biobase_2.70.0                    GenomicRanges_1.62.1             
+[17] Seqinfo_1.0.0                     IRanges_2.44.0                   
+[19] S4Vectors_0.48.0                  BiocGenerics_0.56.0              
+[21] generics_0.1.4                    Signac_1.16.0                    
+[23] Seurat_5.4.0                      SeuratObject_5.3.0               
+[25] sp_2.2-0                         
+
+loaded via a namespace (and not attached):
+  [1] RcppAnnoy_0.0.22            splines_4.5.2              
+  [3] later_1.4.4                 bitops_1.0-9               
+  [5] tibble_3.3.1                polyclip_1.10-7            
+  [7] XML_3.99-0.20               fastDummies_1.7.5          
+  [9] lifecycle_1.0.5             globals_0.18.0             
+ [11] lattice_0.22-7              MASS_7.3-65                
+ [13] magrittr_2.0.4              plotly_4.11.0              
+ [15] rmarkdown_2.30              yaml_2.3.12                
+ [17] httpuv_1.6.16               otel_0.2.0                 
+ [19] sctransform_0.4.2           spam_2.11-3                
+ [21] spatstat.sparse_3.1-0       reticulate_1.44.1          
+ [23] cowplot_1.2.0               pbapply_1.7-4              
+ [25] DBI_1.2.3                   RColorBrewer_1.1-3         
+ [27] abind_1.4-8                 Rtsne_0.17                 
+ [29] purrr_1.2.1                 RCurl_1.98-1.17            
+ [31] ggrepel_0.9.6               irlba_2.3.5.1              
+ [33] listenv_0.10.0              spatstat.utils_3.2-0       
+ [35] goftest_1.2-3               RSpectra_0.16-2            
+ [37] spatstat.random_3.4-3       fitdistrplus_1.2-4         
+ [39] parallelly_1.46.1           codetools_0.2-20           
+ [41] DelayedArray_0.36.0         RcppRoll_0.3.1             
+ [43] tidyselect_1.2.1            UCSC.utils_1.6.0           
+ [45] farver_2.1.2                matrixStats_1.5.0          
+ [47] spatstat.explore_3.6-0      GenomicAlignments_1.46.0   
+ [49] jsonlite_2.0.0              progressr_0.18.0           
+ [51] ggridges_0.5.7              survival_3.8-3             
+ [53] tools_4.5.2                 ica_1.0-3                  
+ [55] Rcpp_1.1.1                  glue_1.8.0                 
+ [57] gridExtra_2.3               SparseArray_1.10.8         
+ [59] xfun_0.55                   MatrixGenerics_1.22.0      
+ [61] dplyr_1.1.4                 withr_3.0.2                
+ [63] fastmap_1.2.0               digest_0.6.39              
+ [65] R6_2.6.1                    mime_0.13                  
+ [67] scattermore_1.2             tensor_1.5.1               
+ [69] dichromat_2.0-0.1           spatstat.data_3.1-9        
+ [71] RSQLite_2.4.5               cigarillo_1.0.0            
+ [73] tidyr_1.3.2                 data.table_1.17.8          
+ [75] httr_1.4.7                  htmlwidgets_1.6.4          
+ [77] S4Arrays_1.10.1             uwot_0.2.4                 
+ [79] pkgconfig_2.0.3             gtable_0.3.6               
+ [81] blob_1.2.4                  lmtest_0.9-40              
+ [83] S7_0.2.1                    htmltools_0.5.9            
+ [85] dotCall64_1.2               ProtGenerics_1.42.0        
+ [87] scales_1.4.0                png_0.1-8                  
+ [89] spatstat.univar_3.1-5       knitr_1.50                 
+ [91] reshape2_1.4.5              rjson_0.2.23               
+ [93] nlme_3.1-168                curl_7.0.0                 
+ [95] zoo_1.8-15                  cachem_1.1.0               
+ [97] stringr_1.6.0               KernSmooth_2.23-26         
+ [99] parallel_4.5.2              miniUI_0.1.2               
+[101] restfulr_0.0.16             pillar_1.11.1              
+[103] grid_4.5.2                  vctrs_0.6.5                
+[105] RANN_2.6.2                  promises_1.5.0             
+[107] xtable_1.8-4                cluster_2.1.8.1            
+[109] evaluate_1.0.5              cli_3.6.5                  
+[111] compiler_4.5.2              Rsamtools_2.26.0           
+[113] rlang_1.1.7                 crayon_1.5.3               
+[115] future.apply_1.20.1         plyr_1.8.9                 
+[117] stringi_1.8.7               viridisLite_0.4.2          
+[119] deldir_2.0-4                BiocParallel_1.44.0        
+[121] lazyeval_0.2.2              spatstat.geom_3.6-1        
+[123] Matrix_1.7-4                RcppHNSW_0.6.0             
+[125] bit64_4.6.0-1               future_1.68.0              
+[127] KEGGREST_1.50.0             shiny_1.12.1               
+[129] SummarizedExperiment_1.40.0 ROCR_1.0-11                
+[131] igraph_2.2.2                memoise_2.0.1              
+[133] fastmatch_1.1-6             bit_4.6.0                  </code></pre>
+</div>
 </div>
 
 
@@ -975,244 +1082,244 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Signac: scRNA + scATAC Integration"</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="an">subtitle:</span><span class="co"> "Link chromatin accessibility to gene expression using Signac"</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="an">categories:</span><span class="co"> [Multi-omics, Signac, scATAC-seq, scRNA-seq]</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="co">---</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a></span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>Multi-omics · Chapter 02<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a></span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="fu">## Overview</span></span>
-<span id="cb14-10"><a href="#cb14-10"></a></span>
-<span id="cb14-11"><a href="#cb14-11"></a><span class="co">[</span><span class="ot">Signac</span><span class="co">](https://stuartlab.org/signac/)</span> extends Seurat to handle chromatin</span>
-<span id="cb14-12"><a href="#cb14-12"></a>accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome),</span>
-<span id="cb14-13"><a href="#cb14-13"></a>it enables joint analysis — linking open chromatin regions to gene expression</span>
-<span id="cb14-14"><a href="#cb14-14"></a>at single-cell resolution.</span>
-<span id="cb14-15"><a href="#cb14-15"></a></span>
-<span id="cb14-16"><a href="#cb14-16"></a>**This chapter covers:**</span>
-<span id="cb14-17"><a href="#cb14-17"></a></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="ss">1. </span>Creating a Signac object from a 10x Multiome dataset</span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="ss">2. </span>ATAC-seq QC within Signac</span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="ss">3. </span>LSI dimensionality reduction</span>
-<span id="cb14-21"><a href="#cb14-21"></a><span class="ss">4. </span>Joint WNN embedding with matched RNA</span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="ss">5. </span>Linking peaks to genes</span>
-<span id="cb14-23"><a href="#cb14-23"></a></span>
-<span id="cb14-24"><a href="#cb14-24"></a>---</span>
-<span id="cb14-25"><a href="#cb14-25"></a></span>
-<span id="cb14-26"><a href="#cb14-26"></a><span class="fu">## Setup</span></span>
-<span id="cb14-27"><a href="#cb14-27"></a></span>
-<span id="cb14-30"><a href="#cb14-30"></a><span class="in">```{r}</span></span>
-<span id="cb14-31"><a href="#cb14-31"></a><span class="co">#| label: setup</span></span>
-<span id="cb14-32"><a href="#cb14-32"></a></span>
-<span id="cb14-33"><a href="#cb14-33"></a><span class="fu">library</span>(Seurat)</span>
-<span id="cb14-34"><a href="#cb14-34"></a><span class="fu">library</span>(Signac)</span>
-<span id="cb14-35"><a href="#cb14-35"></a><span class="fu">library</span>(EnsDb.Hsapiens.v86)</span>
-<span id="cb14-36"><a href="#cb14-36"></a><span class="fu">library</span>(BSgenome.Hsapiens.UCSC.hg38)</span>
-<span id="cb14-37"><a href="#cb14-37"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-38"><a href="#cb14-38"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb14-39"><a href="#cb14-39"></a><span class="in">```</span></span>
-<span id="cb14-40"><a href="#cb14-40"></a></span>
-<span id="cb14-41"><a href="#cb14-41"></a>---</span>
-<span id="cb14-42"><a href="#cb14-42"></a></span>
-<span id="cb14-43"><a href="#cb14-43"></a><span class="fu">## Load 10x Multiome Data</span></span>
-<span id="cb14-44"><a href="#cb14-44"></a></span>
-<span id="cb14-47"><a href="#cb14-47"></a><span class="in">```{r}</span></span>
-<span id="cb14-48"><a href="#cb14-48"></a><span class="co">#| label: load-data</span></span>
-<span id="cb14-49"><a href="#cb14-49"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-50"><a href="#cb14-50"></a></span>
-<span id="cb14-51"><a href="#cb14-51"></a><span class="co"># Read Cell Ranger ARC output</span></span>
-<span id="cb14-52"><a href="#cb14-52"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X_h5</span>(<span class="st">"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5"</span>)</span>
-<span id="cb14-53"><a href="#cb14-53"></a></span>
-<span id="cb14-54"><a href="#cb14-54"></a><span class="co"># Separate RNA and ATAC matrices</span></span>
-<span id="cb14-55"><a href="#cb14-55"></a>rna_counts  <span class="ot">&lt;-</span> counts<span class="sc">$</span><span class="st">`</span><span class="at">Gene Expression</span><span class="st">`</span></span>
-<span id="cb14-56"><a href="#cb14-56"></a>atac_counts <span class="ot">&lt;-</span> counts<span class="sc">$</span>Peaks</span>
-<span id="cb14-57"><a href="#cb14-57"></a></span>
-<span id="cb14-58"><a href="#cb14-58"></a><span class="co"># Load fragment file metadata</span></span>
-<span id="cb14-59"><a href="#cb14-59"></a>fragpath <span class="ot">&lt;-</span> <span class="st">"data/raw/pbmc_multiome/atac_fragments.tsv.gz"</span></span>
-<span id="cb14-60"><a href="#cb14-60"></a><span class="in">```</span></span>
-<span id="cb14-61"><a href="#cb14-61"></a></span>
-<span id="cb14-62"><a href="#cb14-62"></a>---</span>
-<span id="cb14-63"><a href="#cb14-63"></a></span>
-<span id="cb14-64"><a href="#cb14-64"></a><span class="fu">## Create Seurat + Signac Object</span></span>
-<span id="cb14-65"><a href="#cb14-65"></a></span>
-<span id="cb14-68"><a href="#cb14-68"></a><span class="in">```{r}</span></span>
-<span id="cb14-69"><a href="#cb14-69"></a><span class="co">#| label: create-object</span></span>
-<span id="cb14-70"><a href="#cb14-70"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-71"><a href="#cb14-71"></a></span>
-<span id="cb14-72"><a href="#cb14-72"></a><span class="co"># Genome annotation</span></span>
-<span id="cb14-73"><a href="#cb14-73"></a>annotation <span class="ot">&lt;-</span> <span class="fu">GetGRangesFromEnsDb</span>(<span class="at">ensdb =</span> EnsDb.Hsapiens.v86)</span>
-<span id="cb14-74"><a href="#cb14-74"></a><span class="fu">seqlevels</span>(annotation) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"chr"</span>, <span class="fu">seqlevels</span>(annotation))</span>
-<span id="cb14-75"><a href="#cb14-75"></a></span>
-<span id="cb14-76"><a href="#cb14-76"></a><span class="co"># Create chromatin assay</span></span>
-<span id="cb14-77"><a href="#cb14-77"></a>atac_assay <span class="ot">&lt;-</span> <span class="fu">CreateChromatinAssay</span>(</span>
-<span id="cb14-78"><a href="#cb14-78"></a>  <span class="at">counts     =</span> atac_counts,</span>
-<span id="cb14-79"><a href="#cb14-79"></a>  <span class="at">sep        =</span> <span class="fu">c</span>(<span class="st">":"</span>, <span class="st">"-"</span>),</span>
-<span id="cb14-80"><a href="#cb14-80"></a>  <span class="at">fragments  =</span> fragpath,</span>
-<span id="cb14-81"><a href="#cb14-81"></a>  <span class="at">annotation =</span> annotation</span>
-<span id="cb14-82"><a href="#cb14-82"></a>)</span>
-<span id="cb14-83"><a href="#cb14-83"></a></span>
-<span id="cb14-84"><a href="#cb14-84"></a><span class="co"># Build Seurat object with both modalities</span></span>
-<span id="cb14-85"><a href="#cb14-85"></a>seu <span class="ot">&lt;-</span> <span class="fu">CreateSeuratObject</span>(<span class="at">counts =</span> rna_counts, <span class="at">assay =</span> <span class="st">"RNA"</span>)</span>
-<span id="cb14-86"><a href="#cb14-86"></a>seu[[<span class="st">"ATAC"</span>]] <span class="ot">&lt;-</span> atac_assay</span>
-<span id="cb14-87"><a href="#cb14-87"></a></span>
-<span id="cb14-88"><a href="#cb14-88"></a>seu</span>
-<span id="cb14-89"><a href="#cb14-89"></a><span class="in">```</span></span>
-<span id="cb14-90"><a href="#cb14-90"></a></span>
-<span id="cb14-91"><a href="#cb14-91"></a>---</span>
-<span id="cb14-92"><a href="#cb14-92"></a></span>
-<span id="cb14-93"><a href="#cb14-93"></a><span class="fu">## ATAC QC</span></span>
-<span id="cb14-94"><a href="#cb14-94"></a></span>
-<span id="cb14-97"><a href="#cb14-97"></a><span class="in">```{r}</span></span>
-<span id="cb14-98"><a href="#cb14-98"></a><span class="co">#| label: atac-qc</span></span>
-<span id="cb14-99"><a href="#cb14-99"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-100"><a href="#cb14-100"></a></span>
-<span id="cb14-101"><a href="#cb14-101"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
-<span id="cb14-102"><a href="#cb14-102"></a></span>
-<span id="cb14-103"><a href="#cb14-103"></a>seu <span class="ot">&lt;-</span> <span class="fu">NucleosomeSignal</span>(seu)</span>
-<span id="cb14-104"><a href="#cb14-104"></a>seu <span class="ot">&lt;-</span> <span class="fu">TSSEnrichment</span>(seu, <span class="at">fast =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb14-105"><a href="#cb14-105"></a></span>
-<span id="cb14-106"><a href="#cb14-106"></a><span class="co"># Filter</span></span>
-<span id="cb14-107"><a href="#cb14-107"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
-<span id="cb14-108"><a href="#cb14-108"></a>  seu,</span>
-<span id="cb14-109"><a href="#cb14-109"></a>  <span class="at">subset =</span> nCount_ATAC <span class="sc">&gt;</span> <span class="dv">1000</span>   <span class="sc">&amp;</span></span>
-<span id="cb14-110"><a href="#cb14-110"></a>           nCount_ATAC <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span></span>
-<span id="cb14-111"><a href="#cb14-111"></a>           nCount_RNA  <span class="sc">&gt;</span> <span class="dv">200</span>    <span class="sc">&amp;</span></span>
-<span id="cb14-112"><a href="#cb14-112"></a>           nCount_RNA  <span class="sc">&lt;</span> <span class="dv">25000</span>  <span class="sc">&amp;</span></span>
-<span id="cb14-113"><a href="#cb14-113"></a>           nucleosome_signal <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span></span>
-<span id="cb14-114"><a href="#cb14-114"></a>           TSS.enrichment <span class="sc">&gt;</span> <span class="dv">1</span></span>
-<span id="cb14-115"><a href="#cb14-115"></a>)</span>
-<span id="cb14-116"><a href="#cb14-116"></a><span class="in">```</span></span>
-<span id="cb14-117"><a href="#cb14-117"></a></span>
-<span id="cb14-120"><a href="#cb14-120"></a><span class="in">```{r}</span></span>
-<span id="cb14-121"><a href="#cb14-121"></a><span class="co">#| label: atac-qc-plot</span></span>
-<span id="cb14-122"><a href="#cb14-122"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-123"><a href="#cb14-123"></a><span class="co">#| fig-cap: "ATAC QC metrics: nucleosome signal and TSS enrichment"</span></span>
-<span id="cb14-124"><a href="#cb14-124"></a></span>
-<span id="cb14-125"><a href="#cb14-125"></a><span class="fu">VlnPlot</span>(</span>
-<span id="cb14-126"><a href="#cb14-126"></a>  seu,</span>
-<span id="cb14-127"><a href="#cb14-127"></a>  <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"nCount_ATAC"</span>, <span class="st">"TSS.enrichment"</span>, <span class="st">"nucleosome_signal"</span>),</span>
-<span id="cb14-128"><a href="#cb14-128"></a>  <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">pt.size =</span> <span class="dv">0</span></span>
-<span id="cb14-129"><a href="#cb14-129"></a>)</span>
-<span id="cb14-130"><a href="#cb14-130"></a><span class="in">```</span></span>
-<span id="cb14-131"><a href="#cb14-131"></a></span>
-<span id="cb14-132"><a href="#cb14-132"></a>---</span>
-<span id="cb14-133"><a href="#cb14-133"></a></span>
-<span id="cb14-134"><a href="#cb14-134"></a><span class="fu">## Process Each Modality</span></span>
-<span id="cb14-135"><a href="#cb14-135"></a></span>
-<span id="cb14-138"><a href="#cb14-138"></a><span class="in">```{r}</span></span>
-<span id="cb14-139"><a href="#cb14-139"></a><span class="co">#| label: process-rna</span></span>
-<span id="cb14-140"><a href="#cb14-140"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-141"><a href="#cb14-141"></a></span>
-<span id="cb14-142"><a href="#cb14-142"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"RNA"</span></span>
-<span id="cb14-143"><a href="#cb14-143"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(seu, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb14-144"><a href="#cb14-144"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(seu, <span class="at">npcs =</span> <span class="dv">30</span>)</span>
-<span id="cb14-145"><a href="#cb14-145"></a><span class="in">```</span></span>
-<span id="cb14-146"><a href="#cb14-146"></a></span>
-<span id="cb14-149"><a href="#cb14-149"></a><span class="in">```{r}</span></span>
-<span id="cb14-150"><a href="#cb14-150"></a><span class="co">#| label: process-atac</span></span>
-<span id="cb14-151"><a href="#cb14-151"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-152"><a href="#cb14-152"></a></span>
-<span id="cb14-153"><a href="#cb14-153"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
-<span id="cb14-154"><a href="#cb14-154"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunTFIDF</span>(seu)</span>
-<span id="cb14-155"><a href="#cb14-155"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindTopFeatures</span>(seu, <span class="at">min.cutoff =</span> <span class="st">"q0"</span>)</span>
-<span id="cb14-156"><a href="#cb14-156"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunSVD</span>(seu)   <span class="co"># LSI</span></span>
-<span id="cb14-157"><a href="#cb14-157"></a><span class="in">```</span></span>
-<span id="cb14-158"><a href="#cb14-158"></a></span>
-<span id="cb14-159"><a href="#cb14-159"></a>---</span>
-<span id="cb14-160"><a href="#cb14-160"></a></span>
-<span id="cb14-161"><a href="#cb14-161"></a><span class="fu">## Joint WNN Embedding</span></span>
-<span id="cb14-162"><a href="#cb14-162"></a></span>
-<span id="cb14-165"><a href="#cb14-165"></a><span class="in">```{r}</span></span>
-<span id="cb14-166"><a href="#cb14-166"></a><span class="co">#| label: wnn</span></span>
-<span id="cb14-167"><a href="#cb14-167"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-168"><a href="#cb14-168"></a></span>
-<span id="cb14-169"><a href="#cb14-169"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindMultiModalNeighbors</span>(</span>
-<span id="cb14-170"><a href="#cb14-170"></a>  seu,</span>
-<span id="cb14-171"><a href="#cb14-171"></a>  <span class="at">reduction.list =</span> <span class="fu">list</span>(<span class="st">"pca"</span>, <span class="st">"lsi"</span>),</span>
-<span id="cb14-172"><a href="#cb14-172"></a>  <span class="at">dims.list      =</span> <span class="fu">list</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">50</span>),  <span class="co"># exclude LSI component 1 (correlated with depth)</span></span>
-<span id="cb14-173"><a href="#cb14-173"></a>  <span class="at">modality.weight.name =</span> <span class="st">"RNA.weight"</span></span>
-<span id="cb14-174"><a href="#cb14-174"></a>)</span>
-<span id="cb14-175"><a href="#cb14-175"></a></span>
-<span id="cb14-176"><a href="#cb14-176"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunUMAP</span>(</span>
-<span id="cb14-177"><a href="#cb14-177"></a>  seu,</span>
-<span id="cb14-178"><a href="#cb14-178"></a>  <span class="at">nn.name    =</span> <span class="st">"weighted.nn"</span>,</span>
-<span id="cb14-179"><a href="#cb14-179"></a>  <span class="at">reduction.name =</span> <span class="st">"wnn.umap"</span>,</span>
-<span id="cb14-180"><a href="#cb14-180"></a>  <span class="at">reduction.key  =</span> <span class="st">"wnnUMAP_"</span></span>
-<span id="cb14-181"><a href="#cb14-181"></a>)</span>
-<span id="cb14-182"><a href="#cb14-182"></a></span>
-<span id="cb14-183"><a href="#cb14-183"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindClusters</span>(seu, <span class="at">graph.name =</span> <span class="st">"wsnn"</span>, <span class="at">resolution =</span> <span class="fl">0.8</span>)</span>
-<span id="cb14-184"><a href="#cb14-184"></a><span class="in">```</span></span>
-<span id="cb14-185"><a href="#cb14-185"></a></span>
-<span id="cb14-188"><a href="#cb14-188"></a><span class="in">```{r}</span></span>
-<span id="cb14-189"><a href="#cb14-189"></a><span class="co">#| label: wnn-plot</span></span>
-<span id="cb14-190"><a href="#cb14-190"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-191"><a href="#cb14-191"></a><span class="co">#| fig-cap: "WNN UMAP colored by cluster and RNA modality weight"</span></span>
-<span id="cb14-192"><a href="#cb14-192"></a></span>
-<span id="cb14-193"><a href="#cb14-193"></a>p1 <span class="ot">&lt;-</span> <span class="fu">DimPlot</span>(seu, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>, <span class="at">label =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">NoLegend</span>()</span>
-<span id="cb14-194"><a href="#cb14-194"></a>p2 <span class="ot">&lt;-</span> <span class="fu">FeaturePlot</span>(seu, <span class="at">features =</span> <span class="st">"RNA.weight"</span>, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>)</span>
-<span id="cb14-195"><a href="#cb14-195"></a>p1 <span class="sc">|</span> p2</span>
-<span id="cb14-196"><a href="#cb14-196"></a><span class="in">```</span></span>
-<span id="cb14-197"><a href="#cb14-197"></a></span>
-<span id="cb14-198"><a href="#cb14-198"></a>---</span>
-<span id="cb14-199"><a href="#cb14-199"></a></span>
-<span id="cb14-200"><a href="#cb14-200"></a><span class="fu">## Link Peaks to Genes</span></span>
-<span id="cb14-201"><a href="#cb14-201"></a></span>
-<span id="cb14-204"><a href="#cb14-204"></a><span class="in">```{r}</span></span>
-<span id="cb14-205"><a href="#cb14-205"></a><span class="co">#| label: link-peaks</span></span>
-<span id="cb14-206"><a href="#cb14-206"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-207"><a href="#cb14-207"></a></span>
-<span id="cb14-208"><a href="#cb14-208"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
-<span id="cb14-209"><a href="#cb14-209"></a></span>
-<span id="cb14-210"><a href="#cb14-210"></a>seu <span class="ot">&lt;-</span> <span class="fu">LinkPeaks</span>(</span>
-<span id="cb14-211"><a href="#cb14-211"></a>  seu,</span>
-<span id="cb14-212"><a href="#cb14-212"></a>  <span class="at">peak.assay =</span> <span class="st">"ATAC"</span>,</span>
-<span id="cb14-213"><a href="#cb14-213"></a>  <span class="at">expression.assay =</span> <span class="st">"SCT"</span>,</span>
-<span id="cb14-214"><a href="#cb14-214"></a>  <span class="at">genes.use  =</span> <span class="fu">VariableFeatures</span>(seu, <span class="at">assay =</span> <span class="st">"SCT"</span>)</span>
-<span id="cb14-215"><a href="#cb14-215"></a>)</span>
-<span id="cb14-216"><a href="#cb14-216"></a><span class="in">```</span></span>
-<span id="cb14-217"><a href="#cb14-217"></a></span>
-<span id="cb14-220"><a href="#cb14-220"></a><span class="in">```{r}</span></span>
-<span id="cb14-221"><a href="#cb14-221"></a><span class="co">#| label: coverage-plot</span></span>
-<span id="cb14-222"><a href="#cb14-222"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-223"><a href="#cb14-223"></a><span class="co">#| fig-cap: "Coverage plot showing chromatin accessibility linked to MS4A1 (CD20)"</span></span>
-<span id="cb14-224"><a href="#cb14-224"></a></span>
-<span id="cb14-225"><a href="#cb14-225"></a><span class="fu">CoveragePlot</span>(</span>
-<span id="cb14-226"><a href="#cb14-226"></a>  seu,</span>
-<span id="cb14-227"><a href="#cb14-227"></a>  <span class="at">region     =</span> <span class="st">"MS4A1"</span>,</span>
-<span id="cb14-228"><a href="#cb14-228"></a>  <span class="at">features   =</span> <span class="st">"MS4A1"</span>,</span>
-<span id="cb14-229"><a href="#cb14-229"></a>  <span class="at">expression.assay =</span> <span class="st">"SCT"</span>,</span>
-<span id="cb14-230"><a href="#cb14-230"></a>  <span class="at">extend.upstream   =</span> <span class="dv">500</span>,</span>
-<span id="cb14-231"><a href="#cb14-231"></a>  <span class="at">extend.downstream =</span> <span class="dv">10000</span></span>
-<span id="cb14-232"><a href="#cb14-232"></a>)</span>
-<span id="cb14-233"><a href="#cb14-233"></a><span class="in">```</span></span>
-<span id="cb14-234"><a href="#cb14-234"></a></span>
-<span id="cb14-235"><a href="#cb14-235"></a>---</span>
-<span id="cb14-236"><a href="#cb14-236"></a></span>
-<span id="cb14-237"><a href="#cb14-237"></a><span class="fu">## Save</span></span>
-<span id="cb14-238"><a href="#cb14-238"></a></span>
-<span id="cb14-241"><a href="#cb14-241"></a><span class="in">```{r}</span></span>
-<span id="cb14-242"><a href="#cb14-242"></a><span class="co">#| label: save</span></span>
-<span id="cb14-243"><a href="#cb14-243"></a><span class="co">#| eval: false</span></span>
-<span id="cb14-244"><a href="#cb14-244"></a></span>
-<span id="cb14-245"><a href="#cb14-245"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_multiome_signac.rds"</span>)</span>
-<span id="cb14-246"><a href="#cb14-246"></a><span class="in">```</span></span>
-<span id="cb14-247"><a href="#cb14-247"></a></span>
-<span id="cb14-248"><a href="#cb14-248"></a>---</span>
-<span id="cb14-249"><a href="#cb14-249"></a></span>
-<span id="cb14-250"><a href="#cb14-250"></a><span class="fu">## Session Info</span></span>
-<span id="cb14-251"><a href="#cb14-251"></a></span>
-<span id="cb14-254"><a href="#cb14-254"></a><span class="in">```{r}</span></span>
-<span id="cb14-255"><a href="#cb14-255"></a><span class="co">#| label: session-info</span></span>
-<span id="cb14-256"><a href="#cb14-256"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb14-257"><a href="#cb14-257"></a><span class="in">```</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> "Signac: scRNA + scATAC Integration"</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="an">subtitle:</span><span class="co"> "Link chromatin accessibility to gene expression using Signac"</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="an">categories:</span><span class="co"> [Multi-omics, Signac, scATAC-seq, scRNA-seq]</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="co">---</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>Multi-omics · Chapter 02<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="fu">## Overview</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a></span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="co">[</span><span class="ot">Signac</span><span class="co">](https://stuartlab.org/signac/)</span> extends Seurat to handle chromatin</span>
+<span id="cb15-12"><a href="#cb15-12"></a>accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome),</span>
+<span id="cb15-13"><a href="#cb15-13"></a>it enables joint analysis — linking open chromatin regions to gene expression</span>
+<span id="cb15-14"><a href="#cb15-14"></a>at single-cell resolution.</span>
+<span id="cb15-15"><a href="#cb15-15"></a></span>
+<span id="cb15-16"><a href="#cb15-16"></a>**This chapter covers:**</span>
+<span id="cb15-17"><a href="#cb15-17"></a></span>
+<span id="cb15-18"><a href="#cb15-18"></a><span class="ss">1. </span>Creating a Signac object from a 10x Multiome dataset</span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="ss">2. </span>ATAC-seq QC within Signac</span>
+<span id="cb15-20"><a href="#cb15-20"></a><span class="ss">3. </span>LSI dimensionality reduction</span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="ss">4. </span>Joint WNN embedding with matched RNA</span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="ss">5. </span>Linking peaks to genes</span>
+<span id="cb15-23"><a href="#cb15-23"></a></span>
+<span id="cb15-24"><a href="#cb15-24"></a>---</span>
+<span id="cb15-25"><a href="#cb15-25"></a></span>
+<span id="cb15-26"><a href="#cb15-26"></a><span class="fu">## Setup</span></span>
+<span id="cb15-27"><a href="#cb15-27"></a></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="in">```{r}</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a><span class="co">#| label: setup</span></span>
+<span id="cb15-32"><a href="#cb15-32"></a></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="fu">library</span>(Seurat)</span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="fu">library</span>(Signac)</span>
+<span id="cb15-35"><a href="#cb15-35"></a><span class="fu">library</span>(EnsDb.Hsapiens.v86)</span>
+<span id="cb15-36"><a href="#cb15-36"></a><span class="fu">library</span>(BSgenome.Hsapiens.UCSC.hg38)</span>
+<span id="cb15-37"><a href="#cb15-37"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-38"><a href="#cb15-38"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb15-39"><a href="#cb15-39"></a><span class="in">```</span></span>
+<span id="cb15-40"><a href="#cb15-40"></a></span>
+<span id="cb15-41"><a href="#cb15-41"></a>---</span>
+<span id="cb15-42"><a href="#cb15-42"></a></span>
+<span id="cb15-43"><a href="#cb15-43"></a><span class="fu">## Load 10x Multiome Data</span></span>
+<span id="cb15-44"><a href="#cb15-44"></a></span>
+<span id="cb15-47"><a href="#cb15-47"></a><span class="in">```{r}</span></span>
+<span id="cb15-48"><a href="#cb15-48"></a><span class="co">#| label: load-data</span></span>
+<span id="cb15-49"><a href="#cb15-49"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-50"><a href="#cb15-50"></a></span>
+<span id="cb15-51"><a href="#cb15-51"></a><span class="co"># Read Cell Ranger ARC output</span></span>
+<span id="cb15-52"><a href="#cb15-52"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X_h5</span>(<span class="st">"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5"</span>)</span>
+<span id="cb15-53"><a href="#cb15-53"></a></span>
+<span id="cb15-54"><a href="#cb15-54"></a><span class="co"># Separate RNA and ATAC matrices</span></span>
+<span id="cb15-55"><a href="#cb15-55"></a>rna_counts  <span class="ot">&lt;-</span> counts<span class="sc">$</span><span class="st">`</span><span class="at">Gene Expression</span><span class="st">`</span></span>
+<span id="cb15-56"><a href="#cb15-56"></a>atac_counts <span class="ot">&lt;-</span> counts<span class="sc">$</span>Peaks</span>
+<span id="cb15-57"><a href="#cb15-57"></a></span>
+<span id="cb15-58"><a href="#cb15-58"></a><span class="co"># Load fragment file metadata</span></span>
+<span id="cb15-59"><a href="#cb15-59"></a>fragpath <span class="ot">&lt;-</span> <span class="st">"data/raw/pbmc_multiome/atac_fragments.tsv.gz"</span></span>
+<span id="cb15-60"><a href="#cb15-60"></a><span class="in">```</span></span>
+<span id="cb15-61"><a href="#cb15-61"></a></span>
+<span id="cb15-62"><a href="#cb15-62"></a>---</span>
+<span id="cb15-63"><a href="#cb15-63"></a></span>
+<span id="cb15-64"><a href="#cb15-64"></a><span class="fu">## Create Seurat + Signac Object</span></span>
+<span id="cb15-65"><a href="#cb15-65"></a></span>
+<span id="cb15-68"><a href="#cb15-68"></a><span class="in">```{r}</span></span>
+<span id="cb15-69"><a href="#cb15-69"></a><span class="co">#| label: create-object</span></span>
+<span id="cb15-70"><a href="#cb15-70"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-71"><a href="#cb15-71"></a></span>
+<span id="cb15-72"><a href="#cb15-72"></a><span class="co"># Genome annotation</span></span>
+<span id="cb15-73"><a href="#cb15-73"></a>annotation <span class="ot">&lt;-</span> <span class="fu">GetGRangesFromEnsDb</span>(<span class="at">ensdb =</span> EnsDb.Hsapiens.v86)</span>
+<span id="cb15-74"><a href="#cb15-74"></a><span class="fu">seqlevels</span>(annotation) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"chr"</span>, <span class="fu">seqlevels</span>(annotation))</span>
+<span id="cb15-75"><a href="#cb15-75"></a></span>
+<span id="cb15-76"><a href="#cb15-76"></a><span class="co"># Create chromatin assay</span></span>
+<span id="cb15-77"><a href="#cb15-77"></a>atac_assay <span class="ot">&lt;-</span> <span class="fu">CreateChromatinAssay</span>(</span>
+<span id="cb15-78"><a href="#cb15-78"></a>  <span class="at">counts     =</span> atac_counts,</span>
+<span id="cb15-79"><a href="#cb15-79"></a>  <span class="at">sep        =</span> <span class="fu">c</span>(<span class="st">":"</span>, <span class="st">"-"</span>),</span>
+<span id="cb15-80"><a href="#cb15-80"></a>  <span class="at">fragments  =</span> fragpath,</span>
+<span id="cb15-81"><a href="#cb15-81"></a>  <span class="at">annotation =</span> annotation</span>
+<span id="cb15-82"><a href="#cb15-82"></a>)</span>
+<span id="cb15-83"><a href="#cb15-83"></a></span>
+<span id="cb15-84"><a href="#cb15-84"></a><span class="co"># Build Seurat object with both modalities</span></span>
+<span id="cb15-85"><a href="#cb15-85"></a>seu <span class="ot">&lt;-</span> <span class="fu">CreateSeuratObject</span>(<span class="at">counts =</span> rna_counts, <span class="at">assay =</span> <span class="st">"RNA"</span>)</span>
+<span id="cb15-86"><a href="#cb15-86"></a>seu[[<span class="st">"ATAC"</span>]] <span class="ot">&lt;-</span> atac_assay</span>
+<span id="cb15-87"><a href="#cb15-87"></a></span>
+<span id="cb15-88"><a href="#cb15-88"></a>seu</span>
+<span id="cb15-89"><a href="#cb15-89"></a><span class="in">```</span></span>
+<span id="cb15-90"><a href="#cb15-90"></a></span>
+<span id="cb15-91"><a href="#cb15-91"></a>---</span>
+<span id="cb15-92"><a href="#cb15-92"></a></span>
+<span id="cb15-93"><a href="#cb15-93"></a><span class="fu">## ATAC QC</span></span>
+<span id="cb15-94"><a href="#cb15-94"></a></span>
+<span id="cb15-97"><a href="#cb15-97"></a><span class="in">```{r}</span></span>
+<span id="cb15-98"><a href="#cb15-98"></a><span class="co">#| label: atac-qc</span></span>
+<span id="cb15-99"><a href="#cb15-99"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-100"><a href="#cb15-100"></a></span>
+<span id="cb15-101"><a href="#cb15-101"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
+<span id="cb15-102"><a href="#cb15-102"></a></span>
+<span id="cb15-103"><a href="#cb15-103"></a>seu <span class="ot">&lt;-</span> <span class="fu">NucleosomeSignal</span>(seu)</span>
+<span id="cb15-104"><a href="#cb15-104"></a>seu <span class="ot">&lt;-</span> <span class="fu">TSSEnrichment</span>(seu, <span class="at">fast =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-105"><a href="#cb15-105"></a></span>
+<span id="cb15-106"><a href="#cb15-106"></a><span class="co"># Filter</span></span>
+<span id="cb15-107"><a href="#cb15-107"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
+<span id="cb15-108"><a href="#cb15-108"></a>  seu,</span>
+<span id="cb15-109"><a href="#cb15-109"></a>  <span class="at">subset =</span> nCount_ATAC <span class="sc">&gt;</span> <span class="dv">1000</span>   <span class="sc">&amp;</span></span>
+<span id="cb15-110"><a href="#cb15-110"></a>           nCount_ATAC <span class="sc">&lt;</span> <span class="dv">100000</span> <span class="sc">&amp;</span></span>
+<span id="cb15-111"><a href="#cb15-111"></a>           nCount_RNA  <span class="sc">&gt;</span> <span class="dv">200</span>    <span class="sc">&amp;</span></span>
+<span id="cb15-112"><a href="#cb15-112"></a>           nCount_RNA  <span class="sc">&lt;</span> <span class="dv">25000</span>  <span class="sc">&amp;</span></span>
+<span id="cb15-113"><a href="#cb15-113"></a>           nucleosome_signal <span class="sc">&lt;</span> <span class="dv">2</span> <span class="sc">&amp;</span></span>
+<span id="cb15-114"><a href="#cb15-114"></a>           TSS.enrichment <span class="sc">&gt;</span> <span class="dv">1</span></span>
+<span id="cb15-115"><a href="#cb15-115"></a>)</span>
+<span id="cb15-116"><a href="#cb15-116"></a><span class="in">```</span></span>
+<span id="cb15-117"><a href="#cb15-117"></a></span>
+<span id="cb15-120"><a href="#cb15-120"></a><span class="in">```{r}</span></span>
+<span id="cb15-121"><a href="#cb15-121"></a><span class="co">#| label: atac-qc-plot</span></span>
+<span id="cb15-122"><a href="#cb15-122"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-123"><a href="#cb15-123"></a><span class="co">#| fig-cap: "ATAC QC metrics: nucleosome signal and TSS enrichment"</span></span>
+<span id="cb15-124"><a href="#cb15-124"></a></span>
+<span id="cb15-125"><a href="#cb15-125"></a><span class="fu">VlnPlot</span>(</span>
+<span id="cb15-126"><a href="#cb15-126"></a>  seu,</span>
+<span id="cb15-127"><a href="#cb15-127"></a>  <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"nCount_ATAC"</span>, <span class="st">"TSS.enrichment"</span>, <span class="st">"nucleosome_signal"</span>),</span>
+<span id="cb15-128"><a href="#cb15-128"></a>  <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">pt.size =</span> <span class="dv">0</span></span>
+<span id="cb15-129"><a href="#cb15-129"></a>)</span>
+<span id="cb15-130"><a href="#cb15-130"></a><span class="in">```</span></span>
+<span id="cb15-131"><a href="#cb15-131"></a></span>
+<span id="cb15-132"><a href="#cb15-132"></a>---</span>
+<span id="cb15-133"><a href="#cb15-133"></a></span>
+<span id="cb15-134"><a href="#cb15-134"></a><span class="fu">## Process Each Modality</span></span>
+<span id="cb15-135"><a href="#cb15-135"></a></span>
+<span id="cb15-138"><a href="#cb15-138"></a><span class="in">```{r}</span></span>
+<span id="cb15-139"><a href="#cb15-139"></a><span class="co">#| label: process-rna</span></span>
+<span id="cb15-140"><a href="#cb15-140"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-141"><a href="#cb15-141"></a></span>
+<span id="cb15-142"><a href="#cb15-142"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"RNA"</span></span>
+<span id="cb15-143"><a href="#cb15-143"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(seu, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb15-144"><a href="#cb15-144"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(seu, <span class="at">npcs =</span> <span class="dv">30</span>)</span>
+<span id="cb15-145"><a href="#cb15-145"></a><span class="in">```</span></span>
+<span id="cb15-146"><a href="#cb15-146"></a></span>
+<span id="cb15-149"><a href="#cb15-149"></a><span class="in">```{r}</span></span>
+<span id="cb15-150"><a href="#cb15-150"></a><span class="co">#| label: process-atac</span></span>
+<span id="cb15-151"><a href="#cb15-151"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-152"><a href="#cb15-152"></a></span>
+<span id="cb15-153"><a href="#cb15-153"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
+<span id="cb15-154"><a href="#cb15-154"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunTFIDF</span>(seu)</span>
+<span id="cb15-155"><a href="#cb15-155"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindTopFeatures</span>(seu, <span class="at">min.cutoff =</span> <span class="st">"q0"</span>)</span>
+<span id="cb15-156"><a href="#cb15-156"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunSVD</span>(seu)   <span class="co"># LSI</span></span>
+<span id="cb15-157"><a href="#cb15-157"></a><span class="in">```</span></span>
+<span id="cb15-158"><a href="#cb15-158"></a></span>
+<span id="cb15-159"><a href="#cb15-159"></a>---</span>
+<span id="cb15-160"><a href="#cb15-160"></a></span>
+<span id="cb15-161"><a href="#cb15-161"></a><span class="fu">## Joint WNN Embedding</span></span>
+<span id="cb15-162"><a href="#cb15-162"></a></span>
+<span id="cb15-165"><a href="#cb15-165"></a><span class="in">```{r}</span></span>
+<span id="cb15-166"><a href="#cb15-166"></a><span class="co">#| label: wnn</span></span>
+<span id="cb15-167"><a href="#cb15-167"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-168"><a href="#cb15-168"></a></span>
+<span id="cb15-169"><a href="#cb15-169"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindMultiModalNeighbors</span>(</span>
+<span id="cb15-170"><a href="#cb15-170"></a>  seu,</span>
+<span id="cb15-171"><a href="#cb15-171"></a>  <span class="at">reduction.list =</span> <span class="fu">list</span>(<span class="st">"pca"</span>, <span class="st">"lsi"</span>),</span>
+<span id="cb15-172"><a href="#cb15-172"></a>  <span class="at">dims.list      =</span> <span class="fu">list</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">50</span>),  <span class="co"># exclude LSI component 1 (correlated with depth)</span></span>
+<span id="cb15-173"><a href="#cb15-173"></a>  <span class="at">modality.weight.name =</span> <span class="st">"RNA.weight"</span></span>
+<span id="cb15-174"><a href="#cb15-174"></a>)</span>
+<span id="cb15-175"><a href="#cb15-175"></a></span>
+<span id="cb15-176"><a href="#cb15-176"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunUMAP</span>(</span>
+<span id="cb15-177"><a href="#cb15-177"></a>  seu,</span>
+<span id="cb15-178"><a href="#cb15-178"></a>  <span class="at">nn.name    =</span> <span class="st">"weighted.nn"</span>,</span>
+<span id="cb15-179"><a href="#cb15-179"></a>  <span class="at">reduction.name =</span> <span class="st">"wnn.umap"</span>,</span>
+<span id="cb15-180"><a href="#cb15-180"></a>  <span class="at">reduction.key  =</span> <span class="st">"wnnUMAP_"</span></span>
+<span id="cb15-181"><a href="#cb15-181"></a>)</span>
+<span id="cb15-182"><a href="#cb15-182"></a></span>
+<span id="cb15-183"><a href="#cb15-183"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindClusters</span>(seu, <span class="at">graph.name =</span> <span class="st">"wsnn"</span>, <span class="at">resolution =</span> <span class="fl">0.8</span>)</span>
+<span id="cb15-184"><a href="#cb15-184"></a><span class="in">```</span></span>
+<span id="cb15-185"><a href="#cb15-185"></a></span>
+<span id="cb15-188"><a href="#cb15-188"></a><span class="in">```{r}</span></span>
+<span id="cb15-189"><a href="#cb15-189"></a><span class="co">#| label: wnn-plot</span></span>
+<span id="cb15-190"><a href="#cb15-190"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-191"><a href="#cb15-191"></a><span class="co">#| fig-cap: "WNN UMAP colored by cluster and RNA modality weight"</span></span>
+<span id="cb15-192"><a href="#cb15-192"></a></span>
+<span id="cb15-193"><a href="#cb15-193"></a>p1 <span class="ot">&lt;-</span> <span class="fu">DimPlot</span>(seu, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>, <span class="at">label =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">NoLegend</span>()</span>
+<span id="cb15-194"><a href="#cb15-194"></a>p2 <span class="ot">&lt;-</span> <span class="fu">FeaturePlot</span>(seu, <span class="at">features =</span> <span class="st">"RNA.weight"</span>, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>)</span>
+<span id="cb15-195"><a href="#cb15-195"></a>p1 <span class="sc">|</span> p2</span>
+<span id="cb15-196"><a href="#cb15-196"></a><span class="in">```</span></span>
+<span id="cb15-197"><a href="#cb15-197"></a></span>
+<span id="cb15-198"><a href="#cb15-198"></a>---</span>
+<span id="cb15-199"><a href="#cb15-199"></a></span>
+<span id="cb15-200"><a href="#cb15-200"></a><span class="fu">## Link Peaks to Genes</span></span>
+<span id="cb15-201"><a href="#cb15-201"></a></span>
+<span id="cb15-204"><a href="#cb15-204"></a><span class="in">```{r}</span></span>
+<span id="cb15-205"><a href="#cb15-205"></a><span class="co">#| label: link-peaks</span></span>
+<span id="cb15-206"><a href="#cb15-206"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-207"><a href="#cb15-207"></a></span>
+<span id="cb15-208"><a href="#cb15-208"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
+<span id="cb15-209"><a href="#cb15-209"></a></span>
+<span id="cb15-210"><a href="#cb15-210"></a>seu <span class="ot">&lt;-</span> <span class="fu">LinkPeaks</span>(</span>
+<span id="cb15-211"><a href="#cb15-211"></a>  seu,</span>
+<span id="cb15-212"><a href="#cb15-212"></a>  <span class="at">peak.assay =</span> <span class="st">"ATAC"</span>,</span>
+<span id="cb15-213"><a href="#cb15-213"></a>  <span class="at">expression.assay =</span> <span class="st">"SCT"</span>,</span>
+<span id="cb15-214"><a href="#cb15-214"></a>  <span class="at">genes.use  =</span> <span class="fu">VariableFeatures</span>(seu, <span class="at">assay =</span> <span class="st">"SCT"</span>)</span>
+<span id="cb15-215"><a href="#cb15-215"></a>)</span>
+<span id="cb15-216"><a href="#cb15-216"></a><span class="in">```</span></span>
+<span id="cb15-217"><a href="#cb15-217"></a></span>
+<span id="cb15-220"><a href="#cb15-220"></a><span class="in">```{r}</span></span>
+<span id="cb15-221"><a href="#cb15-221"></a><span class="co">#| label: coverage-plot</span></span>
+<span id="cb15-222"><a href="#cb15-222"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-223"><a href="#cb15-223"></a><span class="co">#| fig-cap: "Coverage plot showing chromatin accessibility linked to MS4A1 (CD20)"</span></span>
+<span id="cb15-224"><a href="#cb15-224"></a></span>
+<span id="cb15-225"><a href="#cb15-225"></a><span class="fu">CoveragePlot</span>(</span>
+<span id="cb15-226"><a href="#cb15-226"></a>  seu,</span>
+<span id="cb15-227"><a href="#cb15-227"></a>  <span class="at">region     =</span> <span class="st">"MS4A1"</span>,</span>
+<span id="cb15-228"><a href="#cb15-228"></a>  <span class="at">features   =</span> <span class="st">"MS4A1"</span>,</span>
+<span id="cb15-229"><a href="#cb15-229"></a>  <span class="at">expression.assay =</span> <span class="st">"SCT"</span>,</span>
+<span id="cb15-230"><a href="#cb15-230"></a>  <span class="at">extend.upstream   =</span> <span class="dv">500</span>,</span>
+<span id="cb15-231"><a href="#cb15-231"></a>  <span class="at">extend.downstream =</span> <span class="dv">10000</span></span>
+<span id="cb15-232"><a href="#cb15-232"></a>)</span>
+<span id="cb15-233"><a href="#cb15-233"></a><span class="in">```</span></span>
+<span id="cb15-234"><a href="#cb15-234"></a></span>
+<span id="cb15-235"><a href="#cb15-235"></a>---</span>
+<span id="cb15-236"><a href="#cb15-236"></a></span>
+<span id="cb15-237"><a href="#cb15-237"></a><span class="fu">## Save</span></span>
+<span id="cb15-238"><a href="#cb15-238"></a></span>
+<span id="cb15-241"><a href="#cb15-241"></a><span class="in">```{r}</span></span>
+<span id="cb15-242"><a href="#cb15-242"></a><span class="co">#| label: save</span></span>
+<span id="cb15-243"><a href="#cb15-243"></a><span class="co">#| eval: false</span></span>
+<span id="cb15-244"><a href="#cb15-244"></a></span>
+<span id="cb15-245"><a href="#cb15-245"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_multiome_signac.rds"</span>)</span>
+<span id="cb15-246"><a href="#cb15-246"></a><span class="in">```</span></span>
+<span id="cb15-247"><a href="#cb15-247"></a></span>
+<span id="cb15-248"><a href="#cb15-248"></a>---</span>
+<span id="cb15-249"><a href="#cb15-249"></a></span>
+<span id="cb15-250"><a href="#cb15-250"></a><span class="fu">## Session Info</span></span>
+<span id="cb15-251"><a href="#cb15-251"></a></span>
+<span id="cb15-254"><a href="#cb15-254"></a><span class="in">```{r}</span></span>
+<span id="cb15-255"><a href="#cb15-255"></a><span class="co">#| label: session-info</span></span>
+<span id="cb15-256"><a href="#cb15-256"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb15-257"><a href="#cb15-257"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Sarintip Nguanthanee</p>
+<p>© 2025 Sarintip Nguantad</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

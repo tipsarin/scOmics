@@ -107,6 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="../../assets/custom.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -525,6 +526,69 @@ Note
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.5.2 (2025-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 24.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Asia/Bangkok
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_1.1.4        patchwork_1.3.2    ggplot2_4.0.1      Seurat_5.4.0      
+[5] SeuratObject_5.3.0 sp_2.2-0          
+
+loaded via a namespace (and not attached):
+  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         
+  [4] rlang_1.1.7            magrittr_2.0.4         RcppAnnoy_0.0.22      
+  [7] otel_0.2.0             spatstat.geom_3.6-1    matrixStats_1.5.0     
+ [10] ggridges_0.5.7         compiler_4.5.2         png_0.1-8             
+ [13] vctrs_0.6.5            reshape2_1.4.5         stringr_1.6.0         
+ [16] pkgconfig_2.0.3        fastmap_1.2.0          promises_1.5.0        
+ [19] rmarkdown_2.30         purrr_1.2.1            xfun_0.55             
+ [22] jsonlite_2.0.0         goftest_1.2-3          later_1.4.4           
+ [25] spatstat.utils_3.2-0   irlba_2.3.5.1          parallel_4.5.2        
+ [28] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             
+ [31] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-9   
+ [34] reticulate_1.44.1      parallelly_1.46.1      spatstat.univar_3.1-5 
+ [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.1            
+ [40] knitr_1.50             tensor_1.5.1           future.apply_1.20.1   
+ [43] zoo_1.8-15             sctransform_0.4.2      httpuv_1.6.16         
+ [46] Matrix_1.7-4           splines_4.5.2          igraph_2.2.2          
+ [49] tidyselect_1.2.1       abind_1.4-8            dichromat_2.0-0.1     
+ [52] yaml_2.3.12            spatstat.random_3.4-3  codetools_0.2-20      
+ [55] miniUI_0.1.2           spatstat.explore_3.6-0 listenv_0.10.0        
+ [58] lattice_0.22-7         tibble_3.3.1           plyr_1.8.9            
+ [61] withr_3.0.2            shiny_1.12.1           S7_0.2.1              
+ [64] ROCR_1.0-11            evaluate_1.0.5         Rtsne_0.17            
+ [67] future_1.68.0          fastDummies_1.7.5      survival_3.8-3        
+ [70] polyclip_1.10-7        fitdistrplus_1.2-4     pillar_1.11.1         
+ [73] KernSmooth_2.23-26     plotly_4.11.0          generics_0.1.4        
+ [76] RcppHNSW_0.6.0         scales_1.4.0           globals_0.18.0        
+ [79] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        
+ [82] tools_4.5.2            data.table_1.17.8      RSpectra_0.16-2       
+ [85] RANN_2.6.2             dotCall64_1.2          cowplot_1.2.0         
+ [88] grid_4.5.2             tidyr_1.3.2            nlme_3.1-168          
+ [91] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-3           
+ [94] viridisLite_0.4.2      uwot_0.2.4             gtable_0.3.6          
+ [97] digest_0.6.39          progressr_0.18.0       ggrepel_0.9.6         
+[100] htmlwidgets_1.6.4      farver_2.1.2           htmltools_0.5.9       
+[103] lifecycle_1.0.5        httr_1.4.7             mime_0.13             
+[106] MASS_7.3-65           </code></pre>
+</div>
 </div>
 
 
@@ -1001,247 +1065,247 @@ Note
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "QC &amp; Filtering"</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="an">subtitle:</span><span class="co"> "Assess and remove low-quality cells before downstream analysis"</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="an">categories:</span><span class="co"> [scRNA-seq, Seurat, QC]</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="co">---</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>scRNA-seq · Chapter 01<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb12-8"><a href="#cb12-8"></a></span>
-<span id="cb12-9"><a href="#cb12-9"></a><span class="fu">## Overview</span></span>
-<span id="cb12-10"><a href="#cb12-10"></a></span>
-<span id="cb12-11"><a href="#cb12-11"></a>Raw single-cell RNA-seq data invariably contains low-quality cells — damaged cells</span>
-<span id="cb12-12"><a href="#cb12-12"></a>with compromised membranes, empty droplets, or multiplets (two or more cells captured</span>
-<span id="cb12-13"><a href="#cb12-13"></a>in one droplet). Retaining these artefacts distorts downstream clustering and</span>
-<span id="cb12-14"><a href="#cb12-14"></a>differential expression results.</span>
-<span id="cb12-15"><a href="#cb12-15"></a></span>
-<span id="cb12-16"><a href="#cb12-16"></a>**This chapter covers:**</span>
-<span id="cb12-17"><a href="#cb12-17"></a></span>
-<span id="cb12-18"><a href="#cb12-18"></a><span class="ss">1. </span>Loading Cell Ranger output into a Seurat object</span>
-<span id="cb12-19"><a href="#cb12-19"></a><span class="ss">2. </span>Computing per-cell QC metrics</span>
-<span id="cb12-20"><a href="#cb12-20"></a><span class="ss">3. </span>Selecting filtering thresholds from QC distributions</span>
-<span id="cb12-21"><a href="#cb12-21"></a><span class="ss">4. </span>Doublet detection with DoubletFinder</span>
-<span id="cb12-22"><a href="#cb12-22"></a><span class="ss">5. </span>Saving the filtered object for normalization</span>
-<span id="cb12-23"><a href="#cb12-23"></a></span>
-<span id="cb12-24"><a href="#cb12-24"></a>---</span>
-<span id="cb12-25"><a href="#cb12-25"></a></span>
-<span id="cb12-26"><a href="#cb12-26"></a><span class="fu">## Setup</span></span>
-<span id="cb12-27"><a href="#cb12-27"></a></span>
-<span id="cb12-30"><a href="#cb12-30"></a><span class="in">```{r}</span></span>
-<span id="cb12-31"><a href="#cb12-31"></a><span class="co">#| label: setup</span></span>
-<span id="cb12-32"><a href="#cb12-32"></a></span>
-<span id="cb12-33"><a href="#cb12-33"></a><span class="fu">library</span>(Seurat)</span>
-<span id="cb12-34"><a href="#cb12-34"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-35"><a href="#cb12-35"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb12-36"><a href="#cb12-36"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb12-37"><a href="#cb12-37"></a><span class="in">```</span></span>
-<span id="cb12-38"><a href="#cb12-38"></a></span>
-<span id="cb12-39"><a href="#cb12-39"></a>---</span>
-<span id="cb12-40"><a href="#cb12-40"></a></span>
-<span id="cb12-41"><a href="#cb12-41"></a><span class="fu">## Load Data</span></span>
-<span id="cb12-42"><a href="#cb12-42"></a></span>
-<span id="cb12-45"><a href="#cb12-45"></a><span class="in">```{r}</span></span>
-<span id="cb12-46"><a href="#cb12-46"></a><span class="co">#| label: load-data</span></span>
-<span id="cb12-47"><a href="#cb12-47"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-48"><a href="#cb12-48"></a></span>
-<span id="cb12-49"><a href="#cb12-49"></a><span class="co"># From Cell Ranger filtered output directory</span></span>
-<span id="cb12-50"><a href="#cb12-50"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X</span>(</span>
-<span id="cb12-51"><a href="#cb12-51"></a>  <span class="at">data.dir =</span> <span class="st">"data/raw/pbmc3k/filtered_feature_bc_matrix/"</span></span>
-<span id="cb12-52"><a href="#cb12-52"></a>)</span>
-<span id="cb12-53"><a href="#cb12-53"></a></span>
-<span id="cb12-54"><a href="#cb12-54"></a><span class="co"># --- OR from .h5 file ---</span></span>
-<span id="cb12-55"><a href="#cb12-55"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X_h5</span>(<span class="st">"data/raw/pbmc3k/filtered_feature_bc_matrix.h5"</span>)</span>
-<span id="cb12-56"><a href="#cb12-56"></a></span>
-<span id="cb12-57"><a href="#cb12-57"></a>seu <span class="ot">&lt;-</span> <span class="fu">CreateSeuratObject</span>(</span>
-<span id="cb12-58"><a href="#cb12-58"></a>  <span class="at">counts      =</span> counts,</span>
-<span id="cb12-59"><a href="#cb12-59"></a>  <span class="at">project     =</span> <span class="st">"PBMC3k"</span>,</span>
-<span id="cb12-60"><a href="#cb12-60"></a>  <span class="at">min.cells   =</span> <span class="dv">3</span>,    <span class="co"># retain genes detected in ≥ 3 cells</span></span>
-<span id="cb12-61"><a href="#cb12-61"></a>  <span class="at">min.features =</span> <span class="dv">200</span>  <span class="co"># retain cells with ≥ 200 genes detected</span></span>
-<span id="cb12-62"><a href="#cb12-62"></a>)</span>
-<span id="cb12-63"><a href="#cb12-63"></a></span>
-<span id="cb12-64"><a href="#cb12-64"></a>seu</span>
-<span id="cb12-65"><a href="#cb12-65"></a><span class="in">```</span></span>
-<span id="cb12-66"><a href="#cb12-66"></a></span>
-<span id="cb12-67"><a href="#cb12-67"></a>::: {.callout-note}</span>
-<span id="cb12-68"><a href="#cb12-68"></a><span class="in">`min.cells = 3`</span> and <span class="in">`min.features = 200`</span> are deliberately loose.</span>
-<span id="cb12-69"><a href="#cb12-69"></a>Stricter thresholds are applied after inspecting QC metric distributions.</span>
-<span id="cb12-70"><a href="#cb12-70"></a>:::</span>
-<span id="cb12-71"><a href="#cb12-71"></a></span>
-<span id="cb12-72"><a href="#cb12-72"></a>---</span>
-<span id="cb12-73"><a href="#cb12-73"></a></span>
-<span id="cb12-74"><a href="#cb12-74"></a><span class="fu">## Compute QC Metrics</span></span>
-<span id="cb12-75"><a href="#cb12-75"></a></span>
-<span id="cb12-78"><a href="#cb12-78"></a><span class="in">```{r}</span></span>
-<span id="cb12-79"><a href="#cb12-79"></a><span class="co">#| label: qc-metrics</span></span>
-<span id="cb12-80"><a href="#cb12-80"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-81"><a href="#cb12-81"></a></span>
-<span id="cb12-82"><a href="#cb12-82"></a><span class="co"># Mitochondrial gene percentage — high % indicates damaged/dying cells</span></span>
-<span id="cb12-83"><a href="#cb12-83"></a>seu[[<span class="st">"pct_mt"</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(seu, <span class="at">pattern =</span> <span class="st">"^MT-"</span>)</span>
-<span id="cb12-84"><a href="#cb12-84"></a></span>
-<span id="cb12-85"><a href="#cb12-85"></a><span class="co"># Ribosomal gene percentage — context-dependent, informative to track</span></span>
-<span id="cb12-86"><a href="#cb12-86"></a>seu[[<span class="st">"pct_rb"</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(seu, <span class="at">pattern =</span> <span class="st">"^RP[SL]"</span>)</span>
-<span id="cb12-87"><a href="#cb12-87"></a></span>
-<span id="cb12-88"><a href="#cb12-88"></a><span class="co"># Preview metadata</span></span>
-<span id="cb12-89"><a href="#cb12-89"></a><span class="fu">head</span>(seu<span class="sc">@</span>meta.data, <span class="dv">5</span>)</span>
-<span id="cb12-90"><a href="#cb12-90"></a><span class="in">```</span></span>
-<span id="cb12-91"><a href="#cb12-91"></a></span>
-<span id="cb12-92"><a href="#cb12-92"></a>---</span>
-<span id="cb12-93"><a href="#cb12-93"></a></span>
-<span id="cb12-94"><a href="#cb12-94"></a><span class="fu">## Visualise QC Distributions</span></span>
-<span id="cb12-95"><a href="#cb12-95"></a></span>
-<span id="cb12-98"><a href="#cb12-98"></a><span class="in">```{r}</span></span>
-<span id="cb12-99"><a href="#cb12-99"></a><span class="co">#| label: qc-violin</span></span>
-<span id="cb12-100"><a href="#cb12-100"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-101"><a href="#cb12-101"></a><span class="co">#| fig-cap: "Per-cell QC metrics before filtering. Dashed lines indicate candidate thresholds."</span></span>
-<span id="cb12-102"><a href="#cb12-102"></a></span>
-<span id="cb12-103"><a href="#cb12-103"></a><span class="fu">VlnPlot</span>(</span>
-<span id="cb12-104"><a href="#cb12-104"></a>  seu,</span>
-<span id="cb12-105"><a href="#cb12-105"></a>  <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"nFeature_RNA"</span>, <span class="st">"nCount_RNA"</span>, <span class="st">"pct_mt"</span>),</span>
-<span id="cb12-106"><a href="#cb12-106"></a>  <span class="at">ncol     =</span> <span class="dv">3</span>,</span>
-<span id="cb12-107"><a href="#cb12-107"></a>  <span class="at">pt.size  =</span> <span class="fl">0.05</span>,</span>
-<span id="cb12-108"><a href="#cb12-108"></a>  <span class="at">alpha    =</span> <span class="fl">0.3</span></span>
-<span id="cb12-109"><a href="#cb12-109"></a>) <span class="sc">&amp;</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-110"><a href="#cb12-110"></a><span class="in">```</span></span>
-<span id="cb12-111"><a href="#cb12-111"></a></span>
-<span id="cb12-114"><a href="#cb12-114"></a><span class="in">```{r}</span></span>
-<span id="cb12-115"><a href="#cb12-115"></a><span class="co">#| label: qc-scatter</span></span>
-<span id="cb12-116"><a href="#cb12-116"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-117"><a href="#cb12-117"></a><span class="co">#| fig-cap: "Scatter plots reveal relationships between QC metrics."</span></span>
-<span id="cb12-118"><a href="#cb12-118"></a></span>
-<span id="cb12-119"><a href="#cb12-119"></a>p1 <span class="ot">&lt;-</span> <span class="fu">FeatureScatter</span>(seu, <span class="st">"nCount_RNA"</span>, <span class="st">"nFeature_RNA"</span>) <span class="sc">+</span></span>
-<span id="cb12-120"><a href="#cb12-120"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">6000</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"#FF6B6B"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>)</span>
-<span id="cb12-121"><a href="#cb12-121"></a></span>
-<span id="cb12-122"><a href="#cb12-122"></a>p2 <span class="ot">&lt;-</span> <span class="fu">FeatureScatter</span>(seu, <span class="st">"nCount_RNA"</span>, <span class="st">"pct_mt"</span>) <span class="sc">+</span></span>
-<span id="cb12-123"><a href="#cb12-123"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">20</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"#FF6B6B"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>)</span>
-<span id="cb12-124"><a href="#cb12-124"></a></span>
-<span id="cb12-125"><a href="#cb12-125"></a>p1 <span class="sc">|</span> p2</span>
-<span id="cb12-126"><a href="#cb12-126"></a><span class="in">```</span></span>
-<span id="cb12-127"><a href="#cb12-127"></a></span>
-<span id="cb12-128"><a href="#cb12-128"></a>---</span>
-<span id="cb12-129"><a href="#cb12-129"></a></span>
-<span id="cb12-130"><a href="#cb12-130"></a><span class="fu">## Apply Filters</span></span>
-<span id="cb12-131"><a href="#cb12-131"></a></span>
-<span id="cb12-134"><a href="#cb12-134"></a><span class="in">```{r}</span></span>
-<span id="cb12-135"><a href="#cb12-135"></a><span class="co">#| label: filter</span></span>
-<span id="cb12-136"><a href="#cb12-136"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-137"><a href="#cb12-137"></a></span>
-<span id="cb12-138"><a href="#cb12-138"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
-<span id="cb12-139"><a href="#cb12-139"></a>  seu,</span>
-<span id="cb12-140"><a href="#cb12-140"></a>  <span class="at">subset =</span> nFeature_RNA <span class="sc">&gt;</span> <span class="dv">200</span>  <span class="sc">&amp;</span></span>
-<span id="cb12-141"><a href="#cb12-141"></a>           nFeature_RNA <span class="sc">&lt;</span> <span class="dv">6000</span> <span class="sc">&amp;</span></span>
-<span id="cb12-142"><a href="#cb12-142"></a>           pct_mt <span class="sc">&lt;</span> <span class="dv">20</span></span>
-<span id="cb12-143"><a href="#cb12-143"></a>)</span>
-<span id="cb12-144"><a href="#cb12-144"></a></span>
-<span id="cb12-145"><a href="#cb12-145"></a><span class="fu">cat</span>(<span class="st">"Cells retained:"</span>, <span class="fu">ncol</span>(seu), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb12-146"><a href="#cb12-146"></a><span class="in">```</span></span>
-<span id="cb12-147"><a href="#cb12-147"></a></span>
-<span id="cb12-148"><a href="#cb12-148"></a>::: {.callout-warning}</span>
-<span id="cb12-149"><a href="#cb12-149"></a><span class="fu">## Threshold Selection is Dataset-Specific</span></span>
-<span id="cb12-150"><a href="#cb12-150"></a>The values above are appropriate for PBMC datasets. Adjust based on:</span>
-<span id="cb12-151"><a href="#cb12-151"></a></span>
-<span id="cb12-152"><a href="#cb12-152"></a><span class="ss">- </span>**Cell type composition** — neurons and hepatocytes naturally express more genes</span>
-<span id="cb12-153"><a href="#cb12-153"></a><span class="ss">- </span>**Sequencing depth** — deeper libraries shift the <span class="in">`nCount_RNA`</span> distribution</span>
-<span id="cb12-154"><a href="#cb12-154"></a><span class="ss">- </span>**Tissue of origin** — immune cells have lower ambient RNA than solid tissues</span>
-<span id="cb12-155"><a href="#cb12-155"></a>:::</span>
-<span id="cb12-156"><a href="#cb12-156"></a></span>
-<span id="cb12-157"><a href="#cb12-157"></a>---</span>
-<span id="cb12-158"><a href="#cb12-158"></a></span>
-<span id="cb12-159"><a href="#cb12-159"></a><span class="fu">## Doublet Detection</span></span>
-<span id="cb12-160"><a href="#cb12-160"></a></span>
-<span id="cb12-161"><a href="#cb12-161"></a>Doublets are droplets containing two cells that appear as one. Even after ambient</span>
-<span id="cb12-162"><a href="#cb12-162"></a>RNA filtering, doublets can form distinct spurious clusters.</span>
-<span id="cb12-163"><a href="#cb12-163"></a></span>
-<span id="cb12-166"><a href="#cb12-166"></a><span class="in">```{r}</span></span>
-<span id="cb12-167"><a href="#cb12-167"></a><span class="co">#| label: doublet-normalization</span></span>
-<span id="cb12-168"><a href="#cb12-168"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-169"><a href="#cb12-169"></a></span>
-<span id="cb12-170"><a href="#cb12-170"></a><span class="co"># DoubletFinder requires a preliminary normalization + PCA</span></span>
-<span id="cb12-171"><a href="#cb12-171"></a><span class="co"># (these will be done properly in Chapter 02; here they are run solely for doublet detection)</span></span>
-<span id="cb12-172"><a href="#cb12-172"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(seu)</span>
-<span id="cb12-173"><a href="#cb12-173"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(seu)</span>
-<span id="cb12-174"><a href="#cb12-174"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu)</span>
-<span id="cb12-175"><a href="#cb12-175"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(seu, <span class="at">npcs =</span> <span class="dv">20</span>)</span>
-<span id="cb12-176"><a href="#cb12-176"></a><span class="in">```</span></span>
-<span id="cb12-177"><a href="#cb12-177"></a></span>
-<span id="cb12-180"><a href="#cb12-180"></a><span class="in">```{r}</span></span>
-<span id="cb12-181"><a href="#cb12-181"></a><span class="co">#| label: doublet-finder</span></span>
-<span id="cb12-182"><a href="#cb12-182"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-183"><a href="#cb12-183"></a></span>
-<span id="cb12-184"><a href="#cb12-184"></a><span class="fu">library</span>(DoubletFinder)</span>
-<span id="cb12-185"><a href="#cb12-185"></a></span>
-<span id="cb12-186"><a href="#cb12-186"></a><span class="co"># Expected doublet rate: ~0.8% per 1,000 cells recovered (10x estimate)</span></span>
-<span id="cb12-187"><a href="#cb12-187"></a>nExp <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fl">0.075</span> <span class="sc">*</span> <span class="fu">ncol</span>(seu))</span>
-<span id="cb12-188"><a href="#cb12-188"></a></span>
-<span id="cb12-189"><a href="#cb12-189"></a>seu <span class="ot">&lt;-</span> <span class="fu">doubletFinder</span>(</span>
-<span id="cb12-190"><a href="#cb12-190"></a>  seu,</span>
-<span id="cb12-191"><a href="#cb12-191"></a>  <span class="at">PCs     =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>,</span>
-<span id="cb12-192"><a href="#cb12-192"></a>  <span class="at">pN      =</span> <span class="fl">0.25</span>,</span>
-<span id="cb12-193"><a href="#cb12-193"></a>  <span class="at">pK      =</span> <span class="fl">0.09</span>,   <span class="co"># pK should be optimised per sample — see ?paramSweep</span></span>
-<span id="cb12-194"><a href="#cb12-194"></a>  <span class="at">nExp    =</span> nExp,</span>
-<span id="cb12-195"><a href="#cb12-195"></a>  <span class="at">reuse.pANN =</span> <span class="cn">FALSE</span></span>
-<span id="cb12-196"><a href="#cb12-196"></a>)</span>
-<span id="cb12-197"><a href="#cb12-197"></a></span>
-<span id="cb12-198"><a href="#cb12-198"></a><span class="co"># Rename the classification column for clarity</span></span>
-<span id="cb12-199"><a href="#cb12-199"></a>seu<span class="sc">$</span>doublet_class <span class="ot">&lt;-</span> seu[[<span class="fu">grep</span>(<span class="st">"DF.classifications"</span>, <span class="fu">colnames</span>(seu<span class="sc">@</span>meta.data), <span class="at">value =</span> <span class="cn">TRUE</span>)]]</span>
-<span id="cb12-200"><a href="#cb12-200"></a></span>
-<span id="cb12-201"><a href="#cb12-201"></a><span class="co"># Remove doublets</span></span>
-<span id="cb12-202"><a href="#cb12-202"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(seu, <span class="at">subset =</span> doublet_class <span class="sc">==</span> <span class="st">"Singlet"</span>)</span>
-<span id="cb12-203"><a href="#cb12-203"></a><span class="fu">cat</span>(<span class="st">"Singlets retained:"</span>, <span class="fu">ncol</span>(seu), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb12-204"><a href="#cb12-204"></a><span class="in">```</span></span>
-<span id="cb12-205"><a href="#cb12-205"></a></span>
-<span id="cb12-206"><a href="#cb12-206"></a>::: {.callout-tip}</span>
-<span id="cb12-207"><a href="#cb12-207"></a><span class="fu">## Optimising pK</span></span>
-<span id="cb12-208"><a href="#cb12-208"></a>Run <span class="in">`paramSweep()`</span> followed by <span class="in">`summarizeSweep()`</span> and <span class="in">`find.pK()`</span> to determine</span>
-<span id="cb12-209"><a href="#cb12-209"></a>the optimal <span class="in">`pK`</span> value for your dataset. This adds ~5–10 minutes but meaningfully</span>
-<span id="cb12-210"><a href="#cb12-210"></a>improves doublet detection accuracy.</span>
-<span id="cb12-211"><a href="#cb12-211"></a>:::</span>
-<span id="cb12-212"><a href="#cb12-212"></a></span>
-<span id="cb12-213"><a href="#cb12-213"></a>---</span>
-<span id="cb12-214"><a href="#cb12-214"></a></span>
-<span id="cb12-215"><a href="#cb12-215"></a><span class="fu">## Summary Statistics</span></span>
-<span id="cb12-216"><a href="#cb12-216"></a></span>
-<span id="cb12-219"><a href="#cb12-219"></a><span class="in">```{r}</span></span>
-<span id="cb12-220"><a href="#cb12-220"></a><span class="co">#| label: summary</span></span>
-<span id="cb12-221"><a href="#cb12-221"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-222"><a href="#cb12-222"></a></span>
-<span id="cb12-223"><a href="#cb12-223"></a><span class="fu">data.frame</span>(</span>
-<span id="cb12-224"><a href="#cb12-224"></a>  <span class="at">Step       =</span> <span class="fu">c</span>(<span class="st">"After CreateSeuratObject"</span>, <span class="st">"After QC filter"</span>, <span class="st">"After doublet removal"</span>),</span>
-<span id="cb12-225"><a href="#cb12-225"></a>  <span class="at">Cells      =</span> <span class="fu">c</span>(ncol_raw, ncol_filtered, <span class="fu">ncol</span>(seu)),</span>
-<span id="cb12-226"><a href="#cb12-226"></a>  <span class="at">Median_nGene =</span> <span class="fu">c</span>(</span>
-<span id="cb12-227"><a href="#cb12-227"></a>    <span class="fu">median</span>(raw_meta<span class="sc">$</span>nFeature_RNA),</span>
-<span id="cb12-228"><a href="#cb12-228"></a>    <span class="fu">median</span>(filt_meta<span class="sc">$</span>nFeature_RNA),</span>
-<span id="cb12-229"><a href="#cb12-229"></a>    <span class="fu">median</span>(seu<span class="sc">$</span>nFeature_RNA)</span>
-<span id="cb12-230"><a href="#cb12-230"></a>  )</span>
-<span id="cb12-231"><a href="#cb12-231"></a>)</span>
-<span id="cb12-232"><a href="#cb12-232"></a><span class="in">```</span></span>
-<span id="cb12-233"><a href="#cb12-233"></a></span>
-<span id="cb12-234"><a href="#cb12-234"></a>---</span>
-<span id="cb12-235"><a href="#cb12-235"></a></span>
-<span id="cb12-236"><a href="#cb12-236"></a><span class="fu">## Save Checkpoint</span></span>
-<span id="cb12-237"><a href="#cb12-237"></a></span>
-<span id="cb12-240"><a href="#cb12-240"></a><span class="in">```{r}</span></span>
-<span id="cb12-241"><a href="#cb12-241"></a><span class="co">#| label: save</span></span>
-<span id="cb12-242"><a href="#cb12-242"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-243"><a href="#cb12-243"></a></span>
-<span id="cb12-244"><a href="#cb12-244"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_01_filtered.rds"</span>)</span>
-<span id="cb12-245"><a href="#cb12-245"></a><span class="in">```</span></span>
-<span id="cb12-246"><a href="#cb12-246"></a></span>
-<span id="cb12-247"><a href="#cb12-247"></a>---</span>
-<span id="cb12-248"><a href="#cb12-248"></a></span>
-<span id="cb12-249"><a href="#cb12-249"></a><span class="fu">## Session Info</span></span>
-<span id="cb12-250"><a href="#cb12-250"></a></span>
-<span id="cb12-253"><a href="#cb12-253"></a><span class="in">```{r}</span></span>
-<span id="cb12-254"><a href="#cb12-254"></a><span class="co">#| label: session-info</span></span>
-<span id="cb12-255"><a href="#cb12-255"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb12-256"><a href="#cb12-256"></a><span class="in">```</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "QC &amp; Filtering"</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="an">subtitle:</span><span class="co"> "Assess and remove low-quality cells before downstream analysis"</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="an">categories:</span><span class="co"> [scRNA-seq, Seurat, QC]</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">---</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>scRNA-seq · Chapter 01<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">## Overview</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a></span>
+<span id="cb13-11"><a href="#cb13-11"></a>Raw single-cell RNA-seq data invariably contains low-quality cells — damaged cells</span>
+<span id="cb13-12"><a href="#cb13-12"></a>with compromised membranes, empty droplets, or multiplets (two or more cells captured</span>
+<span id="cb13-13"><a href="#cb13-13"></a>in one droplet). Retaining these artefacts distorts downstream clustering and</span>
+<span id="cb13-14"><a href="#cb13-14"></a>differential expression results.</span>
+<span id="cb13-15"><a href="#cb13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16"></a>**This chapter covers:**</span>
+<span id="cb13-17"><a href="#cb13-17"></a></span>
+<span id="cb13-18"><a href="#cb13-18"></a><span class="ss">1. </span>Loading Cell Ranger output into a Seurat object</span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="ss">2. </span>Computing per-cell QC metrics</span>
+<span id="cb13-20"><a href="#cb13-20"></a><span class="ss">3. </span>Selecting filtering thresholds from QC distributions</span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="ss">4. </span>Doublet detection with DoubletFinder</span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="ss">5. </span>Saving the filtered object for normalization</span>
+<span id="cb13-23"><a href="#cb13-23"></a></span>
+<span id="cb13-24"><a href="#cb13-24"></a>---</span>
+<span id="cb13-25"><a href="#cb13-25"></a></span>
+<span id="cb13-26"><a href="#cb13-26"></a><span class="fu">## Setup</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a></span>
+<span id="cb13-30"><a href="#cb13-30"></a><span class="in">```{r}</span></span>
+<span id="cb13-31"><a href="#cb13-31"></a><span class="co">#| label: setup</span></span>
+<span id="cb13-32"><a href="#cb13-32"></a></span>
+<span id="cb13-33"><a href="#cb13-33"></a><span class="fu">library</span>(Seurat)</span>
+<span id="cb13-34"><a href="#cb13-34"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-35"><a href="#cb13-35"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb13-36"><a href="#cb13-36"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb13-37"><a href="#cb13-37"></a><span class="in">```</span></span>
+<span id="cb13-38"><a href="#cb13-38"></a></span>
+<span id="cb13-39"><a href="#cb13-39"></a>---</span>
+<span id="cb13-40"><a href="#cb13-40"></a></span>
+<span id="cb13-41"><a href="#cb13-41"></a><span class="fu">## Load Data</span></span>
+<span id="cb13-42"><a href="#cb13-42"></a></span>
+<span id="cb13-45"><a href="#cb13-45"></a><span class="in">```{r}</span></span>
+<span id="cb13-46"><a href="#cb13-46"></a><span class="co">#| label: load-data</span></span>
+<span id="cb13-47"><a href="#cb13-47"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-48"><a href="#cb13-48"></a></span>
+<span id="cb13-49"><a href="#cb13-49"></a><span class="co"># From Cell Ranger filtered output directory</span></span>
+<span id="cb13-50"><a href="#cb13-50"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X</span>(</span>
+<span id="cb13-51"><a href="#cb13-51"></a>  <span class="at">data.dir =</span> <span class="st">"data/raw/pbmc3k/filtered_feature_bc_matrix/"</span></span>
+<span id="cb13-52"><a href="#cb13-52"></a>)</span>
+<span id="cb13-53"><a href="#cb13-53"></a></span>
+<span id="cb13-54"><a href="#cb13-54"></a><span class="co"># --- OR from .h5 file ---</span></span>
+<span id="cb13-55"><a href="#cb13-55"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X_h5</span>(<span class="st">"data/raw/pbmc3k/filtered_feature_bc_matrix.h5"</span>)</span>
+<span id="cb13-56"><a href="#cb13-56"></a></span>
+<span id="cb13-57"><a href="#cb13-57"></a>seu <span class="ot">&lt;-</span> <span class="fu">CreateSeuratObject</span>(</span>
+<span id="cb13-58"><a href="#cb13-58"></a>  <span class="at">counts      =</span> counts,</span>
+<span id="cb13-59"><a href="#cb13-59"></a>  <span class="at">project     =</span> <span class="st">"PBMC3k"</span>,</span>
+<span id="cb13-60"><a href="#cb13-60"></a>  <span class="at">min.cells   =</span> <span class="dv">3</span>,    <span class="co"># retain genes detected in ≥ 3 cells</span></span>
+<span id="cb13-61"><a href="#cb13-61"></a>  <span class="at">min.features =</span> <span class="dv">200</span>  <span class="co"># retain cells with ≥ 200 genes detected</span></span>
+<span id="cb13-62"><a href="#cb13-62"></a>)</span>
+<span id="cb13-63"><a href="#cb13-63"></a></span>
+<span id="cb13-64"><a href="#cb13-64"></a>seu</span>
+<span id="cb13-65"><a href="#cb13-65"></a><span class="in">```</span></span>
+<span id="cb13-66"><a href="#cb13-66"></a></span>
+<span id="cb13-67"><a href="#cb13-67"></a>::: {.callout-note}</span>
+<span id="cb13-68"><a href="#cb13-68"></a><span class="in">`min.cells = 3`</span> and <span class="in">`min.features = 200`</span> are deliberately loose.</span>
+<span id="cb13-69"><a href="#cb13-69"></a>Stricter thresholds are applied after inspecting QC metric distributions.</span>
+<span id="cb13-70"><a href="#cb13-70"></a>:::</span>
+<span id="cb13-71"><a href="#cb13-71"></a></span>
+<span id="cb13-72"><a href="#cb13-72"></a>---</span>
+<span id="cb13-73"><a href="#cb13-73"></a></span>
+<span id="cb13-74"><a href="#cb13-74"></a><span class="fu">## Compute QC Metrics</span></span>
+<span id="cb13-75"><a href="#cb13-75"></a></span>
+<span id="cb13-78"><a href="#cb13-78"></a><span class="in">```{r}</span></span>
+<span id="cb13-79"><a href="#cb13-79"></a><span class="co">#| label: qc-metrics</span></span>
+<span id="cb13-80"><a href="#cb13-80"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-81"><a href="#cb13-81"></a></span>
+<span id="cb13-82"><a href="#cb13-82"></a><span class="co"># Mitochondrial gene percentage — high % indicates damaged/dying cells</span></span>
+<span id="cb13-83"><a href="#cb13-83"></a>seu[[<span class="st">"pct_mt"</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(seu, <span class="at">pattern =</span> <span class="st">"^MT-"</span>)</span>
+<span id="cb13-84"><a href="#cb13-84"></a></span>
+<span id="cb13-85"><a href="#cb13-85"></a><span class="co"># Ribosomal gene percentage — context-dependent, informative to track</span></span>
+<span id="cb13-86"><a href="#cb13-86"></a>seu[[<span class="st">"pct_rb"</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(seu, <span class="at">pattern =</span> <span class="st">"^RP[SL]"</span>)</span>
+<span id="cb13-87"><a href="#cb13-87"></a></span>
+<span id="cb13-88"><a href="#cb13-88"></a><span class="co"># Preview metadata</span></span>
+<span id="cb13-89"><a href="#cb13-89"></a><span class="fu">head</span>(seu<span class="sc">@</span>meta.data, <span class="dv">5</span>)</span>
+<span id="cb13-90"><a href="#cb13-90"></a><span class="in">```</span></span>
+<span id="cb13-91"><a href="#cb13-91"></a></span>
+<span id="cb13-92"><a href="#cb13-92"></a>---</span>
+<span id="cb13-93"><a href="#cb13-93"></a></span>
+<span id="cb13-94"><a href="#cb13-94"></a><span class="fu">## Visualise QC Distributions</span></span>
+<span id="cb13-95"><a href="#cb13-95"></a></span>
+<span id="cb13-98"><a href="#cb13-98"></a><span class="in">```{r}</span></span>
+<span id="cb13-99"><a href="#cb13-99"></a><span class="co">#| label: qc-violin</span></span>
+<span id="cb13-100"><a href="#cb13-100"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-101"><a href="#cb13-101"></a><span class="co">#| fig-cap: "Per-cell QC metrics before filtering. Dashed lines indicate candidate thresholds."</span></span>
+<span id="cb13-102"><a href="#cb13-102"></a></span>
+<span id="cb13-103"><a href="#cb13-103"></a><span class="fu">VlnPlot</span>(</span>
+<span id="cb13-104"><a href="#cb13-104"></a>  seu,</span>
+<span id="cb13-105"><a href="#cb13-105"></a>  <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"nFeature_RNA"</span>, <span class="st">"nCount_RNA"</span>, <span class="st">"pct_mt"</span>),</span>
+<span id="cb13-106"><a href="#cb13-106"></a>  <span class="at">ncol     =</span> <span class="dv">3</span>,</span>
+<span id="cb13-107"><a href="#cb13-107"></a>  <span class="at">pt.size  =</span> <span class="fl">0.05</span>,</span>
+<span id="cb13-108"><a href="#cb13-108"></a>  <span class="at">alpha    =</span> <span class="fl">0.3</span></span>
+<span id="cb13-109"><a href="#cb13-109"></a>) <span class="sc">&amp;</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb13-110"><a href="#cb13-110"></a><span class="in">```</span></span>
+<span id="cb13-111"><a href="#cb13-111"></a></span>
+<span id="cb13-114"><a href="#cb13-114"></a><span class="in">```{r}</span></span>
+<span id="cb13-115"><a href="#cb13-115"></a><span class="co">#| label: qc-scatter</span></span>
+<span id="cb13-116"><a href="#cb13-116"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-117"><a href="#cb13-117"></a><span class="co">#| fig-cap: "Scatter plots reveal relationships between QC metrics."</span></span>
+<span id="cb13-118"><a href="#cb13-118"></a></span>
+<span id="cb13-119"><a href="#cb13-119"></a>p1 <span class="ot">&lt;-</span> <span class="fu">FeatureScatter</span>(seu, <span class="st">"nCount_RNA"</span>, <span class="st">"nFeature_RNA"</span>) <span class="sc">+</span></span>
+<span id="cb13-120"><a href="#cb13-120"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">6000</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"#FF6B6B"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>)</span>
+<span id="cb13-121"><a href="#cb13-121"></a></span>
+<span id="cb13-122"><a href="#cb13-122"></a>p2 <span class="ot">&lt;-</span> <span class="fu">FeatureScatter</span>(seu, <span class="st">"nCount_RNA"</span>, <span class="st">"pct_mt"</span>) <span class="sc">+</span></span>
+<span id="cb13-123"><a href="#cb13-123"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">20</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"#FF6B6B"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>)</span>
+<span id="cb13-124"><a href="#cb13-124"></a></span>
+<span id="cb13-125"><a href="#cb13-125"></a>p1 <span class="sc">|</span> p2</span>
+<span id="cb13-126"><a href="#cb13-126"></a><span class="in">```</span></span>
+<span id="cb13-127"><a href="#cb13-127"></a></span>
+<span id="cb13-128"><a href="#cb13-128"></a>---</span>
+<span id="cb13-129"><a href="#cb13-129"></a></span>
+<span id="cb13-130"><a href="#cb13-130"></a><span class="fu">## Apply Filters</span></span>
+<span id="cb13-131"><a href="#cb13-131"></a></span>
+<span id="cb13-134"><a href="#cb13-134"></a><span class="in">```{r}</span></span>
+<span id="cb13-135"><a href="#cb13-135"></a><span class="co">#| label: filter</span></span>
+<span id="cb13-136"><a href="#cb13-136"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-137"><a href="#cb13-137"></a></span>
+<span id="cb13-138"><a href="#cb13-138"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
+<span id="cb13-139"><a href="#cb13-139"></a>  seu,</span>
+<span id="cb13-140"><a href="#cb13-140"></a>  <span class="at">subset =</span> nFeature_RNA <span class="sc">&gt;</span> <span class="dv">200</span>  <span class="sc">&amp;</span></span>
+<span id="cb13-141"><a href="#cb13-141"></a>           nFeature_RNA <span class="sc">&lt;</span> <span class="dv">6000</span> <span class="sc">&amp;</span></span>
+<span id="cb13-142"><a href="#cb13-142"></a>           pct_mt <span class="sc">&lt;</span> <span class="dv">20</span></span>
+<span id="cb13-143"><a href="#cb13-143"></a>)</span>
+<span id="cb13-144"><a href="#cb13-144"></a></span>
+<span id="cb13-145"><a href="#cb13-145"></a><span class="fu">cat</span>(<span class="st">"Cells retained:"</span>, <span class="fu">ncol</span>(seu), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb13-146"><a href="#cb13-146"></a><span class="in">```</span></span>
+<span id="cb13-147"><a href="#cb13-147"></a></span>
+<span id="cb13-148"><a href="#cb13-148"></a>::: {.callout-warning}</span>
+<span id="cb13-149"><a href="#cb13-149"></a><span class="fu">## Threshold Selection is Dataset-Specific</span></span>
+<span id="cb13-150"><a href="#cb13-150"></a>The values above are appropriate for PBMC datasets. Adjust based on:</span>
+<span id="cb13-151"><a href="#cb13-151"></a></span>
+<span id="cb13-152"><a href="#cb13-152"></a><span class="ss">- </span>**Cell type composition** — neurons and hepatocytes naturally express more genes</span>
+<span id="cb13-153"><a href="#cb13-153"></a><span class="ss">- </span>**Sequencing depth** — deeper libraries shift the <span class="in">`nCount_RNA`</span> distribution</span>
+<span id="cb13-154"><a href="#cb13-154"></a><span class="ss">- </span>**Tissue of origin** — immune cells have lower ambient RNA than solid tissues</span>
+<span id="cb13-155"><a href="#cb13-155"></a>:::</span>
+<span id="cb13-156"><a href="#cb13-156"></a></span>
+<span id="cb13-157"><a href="#cb13-157"></a>---</span>
+<span id="cb13-158"><a href="#cb13-158"></a></span>
+<span id="cb13-159"><a href="#cb13-159"></a><span class="fu">## Doublet Detection</span></span>
+<span id="cb13-160"><a href="#cb13-160"></a></span>
+<span id="cb13-161"><a href="#cb13-161"></a>Doublets are droplets containing two cells that appear as one. Even after ambient</span>
+<span id="cb13-162"><a href="#cb13-162"></a>RNA filtering, doublets can form distinct spurious clusters.</span>
+<span id="cb13-163"><a href="#cb13-163"></a></span>
+<span id="cb13-166"><a href="#cb13-166"></a><span class="in">```{r}</span></span>
+<span id="cb13-167"><a href="#cb13-167"></a><span class="co">#| label: doublet-normalization</span></span>
+<span id="cb13-168"><a href="#cb13-168"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-169"><a href="#cb13-169"></a></span>
+<span id="cb13-170"><a href="#cb13-170"></a><span class="co"># DoubletFinder requires a preliminary normalization + PCA</span></span>
+<span id="cb13-171"><a href="#cb13-171"></a><span class="co"># (these will be done properly in Chapter 02; here they are run solely for doublet detection)</span></span>
+<span id="cb13-172"><a href="#cb13-172"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(seu)</span>
+<span id="cb13-173"><a href="#cb13-173"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(seu)</span>
+<span id="cb13-174"><a href="#cb13-174"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu)</span>
+<span id="cb13-175"><a href="#cb13-175"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(seu, <span class="at">npcs =</span> <span class="dv">20</span>)</span>
+<span id="cb13-176"><a href="#cb13-176"></a><span class="in">```</span></span>
+<span id="cb13-177"><a href="#cb13-177"></a></span>
+<span id="cb13-180"><a href="#cb13-180"></a><span class="in">```{r}</span></span>
+<span id="cb13-181"><a href="#cb13-181"></a><span class="co">#| label: doublet-finder</span></span>
+<span id="cb13-182"><a href="#cb13-182"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-183"><a href="#cb13-183"></a></span>
+<span id="cb13-184"><a href="#cb13-184"></a><span class="fu">library</span>(DoubletFinder)</span>
+<span id="cb13-185"><a href="#cb13-185"></a></span>
+<span id="cb13-186"><a href="#cb13-186"></a><span class="co"># Expected doublet rate: ~0.8% per 1,000 cells recovered (10x estimate)</span></span>
+<span id="cb13-187"><a href="#cb13-187"></a>nExp <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fl">0.075</span> <span class="sc">*</span> <span class="fu">ncol</span>(seu))</span>
+<span id="cb13-188"><a href="#cb13-188"></a></span>
+<span id="cb13-189"><a href="#cb13-189"></a>seu <span class="ot">&lt;-</span> <span class="fu">doubletFinder</span>(</span>
+<span id="cb13-190"><a href="#cb13-190"></a>  seu,</span>
+<span id="cb13-191"><a href="#cb13-191"></a>  <span class="at">PCs     =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>,</span>
+<span id="cb13-192"><a href="#cb13-192"></a>  <span class="at">pN      =</span> <span class="fl">0.25</span>,</span>
+<span id="cb13-193"><a href="#cb13-193"></a>  <span class="at">pK      =</span> <span class="fl">0.09</span>,   <span class="co"># pK should be optimised per sample — see ?paramSweep</span></span>
+<span id="cb13-194"><a href="#cb13-194"></a>  <span class="at">nExp    =</span> nExp,</span>
+<span id="cb13-195"><a href="#cb13-195"></a>  <span class="at">reuse.pANN =</span> <span class="cn">FALSE</span></span>
+<span id="cb13-196"><a href="#cb13-196"></a>)</span>
+<span id="cb13-197"><a href="#cb13-197"></a></span>
+<span id="cb13-198"><a href="#cb13-198"></a><span class="co"># Rename the classification column for clarity</span></span>
+<span id="cb13-199"><a href="#cb13-199"></a>seu<span class="sc">$</span>doublet_class <span class="ot">&lt;-</span> seu[[<span class="fu">grep</span>(<span class="st">"DF.classifications"</span>, <span class="fu">colnames</span>(seu<span class="sc">@</span>meta.data), <span class="at">value =</span> <span class="cn">TRUE</span>)]]</span>
+<span id="cb13-200"><a href="#cb13-200"></a></span>
+<span id="cb13-201"><a href="#cb13-201"></a><span class="co"># Remove doublets</span></span>
+<span id="cb13-202"><a href="#cb13-202"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(seu, <span class="at">subset =</span> doublet_class <span class="sc">==</span> <span class="st">"Singlet"</span>)</span>
+<span id="cb13-203"><a href="#cb13-203"></a><span class="fu">cat</span>(<span class="st">"Singlets retained:"</span>, <span class="fu">ncol</span>(seu), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb13-204"><a href="#cb13-204"></a><span class="in">```</span></span>
+<span id="cb13-205"><a href="#cb13-205"></a></span>
+<span id="cb13-206"><a href="#cb13-206"></a>::: {.callout-tip}</span>
+<span id="cb13-207"><a href="#cb13-207"></a><span class="fu">## Optimising pK</span></span>
+<span id="cb13-208"><a href="#cb13-208"></a>Run <span class="in">`paramSweep()`</span> followed by <span class="in">`summarizeSweep()`</span> and <span class="in">`find.pK()`</span> to determine</span>
+<span id="cb13-209"><a href="#cb13-209"></a>the optimal <span class="in">`pK`</span> value for your dataset. This adds ~5–10 minutes but meaningfully</span>
+<span id="cb13-210"><a href="#cb13-210"></a>improves doublet detection accuracy.</span>
+<span id="cb13-211"><a href="#cb13-211"></a>:::</span>
+<span id="cb13-212"><a href="#cb13-212"></a></span>
+<span id="cb13-213"><a href="#cb13-213"></a>---</span>
+<span id="cb13-214"><a href="#cb13-214"></a></span>
+<span id="cb13-215"><a href="#cb13-215"></a><span class="fu">## Summary Statistics</span></span>
+<span id="cb13-216"><a href="#cb13-216"></a></span>
+<span id="cb13-219"><a href="#cb13-219"></a><span class="in">```{r}</span></span>
+<span id="cb13-220"><a href="#cb13-220"></a><span class="co">#| label: summary</span></span>
+<span id="cb13-221"><a href="#cb13-221"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-222"><a href="#cb13-222"></a></span>
+<span id="cb13-223"><a href="#cb13-223"></a><span class="fu">data.frame</span>(</span>
+<span id="cb13-224"><a href="#cb13-224"></a>  <span class="at">Step       =</span> <span class="fu">c</span>(<span class="st">"After CreateSeuratObject"</span>, <span class="st">"After QC filter"</span>, <span class="st">"After doublet removal"</span>),</span>
+<span id="cb13-225"><a href="#cb13-225"></a>  <span class="at">Cells      =</span> <span class="fu">c</span>(ncol_raw, ncol_filtered, <span class="fu">ncol</span>(seu)),</span>
+<span id="cb13-226"><a href="#cb13-226"></a>  <span class="at">Median_nGene =</span> <span class="fu">c</span>(</span>
+<span id="cb13-227"><a href="#cb13-227"></a>    <span class="fu">median</span>(raw_meta<span class="sc">$</span>nFeature_RNA),</span>
+<span id="cb13-228"><a href="#cb13-228"></a>    <span class="fu">median</span>(filt_meta<span class="sc">$</span>nFeature_RNA),</span>
+<span id="cb13-229"><a href="#cb13-229"></a>    <span class="fu">median</span>(seu<span class="sc">$</span>nFeature_RNA)</span>
+<span id="cb13-230"><a href="#cb13-230"></a>  )</span>
+<span id="cb13-231"><a href="#cb13-231"></a>)</span>
+<span id="cb13-232"><a href="#cb13-232"></a><span class="in">```</span></span>
+<span id="cb13-233"><a href="#cb13-233"></a></span>
+<span id="cb13-234"><a href="#cb13-234"></a>---</span>
+<span id="cb13-235"><a href="#cb13-235"></a></span>
+<span id="cb13-236"><a href="#cb13-236"></a><span class="fu">## Save Checkpoint</span></span>
+<span id="cb13-237"><a href="#cb13-237"></a></span>
+<span id="cb13-240"><a href="#cb13-240"></a><span class="in">```{r}</span></span>
+<span id="cb13-241"><a href="#cb13-241"></a><span class="co">#| label: save</span></span>
+<span id="cb13-242"><a href="#cb13-242"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-243"><a href="#cb13-243"></a></span>
+<span id="cb13-244"><a href="#cb13-244"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_01_filtered.rds"</span>)</span>
+<span id="cb13-245"><a href="#cb13-245"></a><span class="in">```</span></span>
+<span id="cb13-246"><a href="#cb13-246"></a></span>
+<span id="cb13-247"><a href="#cb13-247"></a>---</span>
+<span id="cb13-248"><a href="#cb13-248"></a></span>
+<span id="cb13-249"><a href="#cb13-249"></a><span class="fu">## Session Info</span></span>
+<span id="cb13-250"><a href="#cb13-250"></a></span>
+<span id="cb13-253"><a href="#cb13-253"></a><span class="in">```{r}</span></span>
+<span id="cb13-254"><a href="#cb13-254"></a><span class="co">#| label: session-info</span></span>
+<span id="cb13-255"><a href="#cb13-255"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb13-256"><a href="#cb13-256"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Sarintip Nguanthanee</p>
+<p>© 2025 Sarintip Nguantad</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
