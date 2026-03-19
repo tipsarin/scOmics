@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-56ea669ec5826bc66574350f54d6c074.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c779bbbf0312832bf623e97e8661afbd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-fdf00b7693c76302df3917c211bb8cac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">6.2</span> Setup</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(Seurat)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(Signac)</span>
@@ -324,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-10x-multiome-data" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="load-10x-multiome-data"><span class="header-section-number">6.3</span> Load 10x Multiome Data</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Read Cell Ranger ARC output</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X_h5</span>(<span class="st">"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5"</span>)</span>
@@ -342,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="create-seurat-signac-object" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="create-seurat-signac-object"><span class="header-section-number">6.4</span> Create Seurat + Signac Object</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Genome annotation</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>annotation <span class="ot">&lt;-</span> <span class="fu">GetGRangesFromEnsDb</span>(<span class="at">ensdb =</span> EnsDb.Hsapiens.v86)</span>
@@ -368,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="atac-qc" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="atac-qc"><span class="header-section-number">6.5</span> ATAC QC</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
@@ -388,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">VlnPlot</span>(</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  seu,</span>
@@ -402,7 +402,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="process-each-modality" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="process-each-modality"><span class="header-section-number">6.6</span> Process Each Modality</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"RNA"</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(seu, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
@@ -410,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>seu <span class="ot">&lt;-</span> <span class="fu">RunTFIDF</span>(seu)</span>
@@ -423,7 +423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="joint-wnn-embedding" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="joint-wnn-embedding"><span class="header-section-number">6.7</span> Joint WNN Embedding</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindMultiModalNeighbors</span>(</span>
 <span id="cb8-2"><a href="#cb8-2"></a>  seu,</span>
@@ -443,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">DimPlot</span>(seu, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>, <span class="at">label =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">NoLegend</span>()</span>
 <span id="cb9-2"><a href="#cb9-2"></a>p2 <span class="ot">&lt;-</span> <span class="fu">FeaturePlot</span>(seu, <span class="at">features =</span> <span class="st">"RNA.weight"</span>, <span class="at">reduction =</span> <span class="st">"wnn.umap"</span>)</span>
@@ -455,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="link-peaks-to-genes" class="level2" data-number="6.8">
 <h2 data-number="6.8" class="anchored" data-anchor-id="link-peaks-to-genes"><span class="header-section-number">6.8</span> Link Peaks to Genes</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">DefaultAssay</span>(seu) <span class="ot">&lt;-</span> <span class="st">"ATAC"</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
@@ -468,7 +468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">CoveragePlot</span>(</span>
 <span id="cb11-2"><a href="#cb11-2"></a>  seu,</span>
@@ -485,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="save" class="level2" data-number="6.9">
 <h2 data-number="6.9" class="anchored" data-anchor-id="save"><span class="header-section-number">6.9</span> Save</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_multiome_signac.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -495,7 +495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="session-info" class="level2" data-number="6.10">
 <h2 data-number="6.10" class="anchored" data-anchor-id="session-info"><span class="header-section-number">6.10</span> Session Info</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>

@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-56ea669ec5826bc66574350f54d6c074.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c779bbbf0312832bf623e97e8661afbd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-fdf00b7693c76302df3917c211bb8cac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -308,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">3.2</span> Setup</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(Seurat)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2)</span>
@@ -321,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-data" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="load-data"><span class="header-section-number">3.3</span> Load Data</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># From Cell Ranger filtered output directory</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>counts <span class="ot">&lt;-</span> <span class="fu">Read10X</span>(</span>
@@ -359,7 +359,7 @@ Note
 <section id="compute-qc-metrics" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="compute-qc-metrics"><span class="header-section-number">3.4</span> Compute QC Metrics</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Mitochondrial gene percentage — high % indicates damaged/dying cells</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>seu[[<span class="st">"pct_mt"</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(seu, <span class="at">pattern =</span> <span class="st">"^MT-"</span>)</span>
@@ -376,7 +376,7 @@ Note
 <section id="visualise-qc-distributions" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="visualise-qc-distributions"><span class="header-section-number">3.5</span> Visualise QC Distributions</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">VlnPlot</span>(</span>
 <span id="cb4-2"><a href="#cb4-2"></a>  seu,</span>
@@ -388,7 +388,7 @@ Note
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">FeatureScatter</span>(seu, <span class="st">"nCount_RNA"</span>, <span class="st">"nFeature_RNA"</span>) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">6000</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"#FF6B6B"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>)</span>
@@ -404,7 +404,7 @@ Note
 <section id="apply-filters" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="apply-filters"><span class="header-section-number">3.6</span> Apply Filters</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
 <span id="cb6-2"><a href="#cb6-2"></a>  seu,</span>
@@ -440,7 +440,7 @@ Note
 <h2 data-number="3.7" class="anchored" data-anchor-id="doublet-detection"><span class="header-section-number">3.7</span> Doublet Detection</h2>
 <p>Doublets are droplets containing two cells that appear as one. Even after ambient RNA filtering, doublets can form distinct spurious clusters.</p>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># DoubletFinder requires a preliminary normalization + PCA</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co"># (these will be done properly in Chapter 02; here they are run solely for doublet detection)</span></span>
@@ -451,7 +451,7 @@ Note
 </details>
 </div>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(DoubletFinder)</span>
 <span id="cb8-2"><a href="#cb8-2"></a></span>
@@ -493,7 +493,7 @@ Note
 <section id="summary-statistics" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="summary-statistics"><span class="header-section-number">3.8</span> Summary Statistics</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">data.frame</span>(</span>
 <span id="cb9-2"><a href="#cb9-2"></a>  <span class="at">Step       =</span> <span class="fu">c</span>(<span class="st">"After CreateSeuratObject"</span>, <span class="st">"After QC filter"</span>, <span class="st">"After doublet removal"</span>),</span>
@@ -511,7 +511,7 @@ Note
 <section id="save-checkpoint" class="level2" data-number="3.9">
 <h2 data-number="3.9" class="anchored" data-anchor-id="save-checkpoint"><span class="header-section-number">3.9</span> Save Checkpoint</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_01_filtered.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -521,7 +521,7 @@ Note
 <section id="session-info" class="level2" data-number="3.10">
 <h2 data-number="3.10" class="anchored" data-anchor-id="session-info"><span class="header-section-number">3.10</span> Session Info</h2>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
