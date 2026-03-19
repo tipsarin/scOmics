@@ -1,6 +1,7 @@
 :root {
   --quarto-body-width: 1100px; /* (normally 900px) */
-  --quarto-sidebar-width: 250px;
+  --quarto-sidebar-width: 300px;
+  --quarto-margin-width: 300px;
 }
 
 
@@ -8,4 +9,17 @@
 main.content {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ปรับแต่งหน้าตา Code Block เพิ่มเติม */
+.listing-category, .code-copy-button, div.sourceCode {
+  border-radius: 8px; /* ทำให้มุมโค้งมนดูสวยขึ้น */
+  border: none;       /* เอาเส้นขอบออกถ้าไม่ชอบ */
+}
+
+/* ถ้าอยากให้สีพื้นหลังในโหมดพับโค้ด (Code Fold) ดูเนียนตา */
+details.code-fold {
+  background: #232629; 
+  border-radius: 8px;
+  padding: 0.5em;
 }
