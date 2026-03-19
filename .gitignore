@@ -1,0 +1,32 @@
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rds
+
+# renv — commit renv.lock but not the library itself
+renv/library/
+renv/staging/
+
+# Quarto
+.quarto/
+
+# Keep _freeze/ in version control (avoids re-running on CI)
+# To ignore: uncomment the line below
+# _freeze/
+
+# Large data files — use external storage (Zenodo, OSF, S3)
+data/raw/
+data/processed/
+*.h5
+*.h5ad
+*.h5seurat
+*.bam
+*.bai
+*.fastq.gz
+*.fragments.tsv.gz
+
+# OS
+.DS_Store
+Thumbs.db

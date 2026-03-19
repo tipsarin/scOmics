@@ -1,0 +1,234 @@
+---
+title: "QC & Filtering"
+subtitle: "Assess and remove low-quality cells before downstream analysis"
+categories: [scRNA-seq, Seurat, QC]
+---
+
+<span class="chapter-badge">scRNA-seq · Chapter 01</span>
+
+## Overview
+
+Raw single-cell RNA-seq data invariably contains low-quality cells — damaged cells
+with compromised membranes, empty droplets, or multiplets (two or more cells captured
+in one droplet). Retaining these artefacts distorts downstream clustering and
+differential expression results.
+
+**This chapter covers:**
+
+1. Loading Cell Ranger output into a Seurat object
+2. Computing per-cell QC metrics
+3. Selecting filtering thresholds from QC distributions
+4. Doublet detection with DoubletFinder
+5. Saving the filtered object for normalization
+
+---
+
+## Setup
+
+```{r}
+#| label: setup
+
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(dplyr)
+```
+
+---
+
+## Load Data
+
+```{r}
+#| label: load-data
+#| eval: false
+
+# From Cell Ranger filtered output directory
+counts <- Read10X(
+  data.dir = "data/raw/pbmc3k/filtered_feature_bc_matrix/"
+)
+
+# --- OR from .h5 file ---
+counts <- Read10X_h5("data/raw/pbmc3k/filtered_feature_bc_matrix.h5")
+
+seu <- CreateSeuratObject(
+  counts      = counts,
+  project     = "PBMC3k",
+  min.cells   = 3,    # retain genes detected in ≥ 3 cells
+  min.features = 200  # retain cells with ≥ 200 genes detected
+)
+
+seu
+```
+
+::: {.callout-note}
+`min.cells = 3` and `min.features = 200` are deliberately loose.
+Stricter thresholds are applied after inspecting QC metric distributions.
+:::
+
+---
+
+## Compute QC Metrics
+
+```{r}
+#| label: qc-metrics
+#| eval: false
+
+# Mitochondrial gene percentage — high % indicates damaged/dying cells
+seu[["pct_mt"]] <- PercentageFeatureSet(seu, pattern = "^MT-")
+
+# Ribosomal gene percentage — context-dependent, informative to track
+seu[["pct_rb"]] <- PercentageFeatureSet(seu, pattern = "^RP[SL]")
+
+# Preview metadata
+head(seu@meta.data, 5)
+```
+
+---
+
+## Visualise QC Distributions
+
+```{r}
+#| label: qc-violin
+#| eval: false
+#| fig-cap: "Per-cell QC metrics before filtering. Dashed lines indicate candidate thresholds."
+
+VlnPlot(
+  seu,
+  features = c("nFeature_RNA", "nCount_RNA", "pct_mt"),
+  ncol     = 3,
+  pt.size  = 0.05,
+  alpha    = 0.3
+) & theme(axis.title.x = element_blank())
+```
+
+```{r}
+#| label: qc-scatter
+#| eval: false
+#| fig-cap: "Scatter plots reveal relationships between QC metrics."
+
+p1 <- FeatureScatter(seu, "nCount_RNA", "nFeature_RNA") +
+  geom_hline(yintercept = c(200, 6000), linetype = "dashed", color = "#FF6B6B", linewidth = 0.6)
+
+p2 <- FeatureScatter(seu, "nCount_RNA", "pct_mt") +
+  geom_hline(yintercept = 20, linetype = "dashed", color = "#FF6B6B", linewidth = 0.6)
+
+p1 | p2
+```
+
+---
+
+## Apply Filters
+
+```{r}
+#| label: filter
+#| eval: false
+
+seu <- subset(
+  seu,
+  subset = nFeature_RNA > 200  &
+           nFeature_RNA < 6000 &
+           pct_mt < 20
+)
+
+cat("Cells retained:", ncol(seu), "\n")
+```
+
+::: {.callout-warning}
+## Threshold Selection is Dataset-Specific
+The values above are appropriate for PBMC datasets. Adjust based on:
+
+- **Cell type composition** — neurons and hepatocytes naturally express more genes
+- **Sequencing depth** — deeper libraries shift the `nCount_RNA` distribution
+- **Tissue of origin** — immune cells have lower ambient RNA than solid tissues
+:::
+
+---
+
+## Doublet Detection
+
+Doublets are droplets containing two cells that appear as one. Even after ambient
+RNA filtering, doublets can form distinct spurious clusters.
+
+```{r}
+#| label: doublet-normalization
+#| eval: false
+
+# DoubletFinder requires a preliminary normalization + PCA
+# (these will be done properly in Chapter 02; here they are run solely for doublet detection)
+seu <- NormalizeData(seu)
+seu <- FindVariableFeatures(seu)
+seu <- ScaleData(seu)
+seu <- RunPCA(seu, npcs = 20)
+```
+
+```{r}
+#| label: doublet-finder
+#| eval: false
+
+library(DoubletFinder)
+
+# Expected doublet rate: ~0.8% per 1,000 cells recovered (10x estimate)
+nExp <- round(0.075 * ncol(seu))
+
+seu <- doubletFinder(
+  seu,
+  PCs     = 1:20,
+  pN      = 0.25,
+  pK      = 0.09,   # pK should be optimised per sample — see ?paramSweep
+  nExp    = nExp,
+  reuse.pANN = FALSE
+)
+
+# Rename the classification column for clarity
+seu$doublet_class <- seu[[grep("DF.classifications", colnames(seu@meta.data), value = TRUE)]]
+
+# Remove doublets
+seu <- subset(seu, subset = doublet_class == "Singlet")
+cat("Singlets retained:", ncol(seu), "\n")
+```
+
+::: {.callout-tip}
+## Optimising pK
+Run `paramSweep()` followed by `summarizeSweep()` and `find.pK()` to determine
+the optimal `pK` value for your dataset. This adds ~5–10 minutes but meaningfully
+improves doublet detection accuracy.
+:::
+
+---
+
+## Summary Statistics
+
+```{r}
+#| label: summary
+#| eval: false
+
+data.frame(
+  Step       = c("After CreateSeuratObject", "After QC filter", "After doublet removal"),
+  Cells      = c(ncol_raw, ncol_filtered, ncol(seu)),
+  Median_nGene = c(
+    median(raw_meta$nFeature_RNA),
+    median(filt_meta$nFeature_RNA),
+    median(seu$nFeature_RNA)
+  )
+)
+```
+
+---
+
+## Save Checkpoint
+
+```{r}
+#| label: save
+#| eval: false
+
+saveRDS(seu, "data/processed/seu_01_filtered.rds")
+```
+
+---
+
+## Session Info
+
+```{r}
+#| label: session-info
+sessionInfo()
+```

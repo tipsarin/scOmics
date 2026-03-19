@@ -1,0 +1,231 @@
+---
+title: "Signac: scRNA + scATAC Integration"
+subtitle: "Link chromatin accessibility to gene expression using Signac"
+categories: [Multi-omics, Signac, scATAC-seq, scRNA-seq]
+---
+
+<span class="chapter-badge">Multi-omics · Chapter 02</span>
+
+## Overview
+
+[Signac](https://stuartlab.org/signac/) extends Seurat to handle chromatin
+accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome),
+it enables joint analysis — linking open chromatin regions to gene expression
+at single-cell resolution.
+
+**This chapter covers:**
+
+1. Creating a Signac object from a 10x Multiome dataset
+2. ATAC-seq QC within Signac
+3. LSI dimensionality reduction
+4. Joint WNN embedding with matched RNA
+5. Linking peaks to genes
+
+---
+
+## Setup
+
+```{r}
+#| label: setup
+
+library(Seurat)
+library(Signac)
+library(EnsDb.Hsapiens.v86)
+library(BSgenome.Hsapiens.UCSC.hg38)
+library(ggplot2)
+library(patchwork)
+```
+
+---
+
+## Load 10x Multiome Data
+
+```{r}
+#| label: load-data
+#| eval: false
+
+# Read Cell Ranger ARC output
+counts <- Read10X_h5("data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5")
+
+# Separate RNA and ATAC matrices
+rna_counts  <- counts$`Gene Expression`
+atac_counts <- counts$Peaks
+
+# Load fragment file metadata
+fragpath <- "data/raw/pbmc_multiome/atac_fragments.tsv.gz"
+```
+
+---
+
+## Create Seurat + Signac Object
+
+```{r}
+#| label: create-object
+#| eval: false
+
+# Genome annotation
+annotation <- GetGRangesFromEnsDb(ensdb = EnsDb.Hsapiens.v86)
+seqlevels(annotation) <- paste0("chr", seqlevels(annotation))
+
+# Create chromatin assay
+atac_assay <- CreateChromatinAssay(
+  counts     = atac_counts,
+  sep        = c(":", "-"),
+  fragments  = fragpath,
+  annotation = annotation
+)
+
+# Build Seurat object with both modalities
+seu <- CreateSeuratObject(counts = rna_counts, assay = "RNA")
+seu[["ATAC"]] <- atac_assay
+
+seu
+```
+
+---
+
+## ATAC QC
+
+```{r}
+#| label: atac-qc
+#| eval: false
+
+DefaultAssay(seu) <- "ATAC"
+
+seu <- NucleosomeSignal(seu)
+seu <- TSSEnrichment(seu, fast = FALSE)
+
+# Filter
+seu <- subset(
+  seu,
+  subset = nCount_ATAC > 1000   &
+           nCount_ATAC < 100000 &
+           nCount_RNA  > 200    &
+           nCount_RNA  < 25000  &
+           nucleosome_signal < 2 &
+           TSS.enrichment > 1
+)
+```
+
+```{r}
+#| label: atac-qc-plot
+#| eval: false
+#| fig-cap: "ATAC QC metrics: nucleosome signal and TSS enrichment"
+
+VlnPlot(
+  seu,
+  features = c("nCount_ATAC", "TSS.enrichment", "nucleosome_signal"),
+  ncol = 3, pt.size = 0
+)
+```
+
+---
+
+## Process Each Modality
+
+```{r}
+#| label: process-rna
+#| eval: false
+
+DefaultAssay(seu) <- "RNA"
+seu <- SCTransform(seu, verbose = FALSE)
+seu <- RunPCA(seu, npcs = 30)
+```
+
+```{r}
+#| label: process-atac
+#| eval: false
+
+DefaultAssay(seu) <- "ATAC"
+seu <- RunTFIDF(seu)
+seu <- FindTopFeatures(seu, min.cutoff = "q0")
+seu <- RunSVD(seu)   # LSI
+```
+
+---
+
+## Joint WNN Embedding
+
+```{r}
+#| label: wnn
+#| eval: false
+
+seu <- FindMultiModalNeighbors(
+  seu,
+  reduction.list = list("pca", "lsi"),
+  dims.list      = list(1:30, 2:50),  # exclude LSI component 1 (correlated with depth)
+  modality.weight.name = "RNA.weight"
+)
+
+seu <- RunUMAP(
+  seu,
+  nn.name    = "weighted.nn",
+  reduction.name = "wnn.umap",
+  reduction.key  = "wnnUMAP_"
+)
+
+seu <- FindClusters(seu, graph.name = "wsnn", resolution = 0.8)
+```
+
+```{r}
+#| label: wnn-plot
+#| eval: false
+#| fig-cap: "WNN UMAP colored by cluster and RNA modality weight"
+
+p1 <- DimPlot(seu, reduction = "wnn.umap", label = TRUE) + NoLegend()
+p2 <- FeaturePlot(seu, features = "RNA.weight", reduction = "wnn.umap")
+p1 | p2
+```
+
+---
+
+## Link Peaks to Genes
+
+```{r}
+#| label: link-peaks
+#| eval: false
+
+DefaultAssay(seu) <- "ATAC"
+
+seu <- LinkPeaks(
+  seu,
+  peak.assay = "ATAC",
+  expression.assay = "SCT",
+  genes.use  = VariableFeatures(seu, assay = "SCT")
+)
+```
+
+```{r}
+#| label: coverage-plot
+#| eval: false
+#| fig-cap: "Coverage plot showing chromatin accessibility linked to MS4A1 (CD20)"
+
+CoveragePlot(
+  seu,
+  region     = "MS4A1",
+  features   = "MS4A1",
+  expression.assay = "SCT",
+  extend.upstream   = 500,
+  extend.downstream = 10000
+)
+```
+
+---
+
+## Save
+
+```{r}
+#| label: save
+#| eval: false
+
+saveRDS(seu, "data/processed/seu_multiome_signac.rds")
+```
+
+---
+
+## Session Info
+
+```{r}
+#| label: session-info
+sessionInfo()
+```

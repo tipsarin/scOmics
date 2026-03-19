@@ -1,0 +1,156 @@
+---
+title: "Normalization & Feature Selection"
+subtitle: "Correct for sequencing depth and identify highly variable genes"
+categories: [scRNA-seq, Seurat, Normalization]
+---
+
+<span class="chapter-badge">scRNA-seq · Chapter 02</span>
+
+## Overview
+
+Raw UMI counts are confounded by differences in sequencing depth across cells.
+Normalization removes this technical variation, allowing meaningful comparison
+of gene expression levels. Feature selection then focuses downstream analysis
+on genes that carry the most biological signal.
+
+**This chapter covers:**
+
+1. Log-normalization (classical approach)
+2. SCTransform v2 (variance-stabilizing approach)
+3. Highly variable gene (HVG) selection
+4. Data scaling
+
+---
+
+## Setup
+
+```{r}
+#| label: setup
+
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+```
+
+```{r}
+#| label: load
+#| eval: false
+
+seu <- readRDS("data/processed/seu_01_filtered.rds")
+```
+
+---
+
+## Approach 1: Log-Normalization
+
+The standard approach: normalize each cell to 10,000 counts (CPM-like),
+then apply a log1p transformation.
+
+```{r}
+#| label: lognorm
+#| eval: false
+
+seu <- NormalizeData(
+  seu,
+  normalization.method = "LogNormalize",
+  scale.factor         = 10000
+)
+```
+
+---
+
+## Approach 2: SCTransform v2 (Recommended)
+
+SCTransform uses regularized negative binomial regression to model
+the mean-variance relationship, producing Pearson residuals that are
+largely independent of sequencing depth.
+
+```{r}
+#| label: sctransform
+#| eval: false
+
+seu <- SCTransform(
+  seu,
+  vst.flavor          = "v2",         # use SCTransform v2
+  vars.to.regress     = "pct_mt",     # optionally regress out mt percentage
+  variable.features.n = 3000,
+  verbose             = FALSE
+)
+```
+
+::: {.callout-tip}
+## Which normalization should I use?
+- **LogNormalize** → faster, well-understood, compatible with all downstream Seurat functions
+- **SCTransform v2** → generally better for datasets with high sequencing depth variance;
+  required when integrating with `SCTransform`-normalized reference datasets
+
+For most published workflows, SCTransform v2 is now the default recommendation.
+:::
+
+---
+
+## Highly Variable Gene Selection
+
+HVGs are genes that vary more across cells than expected by chance —
+they capture biologically meaningful variation.
+
+```{r}
+#| label: hvg
+#| eval: false
+
+# If using LogNormalize (skip if using SCTransform — it selects HVGs internally)
+seu <- FindVariableFeatures(
+  seu,
+  selection.method = "vst",
+  nfeatures        = 3000
+)
+
+# Visualise top HVGs
+top20 <- head(VariableFeatures(seu), 20)
+
+p <- VariableFeaturePlot(seu)
+LabelPoints(plot = p, points = top20, repel = TRUE, xnudge = 0, ynudge = 0)
+```
+
+---
+
+## Scaling
+
+Scaling centers each gene to mean 0 and variance 1 across cells,
+preventing highly expressed genes from dominating PCA.
+
+```{r}
+#| label: scale
+#| eval: false
+
+# Scale only HVGs (faster; sufficient for PCA/UMAP)
+seu <- ScaleData(seu, features = VariableFeatures(seu))
+
+# --- OR scale all genes (required for heatmaps showing non-HVG genes) ---
+seu <- ScaleData(seu, features = rownames(seu))
+```
+
+::: {.callout-note}
+When using SCTransform, scaling is performed internally.
+Calling `ScaleData()` again is not necessary for standard workflows.
+:::
+
+---
+
+## Save Checkpoint
+
+```{r}
+#| label: save
+#| eval: false
+
+saveRDS(seu, "data/processed/seu_02_normalized.rds")
+```
+
+---
+
+## Session Info
+
+```{r}
+#| label: session-info
+sessionInfo()
+```

@@ -1,0 +1,152 @@
+/*-- scss:defaults --*/
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+$font-family-sans-serif:  'DM Sans', sans-serif;
+$font-family-monospace:   'JetBrains Mono', monospace;
+$headings-font-family:    'Syne', sans-serif;
+
+// Color palette — deep teal + slate
+$primary:        #1A936F;   // teal green
+$secondary:      #88D498;   // mint
+$accent:         #C6F1D6;   // pale mint
+$body-bg:        #0F1923;   // deep navy-black
+$body-color:     #E0E6ED;   // soft white
+$link-color:     #88D498;
+
+$code-bg:        #141E2B;
+$code-color:     #C6F1D6;
+$border-color:   #1E3040;
+
+$sidebar-bg:          #0A1018;
+$sidebar-fg:          #B0BEC8;
+$sidebar-hl:          #1A936F;
+
+$toc-color:           #88D498;
+$toc-active-border:   #1A936F;
+
+$navbar-bg:           #0A1018;
+$navbar-fg:           #E0E6ED;
+$navbar-hl:           #88D498;
+
+$body-font-size:       1rem;
+$line-height-base:     1.8;
+
+/*-- scss:rules --*/
+
+// ---- Headings ----
+h1, h2, h3, h4 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #E8F4F0;
+}
+
+h1 { font-size: 2.2rem; border-bottom: 2px solid $primary; padding-bottom: 0.4rem; }
+h2 { font-size: 1.55rem; color: $secondary; }
+h3 { font-size: 1.2rem; }
+
+// ---- Sidebar ----
+.sidebar nav[role="doc-toc"] {
+  border-left: 2px solid $border-color;
+}
+
+.sidebar-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: $secondary !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.chapter-number {
+  color: $primary;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+// ---- Code blocks ----
+div.sourceCode {
+  background: $code-bg !important;
+  border-radius: 8px;
+  border-left: 3px solid $primary;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  margin: 1.5rem 0;
+}
+
+pre.sourceCode {
+  padding: 1.1rem 1.25rem !important;
+}
+
+// Language-specific left border colors
+div.sourceCode.r        { border-left-color: #6BBCFC; }  // R = blue
+div.sourceCode.python   { border-left-color: #FFD97D; }  // Python = yellow
+div.sourceCode.bash     { border-left-color: #88D498; }  // bash = green
+
+// Code copy button
+.code-copy-button {
+  color: $secondary !important;
+  &:hover { color: $accent !important; }
+}
+
+// ---- Callout boxes ----
+.callout {
+  border-radius: 6px;
+  border-left-width: 4px;
+}
+.callout-note    { border-left-color: #6BBCFC; background: rgba(107,188,252,0.07); }
+.callout-tip     { border-left-color: $primary; background: rgba(26,147,111,0.08); }
+.callout-warning { border-left-color: #FFD97D; background: rgba(255,217,125,0.07); }
+.callout-important { border-left-color: #FF6B6B; background: rgba(255,107,107,0.07); }
+
+// ---- Chapter badge ----
+.chapter-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  background: rgba(26,147,111,0.2);
+  color: $secondary;
+  border: 1px solid $primary;
+  padding: 3px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+// ---- Tables ----
+table {
+  font-size: 0.9rem;
+  thead tr th {
+    background: rgba(26,147,111,0.2);
+    color: $secondary;
+    font-family: 'Syne', sans-serif;
+  }
+  tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+  }
+}
+
+// ---- TOC (right panel) ----
+nav#TOC {
+  font-size: 0.82rem;
+  a { color: #7A9BAD; }
+  a:hover, a.active { color: $secondary; }
+  .active { border-left: 2px solid $primary; padding-left: 4px; }
+}
+
+// ---- Scrollbar ----
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: $body-bg; }
+::-webkit-scrollbar-thumb { background: $border-color; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: $primary; }
+
+// ---- Inline code ----
+code:not(.sourceCode) {
+  background: rgba(136,212,152,0.12);
+  color: $secondary;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.88em;
+}

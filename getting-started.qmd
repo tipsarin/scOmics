@@ -1,0 +1,161 @@
+---
+title: "Getting Started"
+subtitle: "Installation, environment setup, and data download"
+---
+
+## Prerequisites
+
+These tutorials assume:
+
+- R ≥ 4.3.0 installed (or access to an HPC with R modules)
+- Familiarity with R syntax and Bioconductor
+- Basic understanding of single-cell library preparation
+
+---
+
+## Environment Management with `renv`
+
+We strongly recommend using [`renv`](https://rstudio.github.io/renv/) to lock package versions per project,
+ensuring reproducibility across machines and time.
+
+```r
+install.packages("renv")
+renv::init()       # initialise in your project directory
+renv::snapshot()   # lock current package versions to renv.lock
+renv::restore()    # restore from renv.lock on another machine
+```
+
+---
+
+## Install Core Packages
+
+### Seurat + Harmony + Monocle3
+
+```r
+# Seurat v5
+install.packages("Seurat")
+install.packages("SeuratData")
+
+# Harmony
+install.packages("harmony")
+
+# Monocle3 dependencies (Bioconductor)
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c(
+  "BiocGenerics", "DelayedArray", "DelayedMatrixStats",
+  "limma", "lme4", "S4Vectors", "SingleCellExperiment",
+  "SummarizedExperiment", "batchelor", "HDF5Array",
+  "terra", "ggrastr"
+))
+
+devtools::install_github("cole-trapnell-lab/monocle3")
+```
+
+### ArchR (scATAC-seq)
+
+```r
+devtools::install_github(
+  "GreenleafLab/ArchR",
+  ref   = "master",
+  repos = BiocManager::repositories()
+)
+ArchR::installExtraPackages()
+```
+
+::: {.callout-note}
+ArchR installation requires `devtools`. On HPC systems, you may need to load
+a `git` module before running `devtools::install_github()`.
+:::
+
+### Signac (scATAC / Multi-omics)
+
+```r
+BiocManager::install(c(
+  "BSgenome.Hsapiens.UCSC.hg38",
+  "EnsDb.Hsapiens.v86",
+  "TFBSTools",
+  "JASPAR2020"
+))
+install.packages("Signac")
+```
+
+### Visualization
+
+```r
+BiocManager::install("ComplexHeatmap")
+install.packages(c(
+  "ggplot2", "patchwork", "ggrepel",
+  "viridis", "RColorBrewer", "scales",
+  "cowplot", "ggsci"
+))
+```
+
+---
+
+## Running on HPC
+
+If you are working on an HPC cluster (as most of these workflows require),
+load modules before starting R:
+
+```bash
+module load R/4.3.3
+module load gcc/11.2.0    # required for some package compilation
+module load hdf5           # required for ArchR / HDF5Array
+```
+
+For memory-intensive steps (e.g., ArchR Arrow file creation, Harmony integration),
+request adequate resources:
+
+```bash
+# Example SLURM header
+#SBATCH --mem=64G
+#SBATCH --cpus-per-task=16
+#SBATCH --time=04:00:00
+```
+
+---
+
+## Datasets Used in This Book
+
+| Dataset | Cells | Source | Used in |
+|---------|-------|--------|---------|
+| PBMC 3k | ~2,700 | 10x Genomics | scRNA-seq basics |
+| PBMC 10k Multiome | ~10,000 | 10x Genomics | Multi-omics, Signac |
+| Mouse Brain Visium | ~3,000 spots | 10x Genomics | Spatial |
+| PBMC ATAC 10k | ~10,000 | 10x Genomics | scATAC / ArchR |
+
+Download scripts are provided at the start of each relevant tutorial.
+
+---
+
+## Recommended Project Structure
+
+```
+your-project/
+├── data/
+│   ├── raw/              # Cell Ranger output, fragment files
+│   └── processed/        # .rds, .h5seurat, ArchR project
+├── analysis/
+│   ├── 01_qc.R
+│   ├── 02_clustering.R
+│   └── ...
+├── figures/
+├── renv.lock
+└── README.md
+```
+
+::: {.callout-tip}
+## Saving Seurat Objects Between Steps
+Use `saveRDS()` and `readRDS()` to persist Seurat objects between chapters,
+avoiding re-running expensive computations:
+
+```r
+# Save
+saveRDS(seu, "data/processed/seu_02_normalized.rds")
+
+# Load
+seu <- readRDS("data/processed/seu_02_normalized.rds")
+```
+:::

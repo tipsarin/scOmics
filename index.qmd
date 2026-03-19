@@ -1,0 +1,158 @@
+---
+title: "Single-Cell Omics Tutorials"
+subtitle: "End-to-end workflows for scRNA-seq, scATAC-seq, Spatial Transcriptomics, Multi-omics, and Genotyping in R"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div style="
+  background: linear-gradient(135deg, #0A1018 0%, #0F2030 50%, #0D2A1E 100%);
+  border: 1px solid #1E3040;
+  border-radius: 12px;
+  padding: 3.5rem 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+">
+  <div style="
+    position: absolute; top: -60px; right: -60px;
+    width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,147,111,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  "></div>
+
+  <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+    color: #88D498; letter-spacing: 0.12em; margin-bottom: 1rem;">
+    R · SEURAT · ARCHR · SIGNAC · HARMONY · MONOCLE3 · COMPLEXHEATMAP
+  </div>
+
+  <h1 style="font-family: 'Syne', sans-serif; font-size: 3rem;
+    color: #E8F4F0; font-weight: 800; line-height: 1.15; margin: 0 0 1.2rem 0;">
+    Single-Cell<br>Omics Tutorials
+  </h1>
+
+  <p style="font-size: 1.05rem; color: #8FA8B8; max-width: 600px;
+    line-height: 1.8; margin: 0 0 2rem 0;">
+    Reproducible, well-documented analysis pipelines for researchers working with
+    single-cell RNA-seq, ATAC-seq, spatial transcriptomics, multi-omics integration,
+    and genotyping. Designed for experienced R users.
+  </p>
+
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    <a href="getting-started.qmd" style="
+      background: #1A936F; color: #E8F4F0;
+      padding: 0.65rem 1.6rem; border-radius: 6px;
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      text-decoration: none; font-size: 0.95rem;
+      transition: background 0.2s;">
+      Get Started →
+    </a>
+    <a href="https://github.com/tipsarin/scOmics" style="
+      background: transparent; color: #88D498;
+      padding: 0.65rem 1.6rem; border-radius: 6px;
+      border: 1px solid #1A936F;
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      text-decoration: none; font-size: 0.95rem;">
+      GitHub
+    </a>
+  </div>
+</div>
+```
+
+## What's Covered
+
+This tutorial series walks through complete single-cell omics analysis workflows,
+from raw data ingestion to publication-ready figures.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+### 🧬 scRNA-seq
+Using **Seurat v5** as the primary framework.
+
+| Chapter | Topic |
+|---|---|
+| 01 | QC & Filtering |
+| 02 | Normalization & HVG Selection |
+| 03 | PCA · UMAP · tSNE |
+| 04 | Graph-based Clustering |
+| 05 | Cell Type Annotation |
+| 06 | Differential Expression + ComplexHeatmap |
+| 07 | Trajectory Analysis (Monocle3) |
+| 08 | Batch Integration (Harmony) |
+
+### 🔓 scATAC-seq
+Using **ArchR** for project management and peak analysis.
+
+| Chapter | Topic |
+|---|---|
+| 01 | QC & Arrow File Creation |
+| 02 | LSI · UMAP |
+| 03 | Peak Annotation & Gene Scores |
+| 04 | TF Motif Analysis (chromVAR) |
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+### 🗺️ Spatial Transcriptomics
+Using **Seurat** with 10x Visium data.
+
+| Chapter | Topic |
+|---|---|
+| 01 | Loading & Spot-level QC |
+| 02 | Spatially Variable Genes |
+| 03 | Cell Type Deconvolution |
+
+### 🔗 Multi-omics & Genotyping
+Integration strategies and donor demultiplexing.
+
+| Chapter | Topic |
+|---|---|
+| 01 | WNN Integration (RNA + ATAC) |
+| 02 | Signac: Linked Peaks to Genes |
+| 03 | Donor Demultiplexing |
+
+:::
+
+:::
+
+---
+
+## Software Versions
+
+Tutorials are developed and tested with the following versions:
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| R | ≥ 4.3.0 | Base environment |
+| Seurat | 5.x | scRNA-seq, Spatial, WNN |
+| ArchR | 1.0.3 | scATAC-seq |
+| Signac | 1.13.0 | Chromatin accessibility |
+| Monocle3 | 1.3.x | Trajectory analysis |
+| Harmony | 1.2.x | Batch integration |
+| ComplexHeatmap | 2.18.x | Visualization |
+| ggplot2 | 3.5.x | Visualization |
+
+: {tbl-colwidths="[25,20,55]"}
+
+---
+
+## How to Use These Tutorials
+
+Each chapter follows a consistent structure:
+
+1. **Overview** — biological rationale and goals
+2. **Setup** — required packages and data
+3. **Code walkthrough** — annotated, reproducible R code
+4. **Parameter guidance** — when and how to adjust defaults
+5. **Checkpoints** — `saveRDS()` calls to preserve progress
+6. **Session info** — exact package versions used
+
+::: {.callout-tip}
+## Reproducibility
+All tutorials use `execute: freeze: auto` in Quarto, meaning outputs are cached
+after the first render. Enable this by committing the `_freeze/` directory to your repo.
+:::

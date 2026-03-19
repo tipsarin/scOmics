@@ -1,0 +1,94 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Single-Cell Omics Tutorials"
+  subtitle: "End-to-end workflows for multi-omics analysis in R"
+  author: "Sarintip Nguanthanee"
+  date: today
+  date-format: "MMMM YYYY"
+  doi: ""
+  repo-url: https://github.com/tipsarin/scOmics
+  repo-actions: [edit, issue]
+  sharing: [twitter, linkedin]
+  search: true
+  downloads: [pdf]
+
+  sidebar:
+    style: docked
+    background: dark
+    logo: assets/logo.png
+
+  page-footer:
+    left: "© 2025 Sarintip Nguanthanee"
+    right: "Built with [Quarto](https://quarto.org)"
+
+  chapters:
+    - index.qmd
+    - getting-started.qmd
+
+    - part: "**scRNA-seq**"
+      chapters:
+        - tutorials/scrna/01-qc-filtering.qmd
+        - tutorials/scrna/02-normalization.qmd
+        - tutorials/scrna/03-dim-reduction.qmd
+        - tutorials/scrna/04-clustering.qmd
+        - tutorials/scrna/05-annotation.qmd
+        - tutorials/scrna/06-deg.qmd
+        - tutorials/scrna/07-trajectory.qmd
+        - tutorials/scrna/08-integration.qmd
+
+    - part: "**scATAC-seq**"
+      chapters:
+        - tutorials/scatac/01-qc.qmd
+        - tutorials/scatac/02-dim-reduction.qmd
+        - tutorials/scatac/03-peak-annotation.qmd
+        - tutorials/scatac/04-motif.qmd
+
+    - part: "**Spatial Transcriptomics**"
+      chapters:
+        - tutorials/spatial/01-loading.qmd
+        - tutorials/spatial/02-svg.qmd
+        - tutorials/spatial/03-deconvolution.qmd
+
+    - part: "**Multi-omics & Genotyping**"
+      chapters:
+        - tutorials/multiomics/01-wnn.qmd
+        - tutorials/multiomics/02-signac.qmd
+        - tutorials/multiomics/03-genotyping.qmd
+
+    - references.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, custom.scss]
+    code-fold: show
+    code-tools: true
+    code-copy: true
+    code-line-numbers: true
+    code-block-bg: true
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    number-depth: 2
+    highlight-style: github-dark
+    fig-align: center
+    fig-width: 8
+    fig-height: 6
+    link-external-newwindow: true
+
+  pdf:
+    documentclass: scrbook
+    include-in-header: latex/preamble.tex
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+  cache: true
+
+bibliography: references.bib
+csl: nature.csl

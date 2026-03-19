@@ -1,0 +1,198 @@
+---
+title: "Trajectory Analysis"
+subtitle: "Infer developmental pseudotime with Monocle3"
+categories: [scRNA-seq, Monocle3, Trajectory, Pseudotime]
+---
+
+<span class="chapter-badge">scRNA-seq · Chapter 07</span>
+
+## Overview
+
+Trajectory analysis orders cells along a continuum of developmental states,
+assigning each cell a **pseudotime** value that reflects its progress along
+a biological process (differentiation, activation, cell cycle, etc.).
+
+**This chapter covers:**
+
+1. Converting a Seurat object to a Monocle3 `cell_data_set`
+2. Preprocessing and dimensionality reduction within Monocle3
+3. Learning the principal graph
+4. Setting the root node and computing pseudotime
+5. Identifying genes that change along pseudotime
+
+---
+
+## Setup
+
+```{r}
+#| label: setup
+
+library(Seurat)
+library(monocle3)
+library(ggplot2)
+library(patchwork)
+library(dplyr)
+```
+
+```{r}
+#| label: load
+#| eval: false
+
+seu <- readRDS("data/processed/seu_05_annotated.rds")
+```
+
+---
+
+## Convert Seurat → Monocle3 `cell_data_set`
+
+```{r}
+#| label: convert
+#| eval: false
+
+# Extract components from Seurat
+gene_metadata <- data.frame(
+  gene_short_name = rownames(seu),
+  row.names       = rownames(seu)
+)
+
+cds <- new_cell_data_set(
+  expression_data   = GetAssayData(seu, assay = "RNA", layer = "counts"),
+  cell_metadata     = seu@meta.data,
+  gene_metadata     = gene_metadata
+)
+```
+
+---
+
+## Preprocess and Reduce Dimensions
+
+```{r}
+#| label: preprocess
+#| eval: false
+
+cds <- preprocess_cds(cds, num_dim = 30)
+cds <- reduce_dimension(cds, reduction_method = "UMAP")
+```
+
+::: {.callout-tip}
+## Transfer UMAP coordinates from Seurat
+To keep your Seurat UMAP layout consistent with the trajectory plot,
+embed the Seurat UMAP coordinates directly into the Monocle3 object:
+
+```r
+reducedDim(cds, type = "UMAP") <- Embeddings(seu, reduction = "umap")
+```
+:::
+
+---
+
+## Cluster and Learn Graph
+
+```{r}
+#| label: cluster-graph
+#| eval: false
+
+cds <- cluster_cells(cds, resolution = 1e-3)
+
+cds <- learn_graph(
+  cds,
+  use_partition     = TRUE,
+  close_loop        = FALSE,
+  learn_graph_control = list(minimal_branch_len = 5)
+)
+
+plot_cells(
+  cds,
+  color_cells_by = "cell_type",
+  label_groups_by_cluster = FALSE,
+  label_leaves   = TRUE,
+  label_branch_points = TRUE
+)
+```
+
+---
+
+## Order Cells in Pseudotime
+
+```{r}
+#| label: pseudotime
+#| eval: false
+
+# Interactive root selection (run in RStudio, not on HPC)
+cds <- order_cells(cds)
+
+# --- OR set root programmatically ---
+# Identify the root node nearest to a known progenitor cluster
+root_cells <- rownames(subset(colData(cds), cell_type == "HSC"))
+cds <- order_cells(cds, root_cells = root_cells)
+
+plot_cells(
+  cds,
+  color_cells_by = "pseudotime",
+  label_cell_groups = FALSE,
+  label_leaves   = FALSE,
+  label_branch_points = FALSE,
+  graph_label_size = 3
+)
+```
+
+---
+
+## Identify Pseudotime-Dependent Genes
+
+```{r}
+#| label: deg-pseudotime
+#| eval: false
+
+# Test all genes (computationally intensive — subset to HVGs if needed)
+pr_test <- graph_test(cds, neighbor_graph = "principal_graph", cores = 8)
+
+pr_deg <- pr_test %>%
+  filter(q_value < 0.05) %>%
+  arrange(desc(morans_I))
+
+head(pr_deg, 20)
+```
+
+```{r}
+#| label: gene-modules
+#| eval: false
+#| fig-cap: "Co-expressed gene modules along the principal trajectory"
+
+# Group co-expressed genes into modules
+gene_module_df <- find_gene_modules(
+  cds[rownames(pr_deg)[1:500], ],
+  resolution = c(10^seq(-6, -1))
+)
+
+plot_cells(
+  cds,
+  genes        = gene_module_df,
+  label_cell_groups = FALSE,
+  show_trajectory_graph = FALSE
+)
+```
+
+---
+
+## Save
+
+```{r}
+#| label: save
+#| eval: false
+
+saveRDS(cds, "data/processed/cds_07_trajectory.rds")
+
+# Add pseudotime back to Seurat object
+seu$pseudotime <- pseudotime(cds)[colnames(seu)]
+saveRDS(seu, "data/processed/seu_07_pseudotime.rds")
+```
+
+---
+
+## Session Info
+
+```{r}
+#| label: session-info
+sessionInfo()
+```
