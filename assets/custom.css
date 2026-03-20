@@ -1,3 +1,4 @@
+/*
 .quarto-code-tools-menu {
   position: relative;
   z-index: 9999 !important;
@@ -16,6 +17,8 @@
 .quarto-container-fluid {
   max-width: 1600px !important; 
 }
+
+*/
 
 main.content {
   max-width: 1000px !important;
