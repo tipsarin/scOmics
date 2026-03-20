@@ -510,7 +510,7 @@
     "href": "tutorials/scrna/dandelion_test.html#test",
     "title": "Clonal Analysis",
     "section": "",
-    "text": "Test\n\n\nCode\n# Cell 2 — Code cell\nimport scanpy as sc\nimport matplotlib.pyplot as plt\n\n\n\n\nCode\nsc.settings.verbosity = 3 # verbosity: errors (0), warnings (1), info (2), hints (3)\nsc.logging.print_versions()\n\n\n\n\n\n\n\nCode\n# Load example dataset (PBMC3k built-in)\nadata = sc.datasets.pbmc3k_processed()\n\n\n\n\n\n\n\nCode\n# UMAP colored by cell type\nsc.pl.umap(\n    adata,\n    color='louvain',\n    title='PBMC 3k — Cell Types',\n    frameon=False,\n    legend_loc='on data'\n)",
+    "text": "Test\n\n\nCode\n# Cell 2 — Code cell\nimport scanpy as sc\nimport matplotlib.pyplot as plt\n\n\n\n\nCode\nsc.settings.verbosity = 3 # verbosity: errors (0), warnings (1), info (2), hints (3)\nsc.logging.print_versions()\n\n\n\n\n\n\n\nCode\n# Load example dataset (PBMC3k built-in)\nadata = sc.datasets.pbmc3k_processed()\n\n\ntry downloading from url\nhttps://raw.githubusercontent.com/chanzuckerberg/cellxgene/main/example-dataset/pbmc3k.h5ad\n... this may take a while but only happens once\n\n\n\n\n\n\n\nCode\n# UMAP colored by cell type\nsc.pl.umap(\n    adata,\n    color='louvain',\n    title='PBMC 3k — Cell Types',\n    frameon=False,\n    legend_loc='on data'\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clonal Analysis</span>"
