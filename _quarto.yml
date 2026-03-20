@@ -45,9 +45,11 @@ book:
 
 format:
   html:
+    theme:
+      light: flatly
+      dark: flatly
+    css: assets/epub.css
     respect-user-color-scheme: true
-    theme: flatly
-    css: assets/custom.css
     code-fold: true
     code-tools: true
     code-copy: true
