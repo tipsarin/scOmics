@@ -2,11 +2,13 @@
 title: "References"
 ---
 
-::: {#refs}
-:::
-
 ## Software & Tools
 
 Seurat [@hao2021integrated] ([GitHub](https://github.com/satijalab/seurat))
 
-ArchR [@granja2021archr] ([GitHub](https://github.com/GreenleafLab/ArchR) | [Docs](https://www.archrproject.com))
+ArchR [@granja2021archr] ([GitHub](https://github.com/GreenleafLab/ArchR) \| [Docs](https://www.archrproject.com))
+
+------------------------------------------------------------------------
+
+::: {#refs}
+:::
