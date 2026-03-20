@@ -86,4 +86,4 @@ knitr:
       .libPaths: ["/home/sarintip/R/x86_64-pc-linux-gnu-library/4.5.1"]
 
 bibliography: references.bib
-csl: nature.csl
+csl: apa.csl
