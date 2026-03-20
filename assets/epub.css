@@ -1,3 +1,20 @@
+#quarto-back-to-top {
+  display: block !important;
+}
+
+/* Transparent navbar */
+.navbar {
+  background-color: transparent !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Dark mode navbar */
+[data-bs-theme="dark"] .navbar {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 body {
   font-size: 1.0rem;
   line-height: 1.8;
