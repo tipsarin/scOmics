@@ -16,7 +16,7 @@ book:
 
   sidebar:
     style: floating
-    background: light
+    background: none
     logo: assets/VClabLogo.png
 
   page-footer:
@@ -61,7 +61,7 @@ format:
     toc-depth: 3
     number-sections: true
     number-depth: 2
-    highlight-style: arrow
+    highlight-style: github
     fig-align: center
     fig-width: 8
     fig-height: 6
