@@ -10,7 +10,7 @@ book:
   date-format: "MMMM YYYY"
   doi: ""
   repo-url: https://github.com/tipsarin/scOmics
-  repo-actions: [edit, issue]
+  repo-actions: [issue]
   sharing: [twitter, linkedin]
   search: true
 
@@ -53,14 +53,14 @@ format:
     code-fold: true
     code-tools: true
     code-copy: true
-    code-line-numbers: true
+    code-line-numbers: false
     code-block-bg: true
     smooth-scroll: true
     html-math-method: katex
     toc: true
     toc-depth: 3
-    number-sections: true
-    number-depth: 2
+    number-sections: false
+    number-depth: 3
     highlight-style: github
     fig-align: center
     fig-width: 8
