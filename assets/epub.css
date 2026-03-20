@@ -31,3 +31,8 @@ body {
 div.sourceCode {
   border-left: 3px solid #2c7a4b;
 }
+
+/* Code block font size */
+div.sourceCode, pre.sourceCode {
+  font-size: 0.82rem;
+}
