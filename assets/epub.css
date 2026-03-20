@@ -34,5 +34,22 @@ div.sourceCode {
 
 /* Code block font size */
 div.sourceCode, pre.sourceCode {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
+}
+
+/* Output/result text */
+pre:not(.sourceCode) {
+  font-size: 0.80rem;
+  color: #6c757d;           /* light mode: medium grey */
+  background-color: #f8f9fa;
+  border-left: 3px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+
+/* Dark mode output */
+[data-bs-theme="dark"] pre:not(.sourceCode) {
+  color: #adb5bd;           /* dark mode: lighter grey */
+  background-color: #2b2b2b;
+  border-left: 3px solid #495057;
 }
