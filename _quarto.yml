@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - assets/
 
 book:
   title: "Single-Cell Omics Tutorials"
@@ -48,10 +50,10 @@ book:
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: sketchy
+      dark: sketchy
     back-to-top-navigation: true
-    css: assets/epub.css
+    css: assets/custom.css
     code-fold: true
     code-tools: true
     code-copy: true

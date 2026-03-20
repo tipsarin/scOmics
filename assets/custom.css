@@ -1,89 +1,63 @@
-/*
-.quarto-code-tools-menu {
-  position: relative;
-  z-index: 9999 !important;
-  cursor: pointer;
+#quarto-back-to-top {
+  display: block !important;
+}
+
+#back-to-top-btn:hover {
+  background-color: #1a5c38;
+}
+
+/* Transparent navbar */
+.navbar {
+  background-color: transparent !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Dark mode navbar */
+[data-bs-theme="dark"] .navbar {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 #quarto-sidebar {
-  width: 300px !important; 
+  background: transparent !important;
 }
 
-#quarto-margin-sidebar {
-  width: 300px !important;
-}
-
-/
-.quarto-container-fluid {
-  max-width: 1600px !important; 
-}
-
-
-
-main.content {
-  max-width: 1000px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-*/
-
-* ── Content column: centered, not too wide ── */
-.page-columns .content {
-  max-width: 720px;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-/* ── Body typography ── */
 body {
   font-size: 1.0rem;
   line-height: 1.8;
-  color: #222;
 }
 
-/* ── Sidebar left ── */
-#quarto-sidebar {
-  min-width: 220px;
-  max-width: 260px;
+div.sourceCode {
+  border-left: 3px solid #2c7a4b;
 }
 
-/* ── Right TOC: smaller, sits below naturally ── */
-#quarto-margin-sidebar {
-  font-size: 0.82rem;
-  padding-top: 0;
+/* Code block font size */
+div.sourceCode, pre.sourceCode {
+  font-size: 0.75rem;
 }
 
-/* ── Headings ── */
-h1, h2, h3 {
-  font-weight: 600;
-  margin-top: 2rem;
+/* Output/result text */
+/* Code output / result */
+.cell-output pre,
+.cell-output-stdout pre,
+.cell-output-stderr pre,
+.cell-output-display pre {
+  font-size: 0.75rem !important;
+  color: #6c757d;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
 }
+/* 
+  background-color: #f8f9fa;
+  border-left: 3px solid #dee2e6; */
 
-/* ── Tablet: hide right TOC ── */
-@media (max-width: 1200px) {
-  #quarto-margin-sidebar {
-    display: none !important;
-  }
+/* Dark mode 
+[data-bs-theme="dark"] .cell-output pre,
+[data-bs-theme="dark"] .cell-output-stdout pre,
+[data-bs-theme="dark"] .cell-output-stderr pre {
+  color: #adb5bd;
+  background-color: #2b2b2b;
+  border-left: 3px solid #495057;
 }
-
-/* ── Mobile: hide left sidebar ── */
-@media (max-width: 768px) {
-  #quarto-sidebar {
-    display: none !important;
-  }
-  .page-columns .content {
-    margin: 0 1rem;
-  }
-}
-
-
-.listing-category, .code-copy-button, div.sourceCode {
-  border-radius: 8px; 
-  border: none;   
-}
-
-details.code-fold {
-  border-radius: 8px;
-  padding: 0.5em;
-}
-  /* background: #232629; */
+*/
