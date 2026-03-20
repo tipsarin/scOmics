@@ -3,7 +3,7 @@ title: "Test"
 author: "Sarintip"
 ---
 
-![Pipeline Overview](/assets/Test.svg){width="100%"}
+![Pipeline](/assets/Test.svg){width="100%"}
 
 ## Setup
 
