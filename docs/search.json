@@ -636,5 +636,15 @@
       "**Multi-omics & Genotyping**",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "1. Hao, Y., Hao, S.,\nAndersen-Nissen, E., et al. Integrated analysis of\nmultimodal single-cell data. Cell 184,\n3573–3587 (2021).\n\n\n2. Granja, J. M., Corces, M.\nR., Pierce, S. E., et al. ArchR is a scalable software\npackage for integrative single-cell chromatin accessibility analysis.\nNature Genetics 53, 403–411 (2021).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+    ]
   }
 ]
