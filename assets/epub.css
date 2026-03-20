@@ -38,18 +38,24 @@ div.sourceCode, pre.sourceCode {
 }
 
 /* Output/result text */
-pre:not(.sourceCode) {
-  font-size: 0.80rem;
-  color: #6c757d;           /* light mode: medium grey */
+/* Code output / result */
+.cell-output pre,
+.cell-output-stdout pre,
+.cell-output-stderr pre,
+.cell-output-display pre {
+  font-size: 0.75rem !important;
+  color: #6c757d;
   background-color: #f8f9fa;
   border-left: 3px solid #dee2e6;
   border-radius: 4px;
   padding: 0.75rem 1rem;
 }
 
-/* Dark mode output */
-[data-bs-theme="dark"] pre:not(.sourceCode) {
-  color: #adb5bd;           /* dark mode: lighter grey */
+/* Dark mode */
+[data-bs-theme="dark"] .cell-output pre,
+[data-bs-theme="dark"] .cell-output-stdout pre,
+[data-bs-theme="dark"] .cell-output-stderr pre {
+  color: #adb5bd;
   background-color: #2b2b2b;
   border-left: 3px solid #495057;
 }
