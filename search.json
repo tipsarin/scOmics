@@ -642,7 +642,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Granja, J. M. et al. (2021). ArchR is a scalable software package for\nintegrative single-cell chromatin accessibility analysis. Nature\nGenetics, 53, 403–411. https://github.com/GreenleafLab/ArchR\n\n\nHao, Y. et al. (2021). Integrated analysis of multimodal single-cell\ndata. Cell, 184, 3573–3587. https://doi.org/10.1016/j.cell.2021.04.048",
+    "text": "Software & Tools\nSeurat (Hao et al., 2021) (GitHub)\nArchR (Granja et al., 2021) (GitHub | Docs)",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
     ]

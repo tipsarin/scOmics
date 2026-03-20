@@ -435,8 +435,14 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#software-tools" id="toc-software-tools" class="nav-link active" data-scroll-target="#software-tools">Software &amp; Tools</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -465,17 +471,22 @@ div.csl-indent {
 <div id="ref-granja2021archr" class="csl-entry" role="listitem">
 Granja, J. M. et al. (2021). ArchR is a scalable software package for
 integrative single-cell chromatin accessibility analysis. <em>Nature
-Genetics</em>, <em>53</em>, 403–411. <a href="https://github.com/GreenleafLab/ArchR">https://github.com/GreenleafLab/ArchR</a>
+Genetics</em>, <em>53</em>, 403–411. <a href="https://doi.org/10.1038/s41588-021-00790-6">https://doi.org/10.1038/s41588-021-00790-6</a>
 </div>
 <div id="ref-hao2021integrated" class="csl-entry" role="listitem">
 Hao, Y. et al. (2021). Integrated analysis of multimodal single-cell
 data. <em>Cell</em>, <em>184</em>, 3573–3587. <a href="https://doi.org/10.1016/j.cell.2021.04.048">https://doi.org/10.1016/j.cell.2021.04.048</a>
 </div>
 </div>
+<section id="software-tools" class="level2">
+<h2 class="anchored" data-anchor-id="software-tools">Software &amp; Tools</h2>
+<p>Seurat <span class="citation" data-cites="hao2021integrated">(<a href="references.html#ref-hao2021integrated" role="doc-biblioref">Hao et al., 2021</a>)</span> (<a href="https://github.com/satijalab/seurat">GitHub</a>)</p>
+<p>ArchR <span class="citation" data-cites="granja2021archr">(<a href="references.html#ref-granja2021archr" role="doc-biblioref">Granja et al., 2021</a>)</span> (<a href="https://github.com/GreenleafLab/ArchR">GitHub</a> | <a href="https://www.archrproject.com">Docs</a>)</p>
 
 
 <!-- -->
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -961,12 +972,13 @@ data. <em>Cell</em>, <em>184</em>, 3573–3587. <a href="https://doi.org/10.1016
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Seurat <span class="co">[</span><span class="ot">@hao2021integrated</span><span class="co">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ArchR <span class="co">[</span><span class="ot">@granja2021archr</span><span class="co">]</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Software &amp; Tools</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Seurat <span class="co">[</span><span class="ot">@hao2021integrated</span><span class="co">]</span> (<span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/satijalab/seurat)</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ArchR <span class="co">[</span><span class="ot">@granja2021archr</span><span class="co">]</span> (<span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/GreenleafLab/ArchR)</span> | <span class="co">[</span><span class="ot">Docs</span><span class="co">](https://www.archrproject.com)</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -976,7 +988,7 @@ data. <em>Cell</em>, <em>184</em>, 3573–3587. <a href="https://doi.org/10.1016
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
