@@ -13,7 +13,6 @@ book:
   repo-actions: [edit, issue]
   sharing: [twitter, linkedin]
   search: true
-  downloads: [pdf]
 
   sidebar:
     style: docked
@@ -46,7 +45,8 @@ book:
 
 format:
   html:
-    theme: bootstrap 
+    respect-user-color-scheme: true
+    theme: flatly
     css: assets/custom.css
     code-fold: true
     code-tools: true
