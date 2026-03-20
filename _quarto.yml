@@ -50,8 +50,8 @@ book:
 format:
   html:
     theme:
-      light: sketchy
-      dark: sketchy
+      light: litera
+      dark: litera
     back-to-top-navigation: true
     css: assets/custom.css
     code-fold: true
