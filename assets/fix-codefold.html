@@ -1,0 +1,11 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Re-initialize code folding buttons
+  document.querySelectorAll(".code-fold-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const target = this.closest(".sourceCode");
+      if (target) target.classList.toggle("code-fold-closed");
+    });
+  });
+});
+</script>
