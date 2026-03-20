@@ -46,15 +46,14 @@ book:
 format:
   html:
     theme:
-      light: flatly
-      dark: flatly
+      light: cosmo
+      dark: cosmo
     css: assets/epub.css
-    respect-user-color-scheme: true
     code-fold: true
     code-tools: true
     code-copy: true
     code-line-numbers: true
-    code-block-bg: "#2F343F"
+    code-block-bg: true
     smooth-scroll: true
     html-math-method: katex
     toc: true
