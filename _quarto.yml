@@ -5,6 +5,7 @@ project:
 book:
   title: "Single-Cell Omics Tutorials"
   subtitle: "End-to-end workflows for multi-omics analysis in R"
+  favicon: assets/favicon.ico
   author: "Sarintip Nguantad"
   date: today
   date-format: "MMMM YYYY"
