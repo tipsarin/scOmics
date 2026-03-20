@@ -20,7 +20,7 @@ book:
     logo: assets/VClabLogo.png
 
   page-footer:
-    left: "© 2026 Sarintip Nguantad"
+    left: "© Copyright 2025, Sarintip Nguantad"
     right: "Built with [Quarto](https://quarto.org)"
 
   chapters:
@@ -47,7 +47,8 @@ format:
   html:
     theme:
       light: cosmo
-      dark: cosmo
+      dark: darkly
+    back-to-top-navigation: true
     css: assets/epub.css
     code-fold: true
     code-tools: true
