@@ -48,8 +48,8 @@ book:
 format:
   html:
     theme:
-      light: litera
-      dark: litera
+      light: flatly
+      dark: darkly
     back-to-top-navigation: true
     css: assets/custom.css
     code-fold: true
