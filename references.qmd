@@ -3,9 +3,10 @@ title: "References"
 ---
 
 ::: {#refs}
-
-Seurat [@hao2021integrated]
-
-ArchR [@granja2021archr]
-
 :::
+
+## Software & Tools
+
+Seurat [@hao2021integrated] ([GitHub](https://github.com/satijalab/seurat))
+
+ArchR [@granja2021archr] ([GitHub](https://github.com/GreenleafLab/ArchR) | [Docs](https://www.archrproject.com))
