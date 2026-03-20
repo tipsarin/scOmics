@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Single-Cell Omics Tutorials",
     "section": "",
-    "text": "0.1 What’s Covered\nThis tutorial series walks through complete single-cell omics analysis workflows, from raw data ingestion to publication-ready figures.",
+    "text": "What’s Covered\nThis tutorial series walks through complete single-cell omics analysis workflows, from raw data ingestion to publication-ready figures.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Single-Cell Omics Tutorials</span>"
     ]
@@ -23,8 +23,8 @@
     "objectID": "index.html#software-versions",
     "href": "index.html#software-versions",
     "title": "Single-Cell Omics Tutorials",
-    "section": "0.2 Software Versions",
-    "text": "0.2 Software Versions\nTutorials are developed and tested with the following versions:\n\n\n\n\n\n\n\n\nPackage\nVersion\nPurpose\n\n\n\n\nR\n≥ 4.3.0\nBase environment\n\n\nSeurat\n5.x\nscRNA-seq, Spatial, WNN\n\n\nArchR\n1.0.3\nscATAC-seq\n\n\nSignac\n1.13.0\nChromatin accessibility\n\n\nMonocle3\n1.3.x\nTrajectory analysis\n\n\nHarmony\n1.2.x\nBatch integration\n\n\nComplexHeatmap\n2.18.x\nVisualization\n\n\nggplot2\n3.5.x\nVisualization",
+    "section": "Software Versions",
+    "text": "Software Versions\nTutorials are developed and tested with the following versions:\n\n\n\n\n\n\n\n\nPackage\nVersion\nPurpose\n\n\n\n\nR\n≥ 4.3.0\nBase environment\n\n\nSeurat\n5.x\nscRNA-seq, Spatial, WNN\n\n\nArchR\n1.0.3\nscATAC-seq\n\n\nSignac\n1.13.0\nChromatin accessibility\n\n\nMonocle3\n1.3.x\nTrajectory analysis\n\n\nHarmony\n1.2.x\nBatch integration\n\n\nComplexHeatmap\n2.18.x\nVisualization\n\n\nggplot2\n3.5.x\nVisualization",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Single-Cell Omics Tutorials</span>"
     ]
@@ -33,8 +33,8 @@
     "objectID": "index.html#how-to-use-these-tutorials",
     "href": "index.html#how-to-use-these-tutorials",
     "title": "Single-Cell Omics Tutorials",
-    "section": "0.3 How to Use These Tutorials",
-    "text": "0.3 How to Use These Tutorials\nEach chapter follows a consistent structure:\n\nOverview — biological rationale and goals\nSetup — required packages and data\nCode walkthrough — annotated, reproducible R code\nParameter guidance — when and how to adjust defaults\nCheckpoints — saveRDS() calls to preserve progress\nSession info — exact package versions used\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll tutorials use execute: freeze: auto in Quarto, meaning outputs are cached after the first render. Enable this by committing the _freeze/ directory to your repo.",
+    "section": "How to Use These Tutorials",
+    "text": "How to Use These Tutorials\nEach chapter follows a consistent structure:\n\nOverview — biological rationale and goals\nSetup — required packages and data\nCode walkthrough — annotated, reproducible R code\nParameter guidance — when and how to adjust defaults\nCheckpoints — saveRDS() calls to preserve progress\nSession info — exact package versions used\n\n\n\n\n\n\n\nTipReproducibility\n\n\n\nAll tutorials use execute: freeze: auto in Quarto, meaning outputs are cached after the first render. Enable this by committing the _freeze/ directory to your repo.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Single-Cell Omics Tutorials</span>"
     ]
@@ -42,9 +42,9 @@
   {
     "objectID": "getting-started.html",
     "href": "getting-started.html",
-    "title": "2  Getting Started",
+    "title": "Getting Started",
     "section": "",
-    "text": "2.1 Prerequisites\nThese tutorials assume:",
+    "text": "Prerequisites\nThese tutorials assume:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -52,7 +52,7 @@
   {
     "objectID": "getting-started.html#prerequisites",
     "href": "getting-started.html#prerequisites",
-    "title": "2  Getting Started",
+    "title": "Getting Started",
     "section": "",
     "text": "R ≥ 4.3.0 installed (or access to an HPC with R modules)\nFamiliarity with R syntax and Bioconductor\nBasic understanding of single-cell library preparation",
     "crumbs": [
@@ -62,9 +62,9 @@
   {
     "objectID": "getting-started.html#environment-management-with-renv",
     "href": "getting-started.html#environment-management-with-renv",
-    "title": "2  Getting Started",
-    "section": "2.2 Environment Management with renv",
-    "text": "2.2 Environment Management with renv\nWe strongly recommend using renv to lock package versions per project, ensuring reproducibility across machines and time.\ninstall.packages(\"renv\")\nrenv::init()       # initialise in your project directory\nrenv::snapshot()   # lock current package versions to renv.lock\nrenv::restore()    # restore from renv.lock on another machine",
+    "title": "Getting Started",
+    "section": "Environment Management with renv",
+    "text": "Environment Management with renv\nWe strongly recommend using renv to lock package versions per project, ensuring reproducibility across machines and time.\ninstall.packages(\"renv\")\nrenv::init()       # initialise in your project directory\nrenv::snapshot()   # lock current package versions to renv.lock\nrenv::restore()    # restore from renv.lock on another machine",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -72,9 +72,9 @@
   {
     "objectID": "getting-started.html#install-core-packages",
     "href": "getting-started.html#install-core-packages",
-    "title": "2  Getting Started",
-    "section": "2.3 Install Core Packages",
-    "text": "2.3 Install Core Packages\n\nSeurat + Harmony + Monocle3\n# Seurat v5\ninstall.packages(\"Seurat\")\ninstall.packages(\"SeuratData\")\n\n# Harmony\ninstall.packages(\"harmony\")\n\n# Monocle3 dependencies (Bioconductor)\nif (!requireNamespace(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\n\nBiocManager::install(c(\n  \"BiocGenerics\", \"DelayedArray\", \"DelayedMatrixStats\",\n  \"limma\", \"lme4\", \"S4Vectors\", \"SingleCellExperiment\",\n  \"SummarizedExperiment\", \"batchelor\", \"HDF5Array\",\n  \"terra\", \"ggrastr\"\n))\n\ndevtools::install_github(\"cole-trapnell-lab/monocle3\")\n\n\nArchR (scATAC-seq)\ndevtools::install_github(\n  \"GreenleafLab/ArchR\",\n  ref   = \"master\",\n  repos = BiocManager::repositories()\n)\nArchR::installExtraPackages()\n\n\n\n\n\n\nNote\n\n\n\nArchR installation requires devtools. On HPC systems, you may need to load a git module before running devtools::install_github().\n\n\n\n\nSignac (scATAC / Multi-omics)\nBiocManager::install(c(\n  \"BSgenome.Hsapiens.UCSC.hg38\",\n  \"EnsDb.Hsapiens.v86\",\n  \"TFBSTools\",\n  \"JASPAR2020\"\n))\ninstall.packages(\"Signac\")\n\n\nVisualization\nBiocManager::install(\"ComplexHeatmap\")\ninstall.packages(c(\n  \"ggplot2\", \"patchwork\", \"ggrepel\",\n  \"viridis\", \"RColorBrewer\", \"scales\",\n  \"cowplot\", \"ggsci\"\n))",
+    "title": "Getting Started",
+    "section": "Install Core Packages",
+    "text": "Install Core Packages\n\nSeurat + Harmony + Monocle3\n# Seurat v5\ninstall.packages(\"Seurat\")\ninstall.packages(\"SeuratData\")\n\n# Harmony\ninstall.packages(\"harmony\")\n\n# Monocle3 dependencies (Bioconductor)\nif (!requireNamespace(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\n\nBiocManager::install(c(\n  \"BiocGenerics\", \"DelayedArray\", \"DelayedMatrixStats\",\n  \"limma\", \"lme4\", \"S4Vectors\", \"SingleCellExperiment\",\n  \"SummarizedExperiment\", \"batchelor\", \"HDF5Array\",\n  \"terra\", \"ggrastr\"\n))\n\ndevtools::install_github(\"cole-trapnell-lab/monocle3\")\n\n\nArchR (scATAC-seq)\ndevtools::install_github(\n  \"GreenleafLab/ArchR\",\n  ref   = \"master\",\n  repos = BiocManager::repositories()\n)\nArchR::installExtraPackages()\n\n\n\n\n\n\nNote\n\n\n\nArchR installation requires devtools. On HPC systems, you may need to load a git module before running devtools::install_github().\n\n\n\n\nSignac (scATAC / Multi-omics)\nBiocManager::install(c(\n  \"BSgenome.Hsapiens.UCSC.hg38\",\n  \"EnsDb.Hsapiens.v86\",\n  \"TFBSTools\",\n  \"JASPAR2020\"\n))\ninstall.packages(\"Signac\")\n\n\nVisualization\nBiocManager::install(\"ComplexHeatmap\")\ninstall.packages(c(\n  \"ggplot2\", \"patchwork\", \"ggrepel\",\n  \"viridis\", \"RColorBrewer\", \"scales\",\n  \"cowplot\", \"ggsci\"\n))",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -82,9 +82,9 @@
   {
     "objectID": "getting-started.html#running-on-hpc",
     "href": "getting-started.html#running-on-hpc",
-    "title": "2  Getting Started",
-    "section": "2.4 Running on HPC",
-    "text": "2.4 Running on HPC\nIf you are working on an HPC cluster (as most of these workflows require), load modules before starting R:\nmodule load R/4.3.3\nmodule load gcc/11.2.0    # required for some package compilation\nmodule load hdf5           # required for ArchR / HDF5Array\nFor memory-intensive steps (e.g., ArchR Arrow file creation, Harmony integration), request adequate resources:\n# Example SLURM header\n#SBATCH --mem=64G\n#SBATCH --cpus-per-task=16\n#SBATCH --time=04:00:00",
+    "title": "Getting Started",
+    "section": "Running on HPC",
+    "text": "Running on HPC\nIf you are working on an HPC cluster (as most of these workflows require), load modules before starting R:\nmodule load R/4.3.3\nmodule load gcc/11.2.0    # required for some package compilation\nmodule load hdf5           # required for ArchR / HDF5Array\nFor memory-intensive steps (e.g., ArchR Arrow file creation, Harmony integration), request adequate resources:\n# Example SLURM header\n#SBATCH --mem=64G\n#SBATCH --cpus-per-task=16\n#SBATCH --time=04:00:00",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -92,9 +92,9 @@
   {
     "objectID": "getting-started.html#datasets-used-in-this-book",
     "href": "getting-started.html#datasets-used-in-this-book",
-    "title": "2  Getting Started",
-    "section": "2.5 Datasets Used in This Book",
-    "text": "2.5 Datasets Used in This Book\n\n\n\nDataset\nCells\nSource\nUsed in\n\n\n\n\nPBMC 3k\n~2,700\n10x Genomics\nscRNA-seq basics\n\n\nPBMC 10k Multiome\n~10,000\n10x Genomics\nMulti-omics, Signac\n\n\nMouse Brain Visium\n~3,000 spots\n10x Genomics\nSpatial\n\n\nPBMC ATAC 10k\n~10,000\n10x Genomics\nscATAC / ArchR\n\n\n\nDownload scripts are provided at the start of each relevant tutorial.",
+    "title": "Getting Started",
+    "section": "Datasets Used in This Book",
+    "text": "Datasets Used in This Book\n\n\n\nDataset\nCells\nSource\nUsed in\n\n\n\n\nPBMC 3k\n~2,700\n10x Genomics\nscRNA-seq basics\n\n\nPBMC 10k Multiome\n~10,000\n10x Genomics\nMulti-omics, Signac\n\n\nMouse Brain Visium\n~3,000 spots\n10x Genomics\nSpatial\n\n\nPBMC ATAC 10k\n~10,000\n10x Genomics\nscATAC / ArchR\n\n\n\nDownload scripts are provided at the start of each relevant tutorial.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -102,9 +102,9 @@
   {
     "objectID": "getting-started.html#recommended-project-structure",
     "href": "getting-started.html#recommended-project-structure",
-    "title": "2  Getting Started",
-    "section": "2.6 Recommended Project Structure",
-    "text": "2.6 Recommended Project Structure\nyour-project/\n├── data/\n│   ├── raw/              # Cell Ranger output, fragment files\n│   └── processed/        # .rds, .h5seurat, ArchR project\n├── analysis/\n│   ├── 01_qc.R\n│   ├── 02_clustering.R\n│   └── ...\n├── figures/\n├── renv.lock\n└── README.md\n\n\n\n\n\n\nTipSaving Seurat Objects Between Steps\n\n\n\nUse saveRDS() and readRDS() to persist Seurat objects between chapters, avoiding re-running expensive computations:\n# Save\nsaveRDS(seu, \"data/processed/seu_02_normalized.rds\")\n\n# Load\nseu &lt;- readRDS(\"data/processed/seu_02_normalized.rds\")",
+    "title": "Getting Started",
+    "section": "Recommended Project Structure",
+    "text": "Recommended Project Structure\nyour-project/\n├── data/\n│   ├── raw/              # Cell Ranger output, fragment files\n│   └── processed/        # .rds, .h5seurat, ArchR project\n├── analysis/\n│   ├── 01_qc.R\n│   ├── 02_clustering.R\n│   └── ...\n├── figures/\n├── renv.lock\n└── README.md\n\n\n\n\n\n\nTipSaving Seurat Objects Between Steps\n\n\n\nUse saveRDS() and readRDS() to persist Seurat objects between chapters, avoiding re-running expensive computations:\n# Save\nsaveRDS(seu, \"data/processed/seu_02_normalized.rds\")\n\n# Load\nseu &lt;- readRDS(\"data/processed/seu_02_normalized.rds\")",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -112,9 +112,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html",
     "href": "tutorials/scrna/01-qc-filtering.html",
-    "title": "3  QC & Filtering",
+    "title": "QC & Filtering",
     "section": "",
-    "text": "3.1 Overview\nscRNA-seq · Chapter 01\nRaw single-cell RNA-seq data invariably contains low-quality cells — damaged cells with compromised membranes, empty droplets, or multiplets (two or more cells captured in one droplet). Retaining these artefacts distorts downstream clustering and differential expression results.\nThis chapter covers:",
+    "text": "Overview\nscRNA-seq · Chapter 01\nRaw single-cell RNA-seq data invariably contains low-quality cells — damaged cells with compromised membranes, empty droplets, or multiplets (two or more cells captured in one droplet). Retaining these artefacts distorts downstream clustering and differential expression results.\nThis chapter covers:",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -123,7 +123,7 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#overview",
     "href": "tutorials/scrna/01-qc-filtering.html#overview",
-    "title": "3  QC & Filtering",
+    "title": "QC & Filtering",
     "section": "",
     "text": "Loading Cell Ranger output into a Seurat object\nComputing per-cell QC metrics\nSelecting filtering thresholds from QC distributions\nDoublet detection with DoubletFinder\nSaving the filtered object for normalization",
     "crumbs": [
@@ -134,9 +134,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#setup",
     "href": "tutorials/scrna/01-qc-filtering.html#setup",
-    "title": "3  QC & Filtering",
-    "section": "3.2 Setup",
-    "text": "3.2 Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(dplyr)",
+    "title": "QC & Filtering",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(dplyr)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -145,9 +145,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#load-data",
     "href": "tutorials/scrna/01-qc-filtering.html#load-data",
-    "title": "3  QC & Filtering",
-    "section": "3.3 Load Data",
-    "text": "3.3 Load Data\n\n\nCode\n# From Cell Ranger filtered output directory\ncounts &lt;- Read10X(\n  data.dir = \"data/raw/pbmc3k/filtered_feature_bc_matrix/\"\n)\n\n# --- OR from .h5 file ---\ncounts &lt;- Read10X_h5(\"data/raw/pbmc3k/filtered_feature_bc_matrix.h5\")\n\nseu &lt;- CreateSeuratObject(\n  counts      = counts,\n  project     = \"PBMC3k\",\n  min.cells   = 3,    # retain genes detected in ≥ 3 cells\n  min.features = 200  # retain cells with ≥ 200 genes detected\n)\n\nseu\n\n\n\n\n\n\n\n\nNote\n\n\n\nmin.cells = 3 and min.features = 200 are deliberately loose. Stricter thresholds are applied after inspecting QC metric distributions.",
+    "title": "QC & Filtering",
+    "section": "Load Data",
+    "text": "Load Data\n\n\nCode\n# From Cell Ranger filtered output directory\ncounts &lt;- Read10X(\n  data.dir = \"data/raw/pbmc3k/filtered_feature_bc_matrix/\"\n)\n\n# --- OR from .h5 file ---\ncounts &lt;- Read10X_h5(\"data/raw/pbmc3k/filtered_feature_bc_matrix.h5\")\n\nseu &lt;- CreateSeuratObject(\n  counts      = counts,\n  project     = \"PBMC3k\",\n  min.cells   = 3,    # retain genes detected in ≥ 3 cells\n  min.features = 200  # retain cells with ≥ 200 genes detected\n)\n\nseu\n\n\n\n\n\n\n\n\nNote\n\n\n\nmin.cells = 3 and min.features = 200 are deliberately loose. Stricter thresholds are applied after inspecting QC metric distributions.",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -156,9 +156,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#compute-qc-metrics",
     "href": "tutorials/scrna/01-qc-filtering.html#compute-qc-metrics",
-    "title": "3  QC & Filtering",
-    "section": "3.4 Compute QC Metrics",
-    "text": "3.4 Compute QC Metrics\n\n\nCode\n# Mitochondrial gene percentage — high % indicates damaged/dying cells\nseu[[\"pct_mt\"]] &lt;- PercentageFeatureSet(seu, pattern = \"^MT-\")\n\n# Ribosomal gene percentage — context-dependent, informative to track\nseu[[\"pct_rb\"]] &lt;- PercentageFeatureSet(seu, pattern = \"^RP[SL]\")\n\n# Preview metadata\nhead(seu@meta.data, 5)",
+    "title": "QC & Filtering",
+    "section": "Compute QC Metrics",
+    "text": "Compute QC Metrics\n\n\nCode\n# Mitochondrial gene percentage — high % indicates damaged/dying cells\nseu[[\"pct_mt\"]] &lt;- PercentageFeatureSet(seu, pattern = \"^MT-\")\n\n# Ribosomal gene percentage — context-dependent, informative to track\nseu[[\"pct_rb\"]] &lt;- PercentageFeatureSet(seu, pattern = \"^RP[SL]\")\n\n# Preview metadata\nhead(seu@meta.data, 5)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -167,9 +167,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#visualise-qc-distributions",
     "href": "tutorials/scrna/01-qc-filtering.html#visualise-qc-distributions",
-    "title": "3  QC & Filtering",
-    "section": "3.5 Visualise QC Distributions",
-    "text": "3.5 Visualise QC Distributions\n\n\nCode\nVlnPlot(\n  seu,\n  features = c(\"nFeature_RNA\", \"nCount_RNA\", \"pct_mt\"),\n  ncol     = 3,\n  pt.size  = 0.05,\n  alpha    = 0.3\n) & theme(axis.title.x = element_blank())\n\n\n\n\nCode\np1 &lt;- FeatureScatter(seu, \"nCount_RNA\", \"nFeature_RNA\") +\n  geom_hline(yintercept = c(200, 6000), linetype = \"dashed\", color = \"#FF6B6B\", linewidth = 0.6)\n\np2 &lt;- FeatureScatter(seu, \"nCount_RNA\", \"pct_mt\") +\n  geom_hline(yintercept = 20, linetype = \"dashed\", color = \"#FF6B6B\", linewidth = 0.6)\n\np1 | p2",
+    "title": "QC & Filtering",
+    "section": "Visualise QC Distributions",
+    "text": "Visualise QC Distributions\n\n\nCode\nVlnPlot(\n  seu,\n  features = c(\"nFeature_RNA\", \"nCount_RNA\", \"pct_mt\"),\n  ncol     = 3,\n  pt.size  = 0.05,\n  alpha    = 0.3\n) & theme(axis.title.x = element_blank())\n\n\n\n\nCode\np1 &lt;- FeatureScatter(seu, \"nCount_RNA\", \"nFeature_RNA\") +\n  geom_hline(yintercept = c(200, 6000), linetype = \"dashed\", color = \"#FF6B6B\", linewidth = 0.6)\n\np2 &lt;- FeatureScatter(seu, \"nCount_RNA\", \"pct_mt\") +\n  geom_hline(yintercept = 20, linetype = \"dashed\", color = \"#FF6B6B\", linewidth = 0.6)\n\np1 | p2",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -178,9 +178,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#apply-filters",
     "href": "tutorials/scrna/01-qc-filtering.html#apply-filters",
-    "title": "3  QC & Filtering",
-    "section": "3.6 Apply Filters",
-    "text": "3.6 Apply Filters\n\n\nCode\nseu &lt;- subset(\n  seu,\n  subset = nFeature_RNA &gt; 200  &\n           nFeature_RNA &lt; 6000 &\n           pct_mt &lt; 20\n)\n\ncat(\"Cells retained:\", ncol(seu), \"\\n\")\n\n\n\n\n\n\n\n\nWarningThreshold Selection is Dataset-Specific\n\n\n\nThe values above are appropriate for PBMC datasets. Adjust based on:\n\nCell type composition — neurons and hepatocytes naturally express more genes\nSequencing depth — deeper libraries shift the nCount_RNA distribution\nTissue of origin — immune cells have lower ambient RNA than solid tissues",
+    "title": "QC & Filtering",
+    "section": "Apply Filters",
+    "text": "Apply Filters\n\n\nCode\nseu &lt;- subset(\n  seu,\n  subset = nFeature_RNA &gt; 200  &\n           nFeature_RNA &lt; 6000 &\n           pct_mt &lt; 20\n)\n\ncat(\"Cells retained:\", ncol(seu), \"\\n\")\n\n\n\n\n\n\n\n\nWarningThreshold Selection is Dataset-Specific\n\n\n\nThe values above are appropriate for PBMC datasets. Adjust based on:\n\nCell type composition — neurons and hepatocytes naturally express more genes\nSequencing depth — deeper libraries shift the nCount_RNA distribution\nTissue of origin — immune cells have lower ambient RNA than solid tissues",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -189,9 +189,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#doublet-detection",
     "href": "tutorials/scrna/01-qc-filtering.html#doublet-detection",
-    "title": "3  QC & Filtering",
-    "section": "3.7 Doublet Detection",
-    "text": "3.7 Doublet Detection\nDoublets are droplets containing two cells that appear as one. Even after ambient RNA filtering, doublets can form distinct spurious clusters.\n\n\nCode\n# DoubletFinder requires a preliminary normalization + PCA\n# (these will be done properly in Chapter 02; here they are run solely for doublet detection)\nseu &lt;- NormalizeData(seu)\nseu &lt;- FindVariableFeatures(seu)\nseu &lt;- ScaleData(seu)\nseu &lt;- RunPCA(seu, npcs = 20)\n\n\n\n\nCode\nlibrary(DoubletFinder)\n\n# Expected doublet rate: ~0.8% per 1,000 cells recovered (10x estimate)\nnExp &lt;- round(0.075 * ncol(seu))\n\nseu &lt;- doubletFinder(\n  seu,\n  PCs     = 1:20,\n  pN      = 0.25,\n  pK      = 0.09,   # pK should be optimised per sample — see ?paramSweep\n  nExp    = nExp,\n  reuse.pANN = FALSE\n)\n\n# Rename the classification column for clarity\nseu$doublet_class &lt;- seu[[grep(\"DF.classifications\", colnames(seu@meta.data), value = TRUE)]]\n\n# Remove doublets\nseu &lt;- subset(seu, subset = doublet_class == \"Singlet\")\ncat(\"Singlets retained:\", ncol(seu), \"\\n\")\n\n\n\n\n\n\n\n\nTipOptimising pK\n\n\n\nRun paramSweep() followed by summarizeSweep() and find.pK() to determine the optimal pK value for your dataset. This adds ~5–10 minutes but meaningfully improves doublet detection accuracy.",
+    "title": "QC & Filtering",
+    "section": "Doublet Detection",
+    "text": "Doublet Detection\nDoublets are droplets containing two cells that appear as one. Even after ambient RNA filtering, doublets can form distinct spurious clusters.\n\n\nCode\n# DoubletFinder requires a preliminary normalization + PCA\n# (these will be done properly in Chapter 02; here they are run solely for doublet detection)\nseu &lt;- NormalizeData(seu)\nseu &lt;- FindVariableFeatures(seu)\nseu &lt;- ScaleData(seu)\nseu &lt;- RunPCA(seu, npcs = 20)\n\n\n\n\nCode\nlibrary(DoubletFinder)\n\n# Expected doublet rate: ~0.8% per 1,000 cells recovered (10x estimate)\nnExp &lt;- round(0.075 * ncol(seu))\n\nseu &lt;- doubletFinder(\n  seu,\n  PCs     = 1:20,\n  pN      = 0.25,\n  pK      = 0.09,   # pK should be optimised per sample — see ?paramSweep\n  nExp    = nExp,\n  reuse.pANN = FALSE\n)\n\n# Rename the classification column for clarity\nseu$doublet_class &lt;- seu[[grep(\"DF.classifications\", colnames(seu@meta.data), value = TRUE)]]\n\n# Remove doublets\nseu &lt;- subset(seu, subset = doublet_class == \"Singlet\")\ncat(\"Singlets retained:\", ncol(seu), \"\\n\")\n\n\n\n\n\n\n\n\nTipOptimising pK\n\n\n\nRun paramSweep() followed by summarizeSweep() and find.pK() to determine the optimal pK value for your dataset. This adds ~5–10 minutes but meaningfully improves doublet detection accuracy.",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -200,9 +200,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#summary-statistics",
     "href": "tutorials/scrna/01-qc-filtering.html#summary-statistics",
-    "title": "3  QC & Filtering",
-    "section": "3.8 Summary Statistics",
-    "text": "3.8 Summary Statistics\n\n\nCode\ndata.frame(\n  Step       = c(\"After CreateSeuratObject\", \"After QC filter\", \"After doublet removal\"),\n  Cells      = c(ncol_raw, ncol_filtered, ncol(seu)),\n  Median_nGene = c(\n    median(raw_meta$nFeature_RNA),\n    median(filt_meta$nFeature_RNA),\n    median(seu$nFeature_RNA)\n  )\n)",
+    "title": "QC & Filtering",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n\nCode\ndata.frame(\n  Step       = c(\"After CreateSeuratObject\", \"After QC filter\", \"After doublet removal\"),\n  Cells      = c(ncol_raw, ncol_filtered, ncol(seu)),\n  Median_nGene = c(\n    median(raw_meta$nFeature_RNA),\n    median(filt_meta$nFeature_RNA),\n    median(seu$nFeature_RNA)\n  )\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -211,9 +211,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#save-checkpoint",
     "href": "tutorials/scrna/01-qc-filtering.html#save-checkpoint",
-    "title": "3  QC & Filtering",
-    "section": "3.9 Save Checkpoint",
-    "text": "3.9 Save Checkpoint\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_01_filtered.rds\")",
+    "title": "QC & Filtering",
+    "section": "Save Checkpoint",
+    "text": "Save Checkpoint\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_01_filtered.rds\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -222,9 +222,9 @@
   {
     "objectID": "tutorials/scrna/01-qc-filtering.html#session-info",
     "href": "tutorials/scrna/01-qc-filtering.html#session-info",
-    "title": "3  QC & Filtering",
-    "section": "3.10 Session Info",
-    "text": "3.10 Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] dplyr_1.1.4        patchwork_1.3.2    ggplot2_4.0.1      Seurat_5.4.0      \n[5] SeuratObject_5.3.0 sp_2.2-0          \n\nloaded via a namespace (and not attached):\n  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         \n  [4] rlang_1.1.7            magrittr_2.0.4         RcppAnnoy_0.0.22      \n  [7] otel_0.2.0             spatstat.geom_3.6-1    matrixStats_1.5.0     \n [10] ggridges_0.5.7         compiler_4.5.2         png_0.1-8             \n [13] vctrs_0.6.5            reshape2_1.4.5         stringr_1.6.0         \n [16] pkgconfig_2.0.3        fastmap_1.2.0          promises_1.5.0        \n [19] rmarkdown_2.30         purrr_1.2.1            xfun_0.55             \n [22] jsonlite_2.0.0         goftest_1.2-3          later_1.4.4           \n [25] spatstat.utils_3.2-0   irlba_2.3.5.1          parallel_4.5.2        \n [28] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             \n [31] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-9   \n [34] reticulate_1.44.1      parallelly_1.46.1      spatstat.univar_3.1-5 \n [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.1            \n [40] knitr_1.50             tensor_1.5.1           future.apply_1.20.1   \n [43] zoo_1.8-15             sctransform_0.4.2      httpuv_1.6.16         \n [46] Matrix_1.7-4           splines_4.5.2          igraph_2.2.2          \n [49] tidyselect_1.2.1       abind_1.4-8            dichromat_2.0-0.1     \n [52] yaml_2.3.12            spatstat.random_3.4-3  codetools_0.2-20      \n [55] miniUI_0.1.2           spatstat.explore_3.6-0 listenv_0.10.0        \n [58] lattice_0.22-7         tibble_3.3.1           plyr_1.8.9            \n [61] withr_3.0.2            shiny_1.12.1           S7_0.2.1              \n [64] ROCR_1.0-11            evaluate_1.0.5         Rtsne_0.17            \n [67] future_1.68.0          fastDummies_1.7.5      survival_3.8-3        \n [70] polyclip_1.10-7        fitdistrplus_1.2-4     pillar_1.11.1         \n [73] KernSmooth_2.23-26     plotly_4.11.0          generics_0.1.4        \n [76] RcppHNSW_0.6.0         scales_1.4.0           globals_0.18.0        \n [79] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        \n [82] tools_4.5.2            data.table_1.17.8      RSpectra_0.16-2       \n [85] RANN_2.6.2             dotCall64_1.2          cowplot_1.2.0         \n [88] grid_4.5.2             tidyr_1.3.2            nlme_3.1-168          \n [91] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-3           \n [94] viridisLite_0.4.2      uwot_0.2.4             gtable_0.3.6          \n [97] digest_0.6.39          progressr_0.18.0       ggrepel_0.9.6         \n[100] htmlwidgets_1.6.4      farver_2.1.2           htmltools_0.5.9       \n[103] lifecycle_1.0.5        httr_1.4.7             mime_0.13             \n[106] MASS_7.3-65",
+    "title": "QC & Filtering",
+    "section": "Session Info",
+    "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] dplyr_1.1.4        patchwork_1.3.2    ggplot2_4.0.1      Seurat_5.4.0      \n[5] SeuratObject_5.3.0 sp_2.2-0          \n\nloaded via a namespace (and not attached):\n  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         \n  [4] rlang_1.1.7            magrittr_2.0.4         RcppAnnoy_0.0.22      \n  [7] otel_0.2.0             spatstat.geom_3.6-1    matrixStats_1.5.0     \n [10] ggridges_0.5.7         compiler_4.5.2         png_0.1-8             \n [13] vctrs_0.6.5            reshape2_1.4.5         stringr_1.6.0         \n [16] pkgconfig_2.0.3        fastmap_1.2.0          promises_1.5.0        \n [19] rmarkdown_2.30         purrr_1.2.1            xfun_0.55             \n [22] jsonlite_2.0.0         goftest_1.2-3          later_1.4.4           \n [25] spatstat.utils_3.2-0   irlba_2.3.5.1          parallel_4.5.2        \n [28] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             \n [31] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-9   \n [34] reticulate_1.44.1      parallelly_1.46.1      spatstat.univar_3.1-5 \n [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.1            \n [40] knitr_1.50             tensor_1.5.1           future.apply_1.20.1   \n [43] zoo_1.8-15             sctransform_0.4.2      httpuv_1.6.16         \n [46] Matrix_1.7-4           splines_4.5.2          igraph_2.2.2          \n [49] tidyselect_1.2.1       abind_1.4-8            dichromat_2.0-0.1     \n [52] yaml_2.3.12            spatstat.random_3.4-3  codetools_0.2-20      \n [55] miniUI_0.1.2           spatstat.explore_3.6-0 listenv_0.10.0        \n [58] lattice_0.22-7         tibble_3.3.1           plyr_1.8.9            \n [61] withr_3.0.2            shiny_1.12.1           S7_0.2.1              \n [64] ROCR_1.0-11            evaluate_1.0.5         Rtsne_0.17            \n [67] future_1.68.0          fastDummies_1.7.5      survival_3.8-3        \n [70] polyclip_1.10-7        fitdistrplus_1.2-4     pillar_1.11.1         \n [73] KernSmooth_2.23-26     plotly_4.11.0          generics_0.1.4        \n [76] RcppHNSW_0.6.0         scales_1.4.0           globals_0.18.0        \n [79] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        \n [82] tools_4.5.2            data.table_1.17.8      RSpectra_0.16-2       \n [85] RANN_2.6.2             dotCall64_1.2          cowplot_1.2.0         \n [88] grid_4.5.2             tidyr_1.3.2            nlme_3.1-168          \n [91] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-3           \n [94] viridisLite_0.4.2      uwot_0.2.4             gtable_0.3.6          \n [97] digest_0.6.39          progressr_0.18.0       ggrepel_0.9.6         \n[100] htmlwidgets_1.6.4      farver_2.1.2           htmltools_0.5.9       \n[103] lifecycle_1.0.5        httr_1.4.7             mime_0.13             \n[106] MASS_7.3-65",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>QC & Filtering</span>"
@@ -233,9 +233,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html",
     "href": "tutorials/scrna/02-normalization.html",
-    "title": "4  Normalization & Feature Selection",
+    "title": "Normalization & Feature Selection",
     "section": "",
-    "text": "4.1 Overview\nscRNA-seq · Chapter 02\nRaw UMI counts are confounded by differences in sequencing depth across cells. Normalization removes this technical variation, allowing meaningful comparison of gene expression levels. Feature selection then focuses downstream analysis on genes that carry the most biological signal.\nThis chapter covers:",
+    "text": "Overview\nscRNA-seq · Chapter 02\nRaw UMI counts are confounded by differences in sequencing depth across cells. Normalization removes this technical variation, allowing meaningful comparison of gene expression levels. Feature selection then focuses downstream analysis on genes that carry the most biological signal.\nThis chapter covers:",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -244,7 +244,7 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#overview",
     "href": "tutorials/scrna/02-normalization.html#overview",
-    "title": "4  Normalization & Feature Selection",
+    "title": "Normalization & Feature Selection",
     "section": "",
     "text": "Log-normalization (classical approach)\nSCTransform v2 (variance-stabilizing approach)\nHighly variable gene (HVG) selection\nData scaling",
     "crumbs": [
@@ -255,9 +255,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#setup",
     "href": "tutorials/scrna/02-normalization.html#setup",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.2 Setup",
-    "text": "4.2 Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(ggplot2)\nlibrary(patchwork)\n\n\n\n\nCode\nseu &lt;- readRDS(\"data/processed/seu_01_filtered.rds\")",
+    "title": "Normalization & Feature Selection",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(ggplot2)\nlibrary(patchwork)\n\n\n\n\nCode\nseu &lt;- readRDS(\"data/processed/seu_01_filtered.rds\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -266,9 +266,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#approach-1-log-normalization",
     "href": "tutorials/scrna/02-normalization.html#approach-1-log-normalization",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.3 Approach 1: Log-Normalization",
-    "text": "4.3 Approach 1: Log-Normalization\nThe standard approach: normalize each cell to 10,000 counts (CPM-like), then apply a log1p transformation.\n\n\nCode\nseu &lt;- NormalizeData(\n  seu,\n  normalization.method = \"LogNormalize\",\n  scale.factor         = 10000\n)",
+    "title": "Normalization & Feature Selection",
+    "section": "Approach 1: Log-Normalization",
+    "text": "Approach 1: Log-Normalization\nThe standard approach: normalize each cell to 10,000 counts (CPM-like), then apply a log1p transformation.\n\n\nCode\nseu &lt;- NormalizeData(\n  seu,\n  normalization.method = \"LogNormalize\",\n  scale.factor         = 10000\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -277,9 +277,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#approach-2-sctransform-v2-recommended",
     "href": "tutorials/scrna/02-normalization.html#approach-2-sctransform-v2-recommended",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.4 Approach 2: SCTransform v2 (Recommended)",
-    "text": "4.4 Approach 2: SCTransform v2 (Recommended)\nSCTransform uses regularized negative binomial regression to model the mean-variance relationship, producing Pearson residuals that are largely independent of sequencing depth.\n\n\nCode\nseu &lt;- SCTransform(\n  seu,\n  vst.flavor          = \"v2\",         # use SCTransform v2\n  vars.to.regress     = \"pct_mt\",     # optionally regress out mt percentage\n  variable.features.n = 3000,\n  verbose             = FALSE\n)\n\n\n\n\n\n\n\n\nTipWhich normalization should I use?\n\n\n\n\nLogNormalize → faster, well-understood, compatible with all downstream Seurat functions\nSCTransform v2 → generally better for datasets with high sequencing depth variance; required when integrating with SCTransform-normalized reference datasets\n\nFor most published workflows, SCTransform v2 is now the default recommendation.",
+    "title": "Normalization & Feature Selection",
+    "section": "Approach 2: SCTransform v2 (Recommended)",
+    "text": "Approach 2: SCTransform v2 (Recommended)\nSCTransform uses regularized negative binomial regression to model the mean-variance relationship, producing Pearson residuals that are largely independent of sequencing depth.\n\n\nCode\nseu &lt;- SCTransform(\n  seu,\n  vst.flavor          = \"v2\",         # use SCTransform v2\n  vars.to.regress     = \"pct_mt\",     # optionally regress out mt percentage\n  variable.features.n = 3000,\n  verbose             = FALSE\n)\n\n\n\n\n\n\n\n\nTipWhich normalization should I use?\n\n\n\n\nLogNormalize → faster, well-understood, compatible with all downstream Seurat functions\nSCTransform v2 → generally better for datasets with high sequencing depth variance; required when integrating with SCTransform-normalized reference datasets\n\nFor most published workflows, SCTransform v2 is now the default recommendation.",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -288,9 +288,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#highly-variable-gene-selection",
     "href": "tutorials/scrna/02-normalization.html#highly-variable-gene-selection",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.5 Highly Variable Gene Selection",
-    "text": "4.5 Highly Variable Gene Selection\nHVGs are genes that vary more across cells than expected by chance — they capture biologically meaningful variation.\n\n\nCode\n# If using LogNormalize (skip if using SCTransform — it selects HVGs internally)\nseu &lt;- FindVariableFeatures(\n  seu,\n  selection.method = \"vst\",\n  nfeatures        = 3000\n)\n\n# Visualise top HVGs\ntop20 &lt;- head(VariableFeatures(seu), 20)\n\np &lt;- VariableFeaturePlot(seu)\nLabelPoints(plot = p, points = top20, repel = TRUE, xnudge = 0, ynudge = 0)",
+    "title": "Normalization & Feature Selection",
+    "section": "Highly Variable Gene Selection",
+    "text": "Highly Variable Gene Selection\nHVGs are genes that vary more across cells than expected by chance — they capture biologically meaningful variation.\n\n\nCode\n# If using LogNormalize (skip if using SCTransform — it selects HVGs internally)\nseu &lt;- FindVariableFeatures(\n  seu,\n  selection.method = \"vst\",\n  nfeatures        = 3000\n)\n\n# Visualise top HVGs\ntop20 &lt;- head(VariableFeatures(seu), 20)\n\np &lt;- VariableFeaturePlot(seu)\nLabelPoints(plot = p, points = top20, repel = TRUE, xnudge = 0, ynudge = 0)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -299,9 +299,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#scaling",
     "href": "tutorials/scrna/02-normalization.html#scaling",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.6 Scaling",
-    "text": "4.6 Scaling\nScaling centers each gene to mean 0 and variance 1 across cells, preventing highly expressed genes from dominating PCA.\n\n\nCode\n# Scale only HVGs (faster; sufficient for PCA/UMAP)\nseu &lt;- ScaleData(seu, features = VariableFeatures(seu))\n\n# --- OR scale all genes (required for heatmaps showing non-HVG genes) ---\nseu &lt;- ScaleData(seu, features = rownames(seu))\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen using SCTransform, scaling is performed internally. Calling ScaleData() again is not necessary for standard workflows.",
+    "title": "Normalization & Feature Selection",
+    "section": "Scaling",
+    "text": "Scaling\nScaling centers each gene to mean 0 and variance 1 across cells, preventing highly expressed genes from dominating PCA.\n\n\nCode\n# Scale only HVGs (faster; sufficient for PCA/UMAP)\nseu &lt;- ScaleData(seu, features = VariableFeatures(seu))\n\n# --- OR scale all genes (required for heatmaps showing non-HVG genes) ---\nseu &lt;- ScaleData(seu, features = rownames(seu))\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen using SCTransform, scaling is performed internally. Calling ScaleData() again is not necessary for standard workflows.",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -310,9 +310,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#save-checkpoint",
     "href": "tutorials/scrna/02-normalization.html#save-checkpoint",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.7 Save Checkpoint",
-    "text": "4.7 Save Checkpoint\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_02_normalized.rds\")",
+    "title": "Normalization & Feature Selection",
+    "section": "Save Checkpoint",
+    "text": "Save Checkpoint\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_02_normalized.rds\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -321,9 +321,9 @@
   {
     "objectID": "tutorials/scrna/02-normalization.html#session-info",
     "href": "tutorials/scrna/02-normalization.html#session-info",
-    "title": "4  Normalization & Feature Selection",
-    "section": "4.8 Session Info",
-    "text": "4.8 Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] patchwork_1.3.2    ggplot2_4.0.1      Seurat_5.4.0       SeuratObject_5.3.0\n[5] sp_2.2-0          \n\nloaded via a namespace (and not attached):\n  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         \n  [4] rlang_1.1.7            magrittr_2.0.4         RcppAnnoy_0.0.22      \n  [7] otel_0.2.0             spatstat.geom_3.6-1    matrixStats_1.5.0     \n [10] ggridges_0.5.7         compiler_4.5.2         png_0.1-8             \n [13] vctrs_0.6.5            reshape2_1.4.5         stringr_1.6.0         \n [16] pkgconfig_2.0.3        fastmap_1.2.0          promises_1.5.0        \n [19] rmarkdown_2.30         purrr_1.2.1            xfun_0.55             \n [22] jsonlite_2.0.0         goftest_1.2-3          later_1.4.4           \n [25] spatstat.utils_3.2-0   irlba_2.3.5.1          parallel_4.5.2        \n [28] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             \n [31] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-9   \n [34] reticulate_1.44.1      parallelly_1.46.1      spatstat.univar_3.1-5 \n [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.1            \n [40] knitr_1.50             tensor_1.5.1           future.apply_1.20.1   \n [43] zoo_1.8-15             sctransform_0.4.2      httpuv_1.6.16         \n [46] Matrix_1.7-4           splines_4.5.2          igraph_2.2.2          \n [49] tidyselect_1.2.1       abind_1.4-8            dichromat_2.0-0.1     \n [52] yaml_2.3.12            spatstat.random_3.4-3  codetools_0.2-20      \n [55] miniUI_0.1.2           spatstat.explore_3.6-0 listenv_0.10.0        \n [58] lattice_0.22-7         tibble_3.3.1           plyr_1.8.9            \n [61] withr_3.0.2            shiny_1.12.1           S7_0.2.1              \n [64] ROCR_1.0-11            evaluate_1.0.5         Rtsne_0.17            \n [67] future_1.68.0          fastDummies_1.7.5      survival_3.8-3        \n [70] polyclip_1.10-7        fitdistrplus_1.2-4     pillar_1.11.1         \n [73] KernSmooth_2.23-26     plotly_4.11.0          generics_0.1.4        \n [76] RcppHNSW_0.6.0         scales_1.4.0           globals_0.18.0        \n [79] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        \n [82] tools_4.5.2            data.table_1.17.8      RSpectra_0.16-2       \n [85] RANN_2.6.2             dotCall64_1.2          cowplot_1.2.0         \n [88] grid_4.5.2             tidyr_1.3.2            nlme_3.1-168          \n [91] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-3           \n [94] viridisLite_0.4.2      dplyr_1.1.4            uwot_0.2.4            \n [97] gtable_0.3.6           digest_0.6.39          progressr_0.18.0      \n[100] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          \n[103] htmltools_0.5.9        lifecycle_1.0.5        httr_1.4.7            \n[106] mime_0.13              MASS_7.3-65",
+    "title": "Normalization & Feature Selection",
+    "section": "Session Info",
+    "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] patchwork_1.3.2    ggplot2_4.0.1      Seurat_5.4.0       SeuratObject_5.3.0\n[5] sp_2.2-0          \n\nloaded via a namespace (and not attached):\n  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         \n  [4] rlang_1.1.7            magrittr_2.0.4         RcppAnnoy_0.0.22      \n  [7] otel_0.2.0             spatstat.geom_3.6-1    matrixStats_1.5.0     \n [10] ggridges_0.5.7         compiler_4.5.2         png_0.1-8             \n [13] vctrs_0.6.5            reshape2_1.4.5         stringr_1.6.0         \n [16] pkgconfig_2.0.3        fastmap_1.2.0          promises_1.5.0        \n [19] rmarkdown_2.30         purrr_1.2.1            xfun_0.55             \n [22] jsonlite_2.0.0         goftest_1.2-3          later_1.4.4           \n [25] spatstat.utils_3.2-0   irlba_2.3.5.1          parallel_4.5.2        \n [28] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             \n [31] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-9   \n [34] reticulate_1.44.1      parallelly_1.46.1      spatstat.univar_3.1-5 \n [37] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.1            \n [40] knitr_1.50             tensor_1.5.1           future.apply_1.20.1   \n [43] zoo_1.8-15             sctransform_0.4.2      httpuv_1.6.16         \n [46] Matrix_1.7-4           splines_4.5.2          igraph_2.2.2          \n [49] tidyselect_1.2.1       abind_1.4-8            dichromat_2.0-0.1     \n [52] yaml_2.3.12            spatstat.random_3.4-3  codetools_0.2-20      \n [55] miniUI_0.1.2           spatstat.explore_3.6-0 listenv_0.10.0        \n [58] lattice_0.22-7         tibble_3.3.1           plyr_1.8.9            \n [61] withr_3.0.2            shiny_1.12.1           S7_0.2.1              \n [64] ROCR_1.0-11            evaluate_1.0.5         Rtsne_0.17            \n [67] future_1.68.0          fastDummies_1.7.5      survival_3.8-3        \n [70] polyclip_1.10-7        fitdistrplus_1.2-4     pillar_1.11.1         \n [73] KernSmooth_2.23-26     plotly_4.11.0          generics_0.1.4        \n [76] RcppHNSW_0.6.0         scales_1.4.0           globals_0.18.0        \n [79] xtable_1.8-4           glue_1.8.0             lazyeval_0.2.2        \n [82] tools_4.5.2            data.table_1.17.8      RSpectra_0.16-2       \n [85] RANN_2.6.2             dotCall64_1.2          cowplot_1.2.0         \n [88] grid_4.5.2             tidyr_1.3.2            nlme_3.1-168          \n [91] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-3           \n [94] viridisLite_0.4.2      dplyr_1.1.4            uwot_0.2.4            \n [97] gtable_0.3.6           digest_0.6.39          progressr_0.18.0      \n[100] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          \n[103] htmltools_0.5.9        lifecycle_1.0.5        httr_1.4.7            \n[106] mime_0.13              MASS_7.3-65",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Normalization & Feature Selection</span>"
@@ -332,9 +332,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html",
     "href": "tutorials/scrna/07-trajectory.html",
-    "title": "5  Trajectory Analysis",
+    "title": "Trajectory Analysis",
     "section": "",
-    "text": "5.1 Overview\nscRNA-seq · Chapter 07\nTrajectory analysis orders cells along a continuum of developmental states, assigning each cell a pseudotime value that reflects its progress along a biological process (differentiation, activation, cell cycle, etc.).\nThis chapter covers:",
+    "text": "Overview\nscRNA-seq · Chapter 07\nTrajectory analysis orders cells along a continuum of developmental states, assigning each cell a pseudotime value that reflects its progress along a biological process (differentiation, activation, cell cycle, etc.).\nThis chapter covers:",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -343,7 +343,7 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#overview",
     "href": "tutorials/scrna/07-trajectory.html#overview",
-    "title": "5  Trajectory Analysis",
+    "title": "Trajectory Analysis",
     "section": "",
     "text": "Converting a Seurat object to a Monocle3 cell_data_set\nPreprocessing and dimensionality reduction within Monocle3\nLearning the principal graph\nSetting the root node and computing pseudotime\nIdentifying genes that change along pseudotime",
     "crumbs": [
@@ -354,9 +354,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#setup",
     "href": "tutorials/scrna/07-trajectory.html#setup",
-    "title": "5  Trajectory Analysis",
-    "section": "5.2 Setup",
-    "text": "5.2 Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(monocle3)\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(dplyr)\n\n\n\n\nCode\nseu &lt;- readRDS(\"data/processed/seu_05_annotated.rds\")",
+    "title": "Trajectory Analysis",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(monocle3)\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(dplyr)\n\n\n\n\nCode\nseu &lt;- readRDS(\"data/processed/seu_05_annotated.rds\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -365,9 +365,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#convert-seurat-monocle3-cell_data_set",
     "href": "tutorials/scrna/07-trajectory.html#convert-seurat-monocle3-cell_data_set",
-    "title": "5  Trajectory Analysis",
-    "section": "5.3 Convert Seurat → Monocle3 cell_data_set",
-    "text": "5.3 Convert Seurat → Monocle3 cell_data_set\n\n\nCode\n# Extract components from Seurat\ngene_metadata &lt;- data.frame(\n  gene_short_name = rownames(seu),\n  row.names       = rownames(seu)\n)\n\ncds &lt;- new_cell_data_set(\n  expression_data   = GetAssayData(seu, assay = \"RNA\", layer = \"counts\"),\n  cell_metadata     = seu@meta.data,\n  gene_metadata     = gene_metadata\n)",
+    "title": "Trajectory Analysis",
+    "section": "Convert Seurat → Monocle3 cell_data_set",
+    "text": "Convert Seurat → Monocle3 cell_data_set\n\n\nCode\n# Extract components from Seurat\ngene_metadata &lt;- data.frame(\n  gene_short_name = rownames(seu),\n  row.names       = rownames(seu)\n)\n\ncds &lt;- new_cell_data_set(\n  expression_data   = GetAssayData(seu, assay = \"RNA\", layer = \"counts\"),\n  cell_metadata     = seu@meta.data,\n  gene_metadata     = gene_metadata\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -376,9 +376,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#preprocess-and-reduce-dimensions",
     "href": "tutorials/scrna/07-trajectory.html#preprocess-and-reduce-dimensions",
-    "title": "5  Trajectory Analysis",
-    "section": "5.4 Preprocess and Reduce Dimensions",
-    "text": "5.4 Preprocess and Reduce Dimensions\n\n\nCode\ncds &lt;- preprocess_cds(cds, num_dim = 30)\ncds &lt;- reduce_dimension(cds, reduction_method = \"UMAP\")\n\n\n\n\n\n\n\n\nTipTransfer UMAP coordinates from Seurat\n\n\n\nTo keep your Seurat UMAP layout consistent with the trajectory plot, embed the Seurat UMAP coordinates directly into the Monocle3 object:\nreducedDim(cds, type = \"UMAP\") &lt;- Embeddings(seu, reduction = \"umap\")",
+    "title": "Trajectory Analysis",
+    "section": "Preprocess and Reduce Dimensions",
+    "text": "Preprocess and Reduce Dimensions\n\n\nCode\ncds &lt;- preprocess_cds(cds, num_dim = 30)\ncds &lt;- reduce_dimension(cds, reduction_method = \"UMAP\")\n\n\n\n\n\n\n\n\nTipTransfer UMAP coordinates from Seurat\n\n\n\nTo keep your Seurat UMAP layout consistent with the trajectory plot, embed the Seurat UMAP coordinates directly into the Monocle3 object:\nreducedDim(cds, type = \"UMAP\") &lt;- Embeddings(seu, reduction = \"umap\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -387,9 +387,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#cluster-and-learn-graph",
     "href": "tutorials/scrna/07-trajectory.html#cluster-and-learn-graph",
-    "title": "5  Trajectory Analysis",
-    "section": "5.5 Cluster and Learn Graph",
-    "text": "5.5 Cluster and Learn Graph\n\n\nCode\ncds &lt;- cluster_cells(cds, resolution = 1e-3)\n\ncds &lt;- learn_graph(\n  cds,\n  use_partition     = TRUE,\n  close_loop        = FALSE,\n  learn_graph_control = list(minimal_branch_len = 5)\n)\n\nplot_cells(\n  cds,\n  color_cells_by = \"cell_type\",\n  label_groups_by_cluster = FALSE,\n  label_leaves   = TRUE,\n  label_branch_points = TRUE\n)",
+    "title": "Trajectory Analysis",
+    "section": "Cluster and Learn Graph",
+    "text": "Cluster and Learn Graph\n\n\nCode\ncds &lt;- cluster_cells(cds, resolution = 1e-3)\n\ncds &lt;- learn_graph(\n  cds,\n  use_partition     = TRUE,\n  close_loop        = FALSE,\n  learn_graph_control = list(minimal_branch_len = 5)\n)\n\nplot_cells(\n  cds,\n  color_cells_by = \"cell_type\",\n  label_groups_by_cluster = FALSE,\n  label_leaves   = TRUE,\n  label_branch_points = TRUE\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -398,9 +398,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#order-cells-in-pseudotime",
     "href": "tutorials/scrna/07-trajectory.html#order-cells-in-pseudotime",
-    "title": "5  Trajectory Analysis",
-    "section": "5.6 Order Cells in Pseudotime",
-    "text": "5.6 Order Cells in Pseudotime\n\n\nCode\n# Interactive root selection (run in RStudio, not on HPC)\ncds &lt;- order_cells(cds)\n\n# --- OR set root programmatically ---\n# Identify the root node nearest to a known progenitor cluster\nroot_cells &lt;- rownames(subset(colData(cds), cell_type == \"HSC\"))\ncds &lt;- order_cells(cds, root_cells = root_cells)\n\nplot_cells(\n  cds,\n  color_cells_by = \"pseudotime\",\n  label_cell_groups = FALSE,\n  label_leaves   = FALSE,\n  label_branch_points = FALSE,\n  graph_label_size = 3\n)",
+    "title": "Trajectory Analysis",
+    "section": "Order Cells in Pseudotime",
+    "text": "Order Cells in Pseudotime\n\n\nCode\n# Interactive root selection (run in RStudio, not on HPC)\ncds &lt;- order_cells(cds)\n\n# --- OR set root programmatically ---\n# Identify the root node nearest to a known progenitor cluster\nroot_cells &lt;- rownames(subset(colData(cds), cell_type == \"HSC\"))\ncds &lt;- order_cells(cds, root_cells = root_cells)\n\nplot_cells(\n  cds,\n  color_cells_by = \"pseudotime\",\n  label_cell_groups = FALSE,\n  label_leaves   = FALSE,\n  label_branch_points = FALSE,\n  graph_label_size = 3\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -409,9 +409,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#identify-pseudotime-dependent-genes",
     "href": "tutorials/scrna/07-trajectory.html#identify-pseudotime-dependent-genes",
-    "title": "5  Trajectory Analysis",
-    "section": "5.7 Identify Pseudotime-Dependent Genes",
-    "text": "5.7 Identify Pseudotime-Dependent Genes\n\n\nCode\n# Test all genes (computationally intensive — subset to HVGs if needed)\npr_test &lt;- graph_test(cds, neighbor_graph = \"principal_graph\", cores = 8)\n\npr_deg &lt;- pr_test %&gt;%\n  filter(q_value &lt; 0.05) %&gt;%\n  arrange(desc(morans_I))\n\nhead(pr_deg, 20)\n\n\n\n\nCode\n# Group co-expressed genes into modules\ngene_module_df &lt;- find_gene_modules(\n  cds[rownames(pr_deg)[1:500], ],\n  resolution = c(10^seq(-6, -1))\n)\n\nplot_cells(\n  cds,\n  genes        = gene_module_df,\n  label_cell_groups = FALSE,\n  show_trajectory_graph = FALSE\n)",
+    "title": "Trajectory Analysis",
+    "section": "Identify Pseudotime-Dependent Genes",
+    "text": "Identify Pseudotime-Dependent Genes\n\n\nCode\n# Test all genes (computationally intensive — subset to HVGs if needed)\npr_test &lt;- graph_test(cds, neighbor_graph = \"principal_graph\", cores = 8)\n\npr_deg &lt;- pr_test %&gt;%\n  filter(q_value &lt; 0.05) %&gt;%\n  arrange(desc(morans_I))\n\nhead(pr_deg, 20)\n\n\n\n\nCode\n# Group co-expressed genes into modules\ngene_module_df &lt;- find_gene_modules(\n  cds[rownames(pr_deg)[1:500], ],\n  resolution = c(10^seq(-6, -1))\n)\n\nplot_cells(\n  cds,\n  genes        = gene_module_df,\n  label_cell_groups = FALSE,\n  show_trajectory_graph = FALSE\n)",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -420,9 +420,9 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#save",
     "href": "tutorials/scrna/07-trajectory.html#save",
-    "title": "5  Trajectory Analysis",
-    "section": "5.8 Save",
-    "text": "5.8 Save\n\n\nCode\nsaveRDS(cds, \"data/processed/cds_07_trajectory.rds\")\n\n# Add pseudotime back to Seurat object\nseu$pseudotime &lt;- pseudotime(cds)[colnames(seu)]\nsaveRDS(seu, \"data/processed/seu_07_pseudotime.rds\")",
+    "title": "Trajectory Analysis",
+    "section": "Save",
+    "text": "Save\n\n\nCode\nsaveRDS(cds, \"data/processed/cds_07_trajectory.rds\")\n\n# Add pseudotime back to Seurat object\nseu$pseudotime &lt;- pseudotime(cds)[colnames(seu)]\nsaveRDS(seu, \"data/processed/seu_07_pseudotime.rds\")",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
@@ -431,133 +431,210 @@
   {
     "objectID": "tutorials/scrna/07-trajectory.html#session-info",
     "href": "tutorials/scrna/07-trajectory.html#session-info",
-    "title": "5  Trajectory Analysis",
-    "section": "5.9 Session Info",
-    "text": "5.9 Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    stats     graphics  grDevices utils     datasets  methods  \n[8] base     \n\nother attached packages:\n [1] dplyr_1.1.4                 patchwork_1.3.2            \n [3] ggplot2_4.0.1               monocle3_1.4.26            \n [5] SingleCellExperiment_1.32.0 SummarizedExperiment_1.40.0\n [7] GenomicRanges_1.62.1        Seqinfo_1.0.0              \n [9] IRanges_2.44.0              S4Vectors_0.48.0           \n[11] MatrixGenerics_1.22.0       matrixStats_1.5.0          \n[13] Biobase_2.70.0              BiocGenerics_0.56.0        \n[15] generics_0.1.4              Seurat_5.4.0               \n[17] SeuratObject_5.3.0          sp_2.2-0                   \n\nloaded via a namespace (and not attached):\n  [1] RColorBrewer_1.1-3     jsonlite_2.0.0         magrittr_2.0.4        \n  [4] spatstat.utils_3.2-0   nloptr_2.2.1           farver_2.1.2          \n  [7] rmarkdown_2.30         vctrs_0.6.5            ROCR_1.0-11           \n [10] minqa_1.2.8            spatstat.explore_3.6-0 htmltools_0.5.9       \n [13] S4Arrays_1.10.1        SparseArray_1.10.8     sctransform_0.4.2     \n [16] parallelly_1.46.1      KernSmooth_2.23-26     htmlwidgets_1.6.4     \n [19] ica_1.0-3              plyr_1.8.9             plotly_4.11.0         \n [22] zoo_1.8-15             igraph_2.2.2           mime_0.13             \n [25] lifecycle_1.0.5        pkgconfig_2.0.3        Matrix_1.7-4          \n [28] R6_2.6.1               fastmap_1.2.0          rbibutils_2.4         \n [31] fitdistrplus_1.2-4     future_1.68.0          shiny_1.12.1          \n [34] digest_0.6.39          tensor_1.5.1           RSpectra_0.16-2       \n [37] irlba_2.3.5.1          progressr_0.18.0       spatstat.sparse_3.1-0 \n [40] httr_1.4.7             polyclip_1.10-7        abind_1.4-8           \n [43] compiler_4.5.2         withr_3.0.2            S7_0.2.1              \n [46] fastDummies_1.7.5      MASS_7.3-65            DelayedArray_0.36.0   \n [49] tools_4.5.2            lmtest_0.9-40          otel_0.2.0            \n [52] httpuv_1.6.16          future.apply_1.20.1    goftest_1.2-3         \n [55] glue_1.8.0             nlme_3.1-168           promises_1.5.0        \n [58] grid_4.5.2             Rtsne_0.17             cluster_2.1.8.1       \n [61] reshape2_1.4.5         gtable_0.3.6           spatstat.data_3.1-9   \n [64] tidyr_1.3.2            data.table_1.17.8      XVector_0.50.0        \n [67] spatstat.geom_3.6-1    RcppAnnoy_0.0.22       ggrepel_0.9.6         \n [70] RANN_2.6.2             pillar_1.11.1          stringr_1.6.0         \n [73] spam_2.11-3            RcppHNSW_0.6.0         later_1.4.4           \n [76] splines_4.5.2          lattice_0.22-7         survival_3.8-3        \n [79] deldir_2.0-4           tidyselect_1.2.1       miniUI_0.1.2          \n [82] pbapply_1.7-4          knitr_1.50             reformulas_0.4.2      \n [85] gridExtra_2.3          scattermore_1.2        xfun_0.55             \n [88] stringi_1.8.7          boot_1.3-32            lazyeval_0.2.2        \n [91] yaml_2.3.12            evaluate_1.0.5         codetools_0.2-20      \n [94] tibble_3.3.1           cli_3.6.5              uwot_0.2.4            \n [97] Rdpack_2.6.4           xtable_1.8-4           reticulate_1.44.1     \n[100] dichromat_2.0-0.1      Rcpp_1.1.1             globals_0.18.0        \n[103] spatstat.random_3.4-3  png_0.1-8              spatstat.univar_3.1-5 \n[106] parallel_4.5.2         dotCall64_1.2          lme4_1.1-38           \n[109] listenv_0.10.0         viridisLite_0.4.2      scales_1.4.0          \n[112] ggridges_0.5.7         purrr_1.2.1            rlang_1.1.7           \n[115] cowplot_1.2.0",
+    "title": "Trajectory Analysis",
+    "section": "Session Info",
+    "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    stats     graphics  grDevices utils     datasets  methods  \n[8] base     \n\nother attached packages:\n [1] dplyr_1.1.4                 patchwork_1.3.2            \n [3] ggplot2_4.0.1               monocle3_1.4.26            \n [5] SingleCellExperiment_1.32.0 SummarizedExperiment_1.40.0\n [7] GenomicRanges_1.62.1        Seqinfo_1.0.0              \n [9] IRanges_2.44.0              S4Vectors_0.48.0           \n[11] MatrixGenerics_1.22.0       matrixStats_1.5.0          \n[13] Biobase_2.70.0              BiocGenerics_0.56.0        \n[15] generics_0.1.4              Seurat_5.4.0               \n[17] SeuratObject_5.3.0          sp_2.2-0                   \n\nloaded via a namespace (and not attached):\n  [1] RColorBrewer_1.1-3     jsonlite_2.0.0         magrittr_2.0.4        \n  [4] spatstat.utils_3.2-0   nloptr_2.2.1           farver_2.1.2          \n  [7] rmarkdown_2.30         vctrs_0.6.5            ROCR_1.0-11           \n [10] minqa_1.2.8            spatstat.explore_3.6-0 htmltools_0.5.9       \n [13] S4Arrays_1.10.1        SparseArray_1.10.8     sctransform_0.4.2     \n [16] parallelly_1.46.1      KernSmooth_2.23-26     htmlwidgets_1.6.4     \n [19] ica_1.0-3              plyr_1.8.9             plotly_4.11.0         \n [22] zoo_1.8-15             igraph_2.2.2           mime_0.13             \n [25] lifecycle_1.0.5        pkgconfig_2.0.3        Matrix_1.7-4          \n [28] R6_2.6.1               fastmap_1.2.0          rbibutils_2.4         \n [31] fitdistrplus_1.2-4     future_1.68.0          shiny_1.12.1          \n [34] digest_0.6.39          tensor_1.5.1           RSpectra_0.16-2       \n [37] irlba_2.3.5.1          progressr_0.18.0       spatstat.sparse_3.1-0 \n [40] httr_1.4.7             polyclip_1.10-7        abind_1.4-8           \n [43] compiler_4.5.2         withr_3.0.2            S7_0.2.1              \n [46] fastDummies_1.7.5      MASS_7.3-65            DelayedArray_0.36.0   \n [49] tools_4.5.2            lmtest_0.9-40          otel_0.2.0            \n [52] httpuv_1.6.16          future.apply_1.20.1    goftest_1.2-3         \n [55] glue_1.8.0             nlme_3.1-168           promises_1.5.0        \n [58] grid_4.5.2             Rtsne_0.17             cluster_2.1.8.1       \n [61] reshape2_1.4.5         gtable_0.3.6           spatstat.data_3.1-9   \n [64] tidyr_1.3.2            data.table_1.17.8      XVector_0.50.0        \n [67] spatstat.geom_3.6-1    RcppAnnoy_0.0.22       ggrepel_0.9.6         \n [70] RANN_2.6.2             pillar_1.11.1          stringr_1.6.0         \n [73] spam_2.11-3            RcppHNSW_0.6.0         later_1.4.4           \n [76] splines_4.5.2          lattice_0.22-7         survival_3.8-3        \n [79] deldir_2.0-4           tidyselect_1.2.1       miniUI_0.1.2          \n [82] pbapply_1.7-4          knitr_1.50             reformulas_0.4.2      \n [85] gridExtra_2.3          scattermore_1.2        xfun_0.55             \n [88] stringi_1.8.7          boot_1.3-32            lazyeval_0.2.2        \n [91] yaml_2.3.12            evaluate_1.0.5         codetools_0.2-20      \n [94] tibble_3.3.1           cli_3.6.5              uwot_0.2.4            \n [97] Rdpack_2.6.4           xtable_1.8-4           reticulate_1.44.1     \n[100] dichromat_2.0-0.1      Rcpp_1.1.1             globals_0.18.0        \n[103] spatstat.random_3.4-3  png_0.1-8              spatstat.univar_3.1-5 \n[106] parallel_4.5.2         dotCall64_1.2          lme4_1.1-38           \n[109] listenv_0.10.0         viridisLite_0.4.2      scales_1.4.0          \n[112] ggridges_0.5.7         purrr_1.2.1            rlang_1.1.7           \n[115] cowplot_1.2.0",
     "crumbs": [
       "**scRNA-seq**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Trajectory Analysis</span>"
     ]
   },
   {
+    "objectID": "tutorials/scrna/r_test.html",
+    "href": "tutorials/scrna/r_test.html",
+    "title": "Test",
+    "section": "",
+    "text": "Setup\nCode\nlibrary(ggplot2)\nlibrary(patchwork)",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Test</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/r_test.html#scatter-plot",
+    "href": "tutorials/scrna/r_test.html#scatter-plot",
+    "title": "Test",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\n\n\nCode\nset.seed(42)\ndf &lt;- data.frame(\n  UMAP1  = c(rnorm(200, -2), rnorm(200, 2), rnorm(200, 0)),\n  UMAP2  = c(rnorm(200, -2), rnorm(200, 2), rnorm(200, 3)),\n  cluster = rep(c(\"T cell\", \"B cell\", \"Monocyte\"), each = 200)\n)\n\nggplot(df, aes(x = UMAP1, y = UMAP2, color = cluster)) +\n  geom_point(size = 0.8, alpha = 0.7) +\n  scale_color_brewer(palette = \"Set1\") +\n  theme_classic() +\n  labs(title = \"Simulated UMAP\", color = \"Cell Type\")\n\n\n\n\n\nSimulated UMAP-like scatter plot",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Test</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/r_test.html#violin-plot",
+    "href": "tutorials/scrna/r_test.html#violin-plot",
+    "title": "Test",
+    "section": "Violin Plot",
+    "text": "Violin Plot\n\n\nCode\ndf$expression &lt;- c(\n  abs(rnorm(200, 2, 1)),\n  abs(rnorm(200, 4, 1)),\n  abs(rnorm(200, 1, 0.5))\n)\n\nggplot(df, aes(x = cluster, y = expression, fill = cluster)) +\n  geom_violin(trim = FALSE, alpha = 0.8) +\n  geom_boxplot(width = 0.1, fill = \"white\", outlier.size = 0.5) +\n  scale_fill_brewer(palette = \"Set1\") +\n  theme_classic() +\n  labs(title = \"Expression by Cell Type\", \n       x = NULL, y = \"Normalized Expression\") +\n  theme(legend.position = \"none\")\n\n\n\n\n\nGene expression by cluster",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Test</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/r_test.html#patchwork-combined-plots",
+    "href": "tutorials/scrna/r_test.html#patchwork-combined-plots",
+    "title": "Test",
+    "section": "Patchwork — combined plots",
+    "text": "Patchwork — combined plots\n\n\nCode\np1 &lt;- ggplot(df, aes(x = UMAP1, y = UMAP2, color = cluster)) +\n  geom_point(size = 0.8, alpha = 0.7) +\n  scale_color_brewer(palette = \"Set1\") +\n  theme_classic() +\n  theme(legend.position = \"bottom\")\n\np2 &lt;- ggplot(df, aes(x = cluster, y = expression, fill = cluster)) +\n  geom_violin(alpha = 0.8) +\n  scale_fill_brewer(palette = \"Set1\") +\n  theme_classic() +\n  theme(legend.position = \"none\")\n\np1 | p2\n\n\n\n\n\nCombined layout with patchwork",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Test</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/r_test.html#session-info",
+    "href": "tutorials/scrna/r_test.html#session-info",
+    "title": "Test",
+    "section": "Session Info",
+    "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] patchwork_1.3.2 ggplot2_4.0.1  \n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        cli_3.6.5          knitr_1.50         rlang_1.1.7       \n [5] xfun_0.55          generics_0.1.4     S7_0.2.1           jsonlite_2.0.0    \n [9] labeling_0.4.3     glue_1.8.0         htmltools_0.5.9    scales_1.4.0      \n[13] rmarkdown_2.30     grid_4.5.2         tibble_3.3.1       evaluate_1.0.5    \n[17] fastmap_1.2.0      yaml_2.3.12        lifecycle_1.0.5    compiler_4.5.2    \n[21] codetools_0.2-20   dplyr_1.1.4        RColorBrewer_1.1-3 pkgconfig_2.0.3   \n[25] htmlwidgets_1.6.4  farver_2.1.2       digest_0.6.39      R6_2.6.1          \n[29] tidyselect_1.2.1   dichromat_2.0-0.1  pillar_1.11.1      magrittr_2.0.4    \n[33] withr_3.0.2        tools_4.5.2        gtable_0.3.6",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Test</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/dandelion_test.html",
+    "href": "tutorials/scrna/dandelion_test.html",
+    "title": "Clonal Analysis",
+    "section": "",
+    "text": "Test",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clonal Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/dandelion_test.html#test",
+    "href": "tutorials/scrna/dandelion_test.html#test",
+    "title": "Clonal Analysis",
+    "section": "",
+    "text": "Test\n\n\nCode\n# Cell 2 — Code cell\nimport scanpy as sc\nimport matplotlib.pyplot as plt\n\n\n\n\nCode\nsc.settings.verbosity = 3 # verbosity: errors (0), warnings (1), info (2), hints (3)\nsc.logging.print_versions()\n\n\n\n\n\n\n\nCode\n# Load example dataset (PBMC3k built-in)\nadata = sc.datasets.pbmc3k_processed()\n\n\n\n\n\n\n\nCode\n# UMAP colored by cell type\nsc.pl.umap(\n    adata,\n    color='louvain',\n    title='PBMC 3k — Cell Types',\n    frameon=False,\n    legend_loc='on data'\n)",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clonal Analysis</span>"
+    ]
+  },
+  {
     "objectID": "tutorials/multiomics/02-signac.html",
     "href": "tutorials/multiomics/02-signac.html",
-    "title": "6  Signac: scRNA + scATAC Integration",
+    "title": "Signac: scRNA + scATAC Integration",
     "section": "",
-    "text": "6.1 Overview\nMulti-omics · Chapter 02\nSignac extends Seurat to handle chromatin accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome), it enables joint analysis — linking open chromatin regions to gene expression at single-cell resolution.\nThis chapter covers:",
+    "text": "Overview\nMulti-omics · Chapter 02\nSignac extends Seurat to handle chromatin accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome), it enables joint analysis — linking open chromatin regions to gene expression at single-cell resolution.\nThis chapter covers:",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#overview",
     "href": "tutorials/multiomics/02-signac.html#overview",
-    "title": "6  Signac: scRNA + scATAC Integration",
+    "title": "Signac: scRNA + scATAC Integration",
     "section": "",
     "text": "Creating a Signac object from a 10x Multiome dataset\nATAC-seq QC within Signac\nLSI dimensionality reduction\nJoint WNN embedding with matched RNA\nLinking peaks to genes",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#setup",
     "href": "tutorials/multiomics/02-signac.html#setup",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.2 Setup",
-    "text": "6.2 Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(Signac)\nlibrary(EnsDb.Hsapiens.v86)\nlibrary(BSgenome.Hsapiens.UCSC.hg38)\nlibrary(ggplot2)\nlibrary(patchwork)",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(Signac)\nlibrary(EnsDb.Hsapiens.v86)\nlibrary(BSgenome.Hsapiens.UCSC.hg38)\nlibrary(ggplot2)\nlibrary(patchwork)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#load-10x-multiome-data",
     "href": "tutorials/multiomics/02-signac.html#load-10x-multiome-data",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.3 Load 10x Multiome Data",
-    "text": "6.3 Load 10x Multiome Data\n\n\nCode\n# Read Cell Ranger ARC output\ncounts &lt;- Read10X_h5(\"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5\")\n\n# Separate RNA and ATAC matrices\nrna_counts  &lt;- counts$`Gene Expression`\natac_counts &lt;- counts$Peaks\n\n# Load fragment file metadata\nfragpath &lt;- \"data/raw/pbmc_multiome/atac_fragments.tsv.gz\"",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Load 10x Multiome Data",
+    "text": "Load 10x Multiome Data\n\n\nCode\n# Read Cell Ranger ARC output\ncounts &lt;- Read10X_h5(\"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5\")\n\n# Separate RNA and ATAC matrices\nrna_counts  &lt;- counts$`Gene Expression`\natac_counts &lt;- counts$Peaks\n\n# Load fragment file metadata\nfragpath &lt;- \"data/raw/pbmc_multiome/atac_fragments.tsv.gz\"",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#create-seurat-signac-object",
     "href": "tutorials/multiomics/02-signac.html#create-seurat-signac-object",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.4 Create Seurat + Signac Object",
-    "text": "6.4 Create Seurat + Signac Object\n\n\nCode\n# Genome annotation\nannotation &lt;- GetGRangesFromEnsDb(ensdb = EnsDb.Hsapiens.v86)\nseqlevels(annotation) &lt;- paste0(\"chr\", seqlevels(annotation))\n\n# Create chromatin assay\natac_assay &lt;- CreateChromatinAssay(\n  counts     = atac_counts,\n  sep        = c(\":\", \"-\"),\n  fragments  = fragpath,\n  annotation = annotation\n)\n\n# Build Seurat object with both modalities\nseu &lt;- CreateSeuratObject(counts = rna_counts, assay = \"RNA\")\nseu[[\"ATAC\"]] &lt;- atac_assay\n\nseu",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Create Seurat + Signac Object",
+    "text": "Create Seurat + Signac Object\n\n\nCode\n# Genome annotation\nannotation &lt;- GetGRangesFromEnsDb(ensdb = EnsDb.Hsapiens.v86)\nseqlevels(annotation) &lt;- paste0(\"chr\", seqlevels(annotation))\n\n# Create chromatin assay\natac_assay &lt;- CreateChromatinAssay(\n  counts     = atac_counts,\n  sep        = c(\":\", \"-\"),\n  fragments  = fragpath,\n  annotation = annotation\n)\n\n# Build Seurat object with both modalities\nseu &lt;- CreateSeuratObject(counts = rna_counts, assay = \"RNA\")\nseu[[\"ATAC\"]] &lt;- atac_assay\n\nseu",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#atac-qc",
     "href": "tutorials/multiomics/02-signac.html#atac-qc",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.5 ATAC QC",
-    "text": "6.5 ATAC QC\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- NucleosomeSignal(seu)\nseu &lt;- TSSEnrichment(seu, fast = FALSE)\n\n# Filter\nseu &lt;- subset(\n  seu,\n  subset = nCount_ATAC &gt; 1000   &\n           nCount_ATAC &lt; 100000 &\n           nCount_RNA  &gt; 200    &\n           nCount_RNA  &lt; 25000  &\n           nucleosome_signal &lt; 2 &\n           TSS.enrichment &gt; 1\n)\n\n\n\n\nCode\nVlnPlot(\n  seu,\n  features = c(\"nCount_ATAC\", \"TSS.enrichment\", \"nucleosome_signal\"),\n  ncol = 3, pt.size = 0\n)",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "ATAC QC",
+    "text": "ATAC QC\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- NucleosomeSignal(seu)\nseu &lt;- TSSEnrichment(seu, fast = FALSE)\n\n# Filter\nseu &lt;- subset(\n  seu,\n  subset = nCount_ATAC &gt; 1000   &\n           nCount_ATAC &lt; 100000 &\n           nCount_RNA  &gt; 200    &\n           nCount_RNA  &lt; 25000  &\n           nucleosome_signal &lt; 2 &\n           TSS.enrichment &gt; 1\n)\n\n\n\n\nCode\nVlnPlot(\n  seu,\n  features = c(\"nCount_ATAC\", \"TSS.enrichment\", \"nucleosome_signal\"),\n  ncol = 3, pt.size = 0\n)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#process-each-modality",
     "href": "tutorials/multiomics/02-signac.html#process-each-modality",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.6 Process Each Modality",
-    "text": "6.6 Process Each Modality\n\n\nCode\nDefaultAssay(seu) &lt;- \"RNA\"\nseu &lt;- SCTransform(seu, verbose = FALSE)\nseu &lt;- RunPCA(seu, npcs = 30)\n\n\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\nseu &lt;- RunTFIDF(seu)\nseu &lt;- FindTopFeatures(seu, min.cutoff = \"q0\")\nseu &lt;- RunSVD(seu)   # LSI",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Process Each Modality",
+    "text": "Process Each Modality\n\n\nCode\nDefaultAssay(seu) &lt;- \"RNA\"\nseu &lt;- SCTransform(seu, verbose = FALSE)\nseu &lt;- RunPCA(seu, npcs = 30)\n\n\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\nseu &lt;- RunTFIDF(seu)\nseu &lt;- FindTopFeatures(seu, min.cutoff = \"q0\")\nseu &lt;- RunSVD(seu)   # LSI",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#joint-wnn-embedding",
     "href": "tutorials/multiomics/02-signac.html#joint-wnn-embedding",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.7 Joint WNN Embedding",
-    "text": "6.7 Joint WNN Embedding\n\n\nCode\nseu &lt;- FindMultiModalNeighbors(\n  seu,\n  reduction.list = list(\"pca\", \"lsi\"),\n  dims.list      = list(1:30, 2:50),  # exclude LSI component 1 (correlated with depth)\n  modality.weight.name = \"RNA.weight\"\n)\n\nseu &lt;- RunUMAP(\n  seu,\n  nn.name    = \"weighted.nn\",\n  reduction.name = \"wnn.umap\",\n  reduction.key  = \"wnnUMAP_\"\n)\n\nseu &lt;- FindClusters(seu, graph.name = \"wsnn\", resolution = 0.8)\n\n\n\n\nCode\np1 &lt;- DimPlot(seu, reduction = \"wnn.umap\", label = TRUE) + NoLegend()\np2 &lt;- FeaturePlot(seu, features = \"RNA.weight\", reduction = \"wnn.umap\")\np1 | p2",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Joint WNN Embedding",
+    "text": "Joint WNN Embedding\n\n\nCode\nseu &lt;- FindMultiModalNeighbors(\n  seu,\n  reduction.list = list(\"pca\", \"lsi\"),\n  dims.list      = list(1:30, 2:50),  # exclude LSI component 1 (correlated with depth)\n  modality.weight.name = \"RNA.weight\"\n)\n\nseu &lt;- RunUMAP(\n  seu,\n  nn.name    = \"weighted.nn\",\n  reduction.name = \"wnn.umap\",\n  reduction.key  = \"wnnUMAP_\"\n)\n\nseu &lt;- FindClusters(seu, graph.name = \"wsnn\", resolution = 0.8)\n\n\n\n\nCode\np1 &lt;- DimPlot(seu, reduction = \"wnn.umap\", label = TRUE) + NoLegend()\np2 &lt;- FeaturePlot(seu, features = \"RNA.weight\", reduction = \"wnn.umap\")\np1 | p2",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#link-peaks-to-genes",
     "href": "tutorials/multiomics/02-signac.html#link-peaks-to-genes",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.8 Link Peaks to Genes",
-    "text": "6.8 Link Peaks to Genes\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- LinkPeaks(\n  seu,\n  peak.assay = \"ATAC\",\n  expression.assay = \"SCT\",\n  genes.use  = VariableFeatures(seu, assay = \"SCT\")\n)\n\n\n\n\nCode\nCoveragePlot(\n  seu,\n  region     = \"MS4A1\",\n  features   = \"MS4A1\",\n  expression.assay = \"SCT\",\n  extend.upstream   = 500,\n  extend.downstream = 10000\n)",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Link Peaks to Genes",
+    "text": "Link Peaks to Genes\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- LinkPeaks(\n  seu,\n  peak.assay = \"ATAC\",\n  expression.assay = \"SCT\",\n  genes.use  = VariableFeatures(seu, assay = \"SCT\")\n)\n\n\n\n\nCode\nCoveragePlot(\n  seu,\n  region     = \"MS4A1\",\n  features   = \"MS4A1\",\n  expression.assay = \"SCT\",\n  extend.upstream   = 500,\n  extend.downstream = 10000\n)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#save",
     "href": "tutorials/multiomics/02-signac.html#save",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.9 Save",
-    "text": "6.9 Save\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_multiome_signac.rds\")",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Save",
+    "text": "Save\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_multiome_signac.rds\")",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
     "objectID": "tutorials/multiomics/02-signac.html#session-info",
     "href": "tutorials/multiomics/02-signac.html#session-info",
-    "title": "6  Signac: scRNA + scATAC Integration",
-    "section": "6.10 Session Info",
-    "text": "6.10 Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    stats     graphics  grDevices utils     datasets  methods  \n[8] base     \n\nother attached packages:\n [1] patchwork_1.3.2                   ggplot2_4.0.1                    \n [3] BSgenome.Hsapiens.UCSC.hg38_1.4.5 BSgenome_1.78.0                  \n [5] rtracklayer_1.70.0                BiocIO_1.20.0                    \n [7] Biostrings_2.78.0                 XVector_0.50.0                   \n [9] GenomeInfoDb_1.46.2               EnsDb.Hsapiens.v86_2.99.0        \n[11] ensembldb_2.34.0                  AnnotationFilter_1.34.0          \n[13] GenomicFeatures_1.62.0            AnnotationDbi_1.72.0             \n[15] Biobase_2.70.0                    GenomicRanges_1.62.1             \n[17] Seqinfo_1.0.0                     IRanges_2.44.0                   \n[19] S4Vectors_0.48.0                  BiocGenerics_0.56.0              \n[21] generics_0.1.4                    Signac_1.16.0                    \n[23] Seurat_5.4.0                      SeuratObject_5.3.0               \n[25] sp_2.2-0                         \n\nloaded via a namespace (and not attached):\n  [1] RcppAnnoy_0.0.22            splines_4.5.2              \n  [3] later_1.4.4                 bitops_1.0-9               \n  [5] tibble_3.3.1                polyclip_1.10-7            \n  [7] XML_3.99-0.20               fastDummies_1.7.5          \n  [9] lifecycle_1.0.5             globals_0.18.0             \n [11] lattice_0.22-7              MASS_7.3-65                \n [13] magrittr_2.0.4              plotly_4.11.0              \n [15] rmarkdown_2.30              yaml_2.3.12                \n [17] httpuv_1.6.16               otel_0.2.0                 \n [19] sctransform_0.4.2           spam_2.11-3                \n [21] spatstat.sparse_3.1-0       reticulate_1.44.1          \n [23] cowplot_1.2.0               pbapply_1.7-4              \n [25] DBI_1.2.3                   RColorBrewer_1.1-3         \n [27] abind_1.4-8                 Rtsne_0.17                 \n [29] purrr_1.2.1                 RCurl_1.98-1.17            \n [31] ggrepel_0.9.6               irlba_2.3.5.1              \n [33] listenv_0.10.0              spatstat.utils_3.2-0       \n [35] goftest_1.2-3               RSpectra_0.16-2            \n [37] spatstat.random_3.4-3       fitdistrplus_1.2-4         \n [39] parallelly_1.46.1           codetools_0.2-20           \n [41] DelayedArray_0.36.0         RcppRoll_0.3.1             \n [43] tidyselect_1.2.1            UCSC.utils_1.6.0           \n [45] farver_2.1.2                matrixStats_1.5.0          \n [47] spatstat.explore_3.6-0      GenomicAlignments_1.46.0   \n [49] jsonlite_2.0.0              progressr_0.18.0           \n [51] ggridges_0.5.7              survival_3.8-3             \n [53] tools_4.5.2                 ica_1.0-3                  \n [55] Rcpp_1.1.1                  glue_1.8.0                 \n [57] gridExtra_2.3               SparseArray_1.10.8         \n [59] xfun_0.55                   MatrixGenerics_1.22.0      \n [61] dplyr_1.1.4                 withr_3.0.2                \n [63] fastmap_1.2.0               digest_0.6.39              \n [65] R6_2.6.1                    mime_0.13                  \n [67] scattermore_1.2             tensor_1.5.1               \n [69] dichromat_2.0-0.1           spatstat.data_3.1-9        \n [71] RSQLite_2.4.5               cigarillo_1.0.0            \n [73] tidyr_1.3.2                 data.table_1.17.8          \n [75] httr_1.4.7                  htmlwidgets_1.6.4          \n [77] S4Arrays_1.10.1             uwot_0.2.4                 \n [79] pkgconfig_2.0.3             gtable_0.3.6               \n [81] blob_1.2.4                  lmtest_0.9-40              \n [83] S7_0.2.1                    htmltools_0.5.9            \n [85] dotCall64_1.2               ProtGenerics_1.42.0        \n [87] scales_1.4.0                png_0.1-8                  \n [89] spatstat.univar_3.1-5       knitr_1.50                 \n [91] reshape2_1.4.5              rjson_0.2.23               \n [93] nlme_3.1-168                curl_7.0.0                 \n [95] zoo_1.8-15                  cachem_1.1.0               \n [97] stringr_1.6.0               KernSmooth_2.23-26         \n [99] parallel_4.5.2              miniUI_0.1.2               \n[101] restfulr_0.0.16             pillar_1.11.1              \n[103] grid_4.5.2                  vctrs_0.6.5                \n[105] RANN_2.6.2                  promises_1.5.0             \n[107] xtable_1.8-4                cluster_2.1.8.1            \n[109] evaluate_1.0.5              cli_3.6.5                  \n[111] compiler_4.5.2              Rsamtools_2.26.0           \n[113] rlang_1.1.7                 crayon_1.5.3               \n[115] future.apply_1.20.1         plyr_1.8.9                 \n[117] stringi_1.8.7               viridisLite_0.4.2          \n[119] deldir_2.0-4                BiocParallel_1.44.0        \n[121] lazyeval_0.2.2              spatstat.geom_3.6-1        \n[123] Matrix_1.7-4                RcppHNSW_0.6.0             \n[125] bit64_4.6.0-1               future_1.68.0              \n[127] KEGGREST_1.50.0             shiny_1.12.1               \n[129] SummarizedExperiment_1.40.0 ROCR_1.0-11                \n[131] igraph_2.2.2                memoise_2.0.1              \n[133] fastmatch_1.1-6             bit_4.6.0",
+    "title": "Signac: scRNA + scATAC Integration",
+    "section": "Session Info",
+    "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    stats     graphics  grDevices utils     datasets  methods  \n[8] base     \n\nother attached packages:\n [1] patchwork_1.3.2                   ggplot2_4.0.1                    \n [3] BSgenome.Hsapiens.UCSC.hg38_1.4.5 BSgenome_1.78.0                  \n [5] rtracklayer_1.70.0                BiocIO_1.20.0                    \n [7] Biostrings_2.78.0                 XVector_0.50.0                   \n [9] GenomeInfoDb_1.46.2               EnsDb.Hsapiens.v86_2.99.0        \n[11] ensembldb_2.34.0                  AnnotationFilter_1.34.0          \n[13] GenomicFeatures_1.62.0            AnnotationDbi_1.72.0             \n[15] Biobase_2.70.0                    GenomicRanges_1.62.1             \n[17] Seqinfo_1.0.0                     IRanges_2.44.0                   \n[19] S4Vectors_0.48.0                  BiocGenerics_0.56.0              \n[21] generics_0.1.4                    Signac_1.16.0                    \n[23] Seurat_5.4.0                      SeuratObject_5.3.0               \n[25] sp_2.2-0                         \n\nloaded via a namespace (and not attached):\n  [1] RcppAnnoy_0.0.22            splines_4.5.2              \n  [3] later_1.4.4                 bitops_1.0-9               \n  [5] tibble_3.3.1                polyclip_1.10-7            \n  [7] XML_3.99-0.20               fastDummies_1.7.5          \n  [9] lifecycle_1.0.5             globals_0.18.0             \n [11] lattice_0.22-7              MASS_7.3-65                \n [13] magrittr_2.0.4              plotly_4.11.0              \n [15] rmarkdown_2.30              yaml_2.3.12                \n [17] httpuv_1.6.16               otel_0.2.0                 \n [19] sctransform_0.4.2           spam_2.11-3                \n [21] spatstat.sparse_3.1-0       reticulate_1.44.1          \n [23] cowplot_1.2.0               pbapply_1.7-4              \n [25] DBI_1.2.3                   RColorBrewer_1.1-3         \n [27] abind_1.4-8                 Rtsne_0.17                 \n [29] purrr_1.2.1                 RCurl_1.98-1.17            \n [31] ggrepel_0.9.6               irlba_2.3.5.1              \n [33] listenv_0.10.0              spatstat.utils_3.2-0       \n [35] goftest_1.2-3               RSpectra_0.16-2            \n [37] spatstat.random_3.4-3       fitdistrplus_1.2-4         \n [39] parallelly_1.46.1           codetools_0.2-20           \n [41] DelayedArray_0.36.0         RcppRoll_0.3.1             \n [43] tidyselect_1.2.1            UCSC.utils_1.6.0           \n [45] farver_2.1.2                matrixStats_1.5.0          \n [47] spatstat.explore_3.6-0      GenomicAlignments_1.46.0   \n [49] jsonlite_2.0.0              progressr_0.18.0           \n [51] ggridges_0.5.7              survival_3.8-3             \n [53] tools_4.5.2                 ica_1.0-3                  \n [55] Rcpp_1.1.1                  glue_1.8.0                 \n [57] gridExtra_2.3               SparseArray_1.10.8         \n [59] xfun_0.55                   MatrixGenerics_1.22.0      \n [61] dplyr_1.1.4                 withr_3.0.2                \n [63] fastmap_1.2.0               digest_0.6.39              \n [65] R6_2.6.1                    mime_0.13                  \n [67] scattermore_1.2             tensor_1.5.1               \n [69] dichromat_2.0-0.1           spatstat.data_3.1-9        \n [71] RSQLite_2.4.5               cigarillo_1.0.0            \n [73] tidyr_1.3.2                 data.table_1.17.8          \n [75] httr_1.4.7                  htmlwidgets_1.6.4          \n [77] S4Arrays_1.10.1             uwot_0.2.4                 \n [79] pkgconfig_2.0.3             gtable_0.3.6               \n [81] blob_1.2.4                  lmtest_0.9-40              \n [83] S7_0.2.1                    htmltools_0.5.9            \n [85] dotCall64_1.2               ProtGenerics_1.42.0        \n [87] scales_1.4.0                png_0.1-8                  \n [89] spatstat.univar_3.1-5       knitr_1.50                 \n [91] reshape2_1.4.5              rjson_0.2.23               \n [93] nlme_3.1-168                curl_7.0.0                 \n [95] zoo_1.8-15                  cachem_1.1.0               \n [97] stringr_1.6.0               KernSmooth_2.23-26         \n [99] parallel_4.5.2              miniUI_0.1.2               \n[101] restfulr_0.0.16             pillar_1.11.1              \n[103] grid_4.5.2                  vctrs_0.6.5                \n[105] RANN_2.6.2                  promises_1.5.0             \n[107] xtable_1.8-4                cluster_2.1.8.1            \n[109] evaluate_1.0.5              cli_3.6.5                  \n[111] compiler_4.5.2              Rsamtools_2.26.0           \n[113] rlang_1.1.7                 crayon_1.5.3               \n[115] future.apply_1.20.1         plyr_1.8.9                 \n[117] stringi_1.8.7               viridisLite_0.4.2          \n[119] deldir_2.0-4                BiocParallel_1.44.0        \n[121] lazyeval_0.2.2              spatstat.geom_3.6-1        \n[123] Matrix_1.7-4                RcppHNSW_0.6.0             \n[125] bit64_4.6.0-1               future_1.68.0              \n[127] KEGGREST_1.50.0             shiny_1.12.1               \n[129] SummarizedExperiment_1.40.0 ROCR_1.0-11                \n[131] igraph_2.2.2                memoise_2.0.1              \n[133] fastmatch_1.1-6             bit_4.6.0",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   }
 ]

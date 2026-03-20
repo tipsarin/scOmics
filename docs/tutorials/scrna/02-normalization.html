@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Normalization &amp; Feature Selection – Single-Cell Omics Tutorials</title>
+<title>Normalization &amp; Feature Selection – Single-Cell Omics Tutorials</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/scrna/01-qc-filtering.html"><strong>scRNA-seq</strong></a></li><li class="breadcrumb-item"><a href="../../tutorials/scrna/02-normalization.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Normalization &amp; Feature Selection</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/scrna/01-qc-filtering.html"><strong>scRNA-seq</strong></a></li><li class="breadcrumb-item"><a href="../../tutorials/scrna/02-normalization.html"><span class="chapter-title">Normalization &amp; Feature Selection</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -340,14 +340,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Single-Cell Omics Tutorials</span></span></a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-Cell Omics Tutorials</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../getting-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
+  <a href="../../getting-started.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Getting Started</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -361,20 +359,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/scrna/01-qc-filtering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">QC &amp; Filtering</span></span></a>
+  <a href="../../tutorials/scrna/01-qc-filtering.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">QC &amp; Filtering</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/scrna/02-normalization.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Normalization &amp; Feature Selection</span></span></a>
+  <a href="../../tutorials/scrna/02-normalization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Normalization &amp; Feature Selection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/scrna/07-trajectory.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Trajectory Analysis</span></span></a>
+  <a href="../../tutorials/scrna/07-trajectory.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Trajectory Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/scrna/r_test.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/scrna/dandelion_test.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clonal Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -398,16 +403,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/multiomics/02-signac.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Signac: scRNA + scATAC Integration</span></span></a>
+  <a href="../../tutorials/multiomics/02-signac.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Signac: scRNA + scATAC Integration</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  <a href="../../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References</span></a>
   </div>
 </li>
     </ul>
@@ -420,24 +423,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">4.1</span> Overview</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">4.2</span> Setup</a></li>
-  <li><a href="#approach-1-log-normalization" id="toc-approach-1-log-normalization" class="nav-link" data-scroll-target="#approach-1-log-normalization"><span class="header-section-number">4.3</span> Approach 1: Log-Normalization</a></li>
-  <li><a href="#approach-2-sctransform-v2-recommended" id="toc-approach-2-sctransform-v2-recommended" class="nav-link" data-scroll-target="#approach-2-sctransform-v2-recommended"><span class="header-section-number">4.4</span> Approach 2: SCTransform v2 (Recommended)</a></li>
-  <li><a href="#highly-variable-gene-selection" id="toc-highly-variable-gene-selection" class="nav-link" data-scroll-target="#highly-variable-gene-selection"><span class="header-section-number">4.5</span> Highly Variable Gene Selection</a></li>
-  <li><a href="#scaling" id="toc-scaling" class="nav-link" data-scroll-target="#scaling"><span class="header-section-number">4.6</span> Scaling</a></li>
-  <li><a href="#save-checkpoint" id="toc-save-checkpoint" class="nav-link" data-scroll-target="#save-checkpoint"><span class="header-section-number">4.7</span> Save Checkpoint</a></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info"><span class="header-section-number">4.8</span> Session Info</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#approach-1-log-normalization" id="toc-approach-1-log-normalization" class="nav-link" data-scroll-target="#approach-1-log-normalization">Approach 1: Log-Normalization</a></li>
+  <li><a href="#approach-2-sctransform-v2-recommended" id="toc-approach-2-sctransform-v2-recommended" class="nav-link" data-scroll-target="#approach-2-sctransform-v2-recommended">Approach 2: SCTransform v2 (Recommended)</a></li>
+  <li><a href="#highly-variable-gene-selection" id="toc-highly-variable-gene-selection" class="nav-link" data-scroll-target="#highly-variable-gene-selection">Highly Variable Gene Selection</a></li>
+  <li><a href="#scaling" id="toc-scaling" class="nav-link" data-scroll-target="#scaling">Scaling</a></li>
+  <li><a href="#save-checkpoint" id="toc-save-checkpoint" class="nav-link" data-scroll-target="#save-checkpoint">Save Checkpoint</a></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session Info</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/tipsarin/scOmics/edit/main/tutorials/scrna/02-normalization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/scrna/01-qc-filtering.html"><strong>scRNA-seq</strong></a></li><li class="breadcrumb-item"><a href="../../tutorials/scrna/02-normalization.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Normalization &amp; Feature Selection</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/scrna/01-qc-filtering.html"><strong>scRNA-seq</strong></a></li><li class="breadcrumb-item"><a href="../../tutorials/scrna/02-normalization.html"><span class="chapter-title">Normalization &amp; Feature Selection</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Normalization &amp; Feature Selection</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Normalization &amp; Feature Selection</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 <p class="subtitle lead">Correct for sequencing depth and identify highly variable genes</p>
   <div class="quarto-categories">
     <div class="quarto-category">scRNA-seq</div>
@@ -461,8 +464,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><span class="chapter-badge">scRNA-seq · Chapter 02</span></p>
-<section id="overview" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>Raw UMI counts are confounded by differences in sequencing depth across cells. Normalization removes this technical variation, allowing meaningful comparison of gene expression levels. Feature selection then focuses downstream analysis on genes that carry the most biological signal.</p>
 <p><strong>This chapter covers:</strong></p>
 <ol type="1">
@@ -473,52 +476,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <hr>
 </section>
-<section id="setup" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">4.2</span> Setup</h2>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(Seurat)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(patchwork)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Seurat)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/processed/seu_01_filtered.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/processed/seu_01_filtered.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
-<section id="approach-1-log-normalization" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="approach-1-log-normalization"><span class="header-section-number">4.3</span> Approach 1: Log-Normalization</h2>
+<section id="approach-1-log-normalization" class="level2">
+<h2 class="anchored" data-anchor-id="approach-1-log-normalization">Approach 1: Log-Normalization</h2>
 <p>The standard approach: normalize each cell to 10,000 counts (CPM-like), then apply a log1p transformation.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  seu,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="at">normalization.method =</span> <span class="st">"LogNormalize"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="at">scale.factor         =</span> <span class="dv">10000</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">normalization.method =</span> <span class="st">"LogNormalize"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">scale.factor         =</span> <span class="dv">10000</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
-<section id="approach-2-sctransform-v2-recommended" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="approach-2-sctransform-v2-recommended"><span class="header-section-number">4.4</span> Approach 2: SCTransform v2 (Recommended)</h2>
+<section id="approach-2-sctransform-v2-recommended" class="level2">
+<h2 class="anchored" data-anchor-id="approach-2-sctransform-v2-recommended">Approach 2: SCTransform v2 (Recommended)</h2>
 <p>SCTransform uses regularized negative binomial regression to model the mean-variance relationship, producing Pearson residuals that are largely independent of sequencing depth.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  seu,</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="at">vst.flavor          =</span> <span class="st">"v2"</span>,         <span class="co"># use SCTransform v2</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="at">vars.to.regress     =</span> <span class="st">"pct_mt"</span>,     <span class="co"># optionally regress out mt percentage</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="at">variable.features.n =</span> <span class="dv">3000</span>,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="at">verbose             =</span> <span class="cn">FALSE</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vst.flavor          =</span> <span class="st">"v2"</span>,         <span class="co"># use SCTransform v2</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars.to.regress     =</span> <span class="st">"pct_mt"</span>,     <span class="co"># optionally regress out mt percentage</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">variable.features.n =</span> <span class="dv">3000</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">verbose             =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -540,39 +543,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="highly-variable-gene-selection" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="highly-variable-gene-selection"><span class="header-section-number">4.5</span> Highly Variable Gene Selection</h2>
+<section id="highly-variable-gene-selection" class="level2">
+<h2 class="anchored" data-anchor-id="highly-variable-gene-selection">Highly Variable Gene Selection</h2>
 <p>HVGs are genes that vary more across cells than expected by chance — they capture biologically meaningful variation.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># If using LogNormalize (skip if using SCTransform — it selects HVGs internally)</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  seu,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">selection.method =</span> <span class="st">"vst"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">nfeatures        =</span> <span class="dv">3000</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>)</span>
-<span id="cb5-7"><a href="#cb5-7"></a></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="co"># Visualise top HVGs</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>top20 <span class="ot">&lt;-</span> <span class="fu">head</span>(<span class="fu">VariableFeatures</span>(seu), <span class="dv">20</span>)</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a>p <span class="ot">&lt;-</span> <span class="fu">VariableFeaturePlot</span>(seu)</span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="fu">LabelPoints</span>(<span class="at">plot =</span> p, <span class="at">points =</span> top20, <span class="at">repel =</span> <span class="cn">TRUE</span>, <span class="at">xnudge =</span> <span class="dv">0</span>, <span class="at">ynudge =</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using LogNormalize (skip if using SCTransform — it selects HVGs internally)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection.method =</span> <span class="st">"vst"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">nfeatures        =</span> <span class="dv">3000</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise top HVGs</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>top20 <span class="ot">&lt;-</span> <span class="fu">head</span>(<span class="fu">VariableFeatures</span>(seu), <span class="dv">20</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">VariableFeaturePlot</span>(seu)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">LabelPoints</span>(<span class="at">plot =</span> p, <span class="at">points =</span> top20, <span class="at">repel =</span> <span class="cn">TRUE</span>, <span class="at">xnudge =</span> <span class="dv">0</span>, <span class="at">ynudge =</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
-<section id="scaling" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="scaling"><span class="header-section-number">4.6</span> Scaling</h2>
+<section id="scaling" class="level2">
+<h2 class="anchored" data-anchor-id="scaling">Scaling</h2>
 <p>Scaling centers each gene to mean 0 and variance 1 across cells, preventing highly expressed genes from dominating PCA.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Scale only HVGs (faster; sufficient for PCA/UMAP)</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">VariableFeatures</span>(seu))</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># --- OR scale all genes (required for heatmaps showing non-HVG genes) ---</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">rownames</span>(seu))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale only HVGs (faster; sufficient for PCA/UMAP)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">VariableFeatures</span>(seu))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># --- OR scale all genes (required for heatmaps showing non-HVG genes) ---</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">rownames</span>(seu))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -590,22 +593,22 @@ Note
 </div>
 <hr>
 </section>
-<section id="save-checkpoint" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="save-checkpoint"><span class="header-section-number">4.7</span> Save Checkpoint</h2>
+<section id="save-checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="save-checkpoint">Save Checkpoint</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_02_normalized.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_02_normalized.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <hr>
 </section>
-<section id="session-info" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="session-info"><span class="header-section-number">4.8</span> Session Info</h2>
+<section id="session-info" class="level2">
+<h2 class="anchored" data-anchor-id="session-info">Session Info</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.2 (2025-10-31)
@@ -1150,171 +1153,171 @@ loaded via a namespace (and not attached):
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../tutorials/scrna/01-qc-filtering.html" class="pagination-link" aria-label="QC &amp; Filtering">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">QC &amp; Filtering</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">QC &amp; Filtering</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../tutorials/scrna/07-trajectory.html" class="pagination-link" aria-label="Trajectory Analysis">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Trajectory Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">Trajectory Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> "Normalization &amp; Feature Selection"</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="an">subtitle:</span><span class="co"> "Correct for sequencing depth and identify highly variable genes"</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="an">categories:</span><span class="co"> [scRNA-seq, Seurat, Normalization]</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="co">---</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>scRNA-seq · Chapter 02<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a></span>
-<span id="cb10-9"><a href="#cb10-9"></a><span class="fu">## Overview</span></span>
-<span id="cb10-10"><a href="#cb10-10"></a></span>
-<span id="cb10-11"><a href="#cb10-11"></a>Raw UMI counts are confounded by differences in sequencing depth across cells.</span>
-<span id="cb10-12"><a href="#cb10-12"></a>Normalization removes this technical variation, allowing meaningful comparison</span>
-<span id="cb10-13"><a href="#cb10-13"></a>of gene expression levels. Feature selection then focuses downstream analysis</span>
-<span id="cb10-14"><a href="#cb10-14"></a>on genes that carry the most biological signal.</span>
-<span id="cb10-15"><a href="#cb10-15"></a></span>
-<span id="cb10-16"><a href="#cb10-16"></a>**This chapter covers:**</span>
-<span id="cb10-17"><a href="#cb10-17"></a></span>
-<span id="cb10-18"><a href="#cb10-18"></a><span class="ss">1. </span>Log-normalization (classical approach)</span>
-<span id="cb10-19"><a href="#cb10-19"></a><span class="ss">2. </span>SCTransform v2 (variance-stabilizing approach)</span>
-<span id="cb10-20"><a href="#cb10-20"></a><span class="ss">3. </span>Highly variable gene (HVG) selection</span>
-<span id="cb10-21"><a href="#cb10-21"></a><span class="ss">4. </span>Data scaling</span>
-<span id="cb10-22"><a href="#cb10-22"></a></span>
-<span id="cb10-23"><a href="#cb10-23"></a>---</span>
-<span id="cb10-24"><a href="#cb10-24"></a></span>
-<span id="cb10-25"><a href="#cb10-25"></a><span class="fu">## Setup</span></span>
-<span id="cb10-26"><a href="#cb10-26"></a></span>
-<span id="cb10-29"><a href="#cb10-29"></a><span class="in">```{r}</span></span>
-<span id="cb10-30"><a href="#cb10-30"></a><span class="co">#| label: setup</span></span>
-<span id="cb10-31"><a href="#cb10-31"></a></span>
-<span id="cb10-32"><a href="#cb10-32"></a><span class="fu">library</span>(Seurat)</span>
-<span id="cb10-33"><a href="#cb10-33"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-34"><a href="#cb10-34"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb10-35"><a href="#cb10-35"></a><span class="in">```</span></span>
-<span id="cb10-36"><a href="#cb10-36"></a></span>
-<span id="cb10-39"><a href="#cb10-39"></a><span class="in">```{r}</span></span>
-<span id="cb10-40"><a href="#cb10-40"></a><span class="co">#| label: load</span></span>
-<span id="cb10-41"><a href="#cb10-41"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-42"><a href="#cb10-42"></a></span>
-<span id="cb10-43"><a href="#cb10-43"></a>seu <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/processed/seu_01_filtered.rds"</span>)</span>
-<span id="cb10-44"><a href="#cb10-44"></a><span class="in">```</span></span>
-<span id="cb10-45"><a href="#cb10-45"></a></span>
-<span id="cb10-46"><a href="#cb10-46"></a>---</span>
-<span id="cb10-47"><a href="#cb10-47"></a></span>
-<span id="cb10-48"><a href="#cb10-48"></a><span class="fu">## Approach 1: Log-Normalization</span></span>
-<span id="cb10-49"><a href="#cb10-49"></a></span>
-<span id="cb10-50"><a href="#cb10-50"></a>The standard approach: normalize each cell to 10,000 counts (CPM-like),</span>
-<span id="cb10-51"><a href="#cb10-51"></a>then apply a log1p transformation.</span>
-<span id="cb10-52"><a href="#cb10-52"></a></span>
-<span id="cb10-55"><a href="#cb10-55"></a><span class="in">```{r}</span></span>
-<span id="cb10-56"><a href="#cb10-56"></a><span class="co">#| label: lognorm</span></span>
-<span id="cb10-57"><a href="#cb10-57"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-58"><a href="#cb10-58"></a></span>
-<span id="cb10-59"><a href="#cb10-59"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(</span>
-<span id="cb10-60"><a href="#cb10-60"></a>  seu,</span>
-<span id="cb10-61"><a href="#cb10-61"></a>  <span class="at">normalization.method =</span> <span class="st">"LogNormalize"</span>,</span>
-<span id="cb10-62"><a href="#cb10-62"></a>  <span class="at">scale.factor         =</span> <span class="dv">10000</span></span>
-<span id="cb10-63"><a href="#cb10-63"></a>)</span>
-<span id="cb10-64"><a href="#cb10-64"></a><span class="in">```</span></span>
-<span id="cb10-65"><a href="#cb10-65"></a></span>
-<span id="cb10-66"><a href="#cb10-66"></a>---</span>
-<span id="cb10-67"><a href="#cb10-67"></a></span>
-<span id="cb10-68"><a href="#cb10-68"></a><span class="fu">## Approach 2: SCTransform v2 (Recommended)</span></span>
-<span id="cb10-69"><a href="#cb10-69"></a></span>
-<span id="cb10-70"><a href="#cb10-70"></a>SCTransform uses regularized negative binomial regression to model</span>
-<span id="cb10-71"><a href="#cb10-71"></a>the mean-variance relationship, producing Pearson residuals that are</span>
-<span id="cb10-72"><a href="#cb10-72"></a>largely independent of sequencing depth.</span>
-<span id="cb10-73"><a href="#cb10-73"></a></span>
-<span id="cb10-76"><a href="#cb10-76"></a><span class="in">```{r}</span></span>
-<span id="cb10-77"><a href="#cb10-77"></a><span class="co">#| label: sctransform</span></span>
-<span id="cb10-78"><a href="#cb10-78"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-79"><a href="#cb10-79"></a></span>
-<span id="cb10-80"><a href="#cb10-80"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(</span>
-<span id="cb10-81"><a href="#cb10-81"></a>  seu,</span>
-<span id="cb10-82"><a href="#cb10-82"></a>  <span class="at">vst.flavor          =</span> <span class="st">"v2"</span>,         <span class="co"># use SCTransform v2</span></span>
-<span id="cb10-83"><a href="#cb10-83"></a>  <span class="at">vars.to.regress     =</span> <span class="st">"pct_mt"</span>,     <span class="co"># optionally regress out mt percentage</span></span>
-<span id="cb10-84"><a href="#cb10-84"></a>  <span class="at">variable.features.n =</span> <span class="dv">3000</span>,</span>
-<span id="cb10-85"><a href="#cb10-85"></a>  <span class="at">verbose             =</span> <span class="cn">FALSE</span></span>
-<span id="cb10-86"><a href="#cb10-86"></a>)</span>
-<span id="cb10-87"><a href="#cb10-87"></a><span class="in">```</span></span>
-<span id="cb10-88"><a href="#cb10-88"></a></span>
-<span id="cb10-89"><a href="#cb10-89"></a>::: {.callout-tip}</span>
-<span id="cb10-90"><a href="#cb10-90"></a><span class="fu">## Which normalization should I use?</span></span>
-<span id="cb10-91"><a href="#cb10-91"></a><span class="ss">- </span>**LogNormalize** → faster, well-understood, compatible with all downstream Seurat functions</span>
-<span id="cb10-92"><a href="#cb10-92"></a><span class="ss">- </span>**SCTransform v2** → generally better for datasets with high sequencing depth variance;</span>
-<span id="cb10-93"><a href="#cb10-93"></a>  required when integrating with <span class="in">`SCTransform`</span>-normalized reference datasets</span>
-<span id="cb10-94"><a href="#cb10-94"></a></span>
-<span id="cb10-95"><a href="#cb10-95"></a>For most published workflows, SCTransform v2 is now the default recommendation.</span>
-<span id="cb10-96"><a href="#cb10-96"></a>:::</span>
-<span id="cb10-97"><a href="#cb10-97"></a></span>
-<span id="cb10-98"><a href="#cb10-98"></a>---</span>
-<span id="cb10-99"><a href="#cb10-99"></a></span>
-<span id="cb10-100"><a href="#cb10-100"></a><span class="fu">## Highly Variable Gene Selection</span></span>
-<span id="cb10-101"><a href="#cb10-101"></a></span>
-<span id="cb10-102"><a href="#cb10-102"></a>HVGs are genes that vary more across cells than expected by chance —</span>
-<span id="cb10-103"><a href="#cb10-103"></a>they capture biologically meaningful variation.</span>
-<span id="cb10-104"><a href="#cb10-104"></a></span>
-<span id="cb10-107"><a href="#cb10-107"></a><span class="in">```{r}</span></span>
-<span id="cb10-108"><a href="#cb10-108"></a><span class="co">#| label: hvg</span></span>
-<span id="cb10-109"><a href="#cb10-109"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-110"><a href="#cb10-110"></a></span>
-<span id="cb10-111"><a href="#cb10-111"></a><span class="co"># If using LogNormalize (skip if using SCTransform — it selects HVGs internally)</span></span>
-<span id="cb10-112"><a href="#cb10-112"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(</span>
-<span id="cb10-113"><a href="#cb10-113"></a>  seu,</span>
-<span id="cb10-114"><a href="#cb10-114"></a>  <span class="at">selection.method =</span> <span class="st">"vst"</span>,</span>
-<span id="cb10-115"><a href="#cb10-115"></a>  <span class="at">nfeatures        =</span> <span class="dv">3000</span></span>
-<span id="cb10-116"><a href="#cb10-116"></a>)</span>
-<span id="cb10-117"><a href="#cb10-117"></a></span>
-<span id="cb10-118"><a href="#cb10-118"></a><span class="co"># Visualise top HVGs</span></span>
-<span id="cb10-119"><a href="#cb10-119"></a>top20 <span class="ot">&lt;-</span> <span class="fu">head</span>(<span class="fu">VariableFeatures</span>(seu), <span class="dv">20</span>)</span>
-<span id="cb10-120"><a href="#cb10-120"></a></span>
-<span id="cb10-121"><a href="#cb10-121"></a>p <span class="ot">&lt;-</span> <span class="fu">VariableFeaturePlot</span>(seu)</span>
-<span id="cb10-122"><a href="#cb10-122"></a><span class="fu">LabelPoints</span>(<span class="at">plot =</span> p, <span class="at">points =</span> top20, <span class="at">repel =</span> <span class="cn">TRUE</span>, <span class="at">xnudge =</span> <span class="dv">0</span>, <span class="at">ynudge =</span> <span class="dv">0</span>)</span>
-<span id="cb10-123"><a href="#cb10-123"></a><span class="in">```</span></span>
-<span id="cb10-124"><a href="#cb10-124"></a></span>
-<span id="cb10-125"><a href="#cb10-125"></a>---</span>
-<span id="cb10-126"><a href="#cb10-126"></a></span>
-<span id="cb10-127"><a href="#cb10-127"></a><span class="fu">## Scaling</span></span>
-<span id="cb10-128"><a href="#cb10-128"></a></span>
-<span id="cb10-129"><a href="#cb10-129"></a>Scaling centers each gene to mean 0 and variance 1 across cells,</span>
-<span id="cb10-130"><a href="#cb10-130"></a>preventing highly expressed genes from dominating PCA.</span>
-<span id="cb10-131"><a href="#cb10-131"></a></span>
-<span id="cb10-134"><a href="#cb10-134"></a><span class="in">```{r}</span></span>
-<span id="cb10-135"><a href="#cb10-135"></a><span class="co">#| label: scale</span></span>
-<span id="cb10-136"><a href="#cb10-136"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-137"><a href="#cb10-137"></a></span>
-<span id="cb10-138"><a href="#cb10-138"></a><span class="co"># Scale only HVGs (faster; sufficient for PCA/UMAP)</span></span>
-<span id="cb10-139"><a href="#cb10-139"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">VariableFeatures</span>(seu))</span>
-<span id="cb10-140"><a href="#cb10-140"></a></span>
-<span id="cb10-141"><a href="#cb10-141"></a><span class="co"># --- OR scale all genes (required for heatmaps showing non-HVG genes) ---</span></span>
-<span id="cb10-142"><a href="#cb10-142"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">rownames</span>(seu))</span>
-<span id="cb10-143"><a href="#cb10-143"></a><span class="in">```</span></span>
-<span id="cb10-144"><a href="#cb10-144"></a></span>
-<span id="cb10-145"><a href="#cb10-145"></a>::: {.callout-note}</span>
-<span id="cb10-146"><a href="#cb10-146"></a>When using SCTransform, scaling is performed internally.</span>
-<span id="cb10-147"><a href="#cb10-147"></a>Calling <span class="in">`ScaleData()`</span> again is not necessary for standard workflows.</span>
-<span id="cb10-148"><a href="#cb10-148"></a>:::</span>
-<span id="cb10-149"><a href="#cb10-149"></a></span>
-<span id="cb10-150"><a href="#cb10-150"></a>---</span>
-<span id="cb10-151"><a href="#cb10-151"></a></span>
-<span id="cb10-152"><a href="#cb10-152"></a><span class="fu">## Save Checkpoint</span></span>
-<span id="cb10-153"><a href="#cb10-153"></a></span>
-<span id="cb10-156"><a href="#cb10-156"></a><span class="in">```{r}</span></span>
-<span id="cb10-157"><a href="#cb10-157"></a><span class="co">#| label: save</span></span>
-<span id="cb10-158"><a href="#cb10-158"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-159"><a href="#cb10-159"></a></span>
-<span id="cb10-160"><a href="#cb10-160"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_02_normalized.rds"</span>)</span>
-<span id="cb10-161"><a href="#cb10-161"></a><span class="in">```</span></span>
-<span id="cb10-162"><a href="#cb10-162"></a></span>
-<span id="cb10-163"><a href="#cb10-163"></a>---</span>
-<span id="cb10-164"><a href="#cb10-164"></a></span>
-<span id="cb10-165"><a href="#cb10-165"></a><span class="fu">## Session Info</span></span>
-<span id="cb10-166"><a href="#cb10-166"></a></span>
-<span id="cb10-169"><a href="#cb10-169"></a><span class="in">```{r}</span></span>
-<span id="cb10-170"><a href="#cb10-170"></a><span class="co">#| label: session-info</span></span>
-<span id="cb10-171"><a href="#cb10-171"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb10-172"><a href="#cb10-172"></a><span class="in">```</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Normalization &amp; Feature Selection"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Correct for sequencing depth and identify highly variable genes"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [scRNA-seq, Seurat, Normalization]</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chapter-badge"</span><span class="dt">&gt;</span>scRNA-seq · Chapter 02<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>Raw UMI counts are confounded by differences in sequencing depth across cells.</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>Normalization removes this technical variation, allowing meaningful comparison</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>of gene expression levels. Feature selection then focuses downstream analysis</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>on genes that carry the most biological signal.</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>**This chapter covers:**</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Log-normalization (classical approach)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>SCTransform v2 (variance-stabilizing approach)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Highly variable gene (HVG) selection</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Data scaling</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Seurat)</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"data/processed/seu_01_filtered.rds"</span>)</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approach 1: Log-Normalization</span></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>The standard approach: normalize each cell to 10,000 counts (CPM-like),</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>then apply a log1p transformation.</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lognorm</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">normalization.method =</span> <span class="st">"LogNormalize"</span>,</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">scale.factor         =</span> <span class="dv">10000</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approach 2: SCTransform v2 (Recommended)</span></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>SCTransform uses regularized negative binomial regression to model</span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>the mean-variance relationship, producing Pearson residuals that are</span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>largely independent of sequencing depth.</span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: sctransform</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">SCTransform</span>(</span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>  <span class="at">vst.flavor          =</span> <span class="st">"v2"</span>,         <span class="co"># use SCTransform v2</span></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>  <span class="at">vars.to.regress     =</span> <span class="st">"pct_mt"</span>,     <span class="co"># optionally regress out mt percentage</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>  <span class="at">variable.features.n =</span> <span class="dv">3000</span>,</span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>  <span class="at">verbose             =</span> <span class="cn">FALSE</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## Which normalization should I use?</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LogNormalize** → faster, well-understood, compatible with all downstream Seurat functions</span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**SCTransform v2** → generally better for datasets with high sequencing depth variance;</span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>  required when integrating with <span class="in">`SCTransform`</span>-normalized reference datasets</span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>For most published workflows, SCTransform v2 is now the default recommendation.</span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Highly Variable Gene Selection</span></span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a>HVGs are genes that vary more across cells than expected by chance —</span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a>they capture biologically meaningful variation.</span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: hvg</span></span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a><span class="co"># If using LogNormalize (skip if using SCTransform — it selects HVGs internally)</span></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(</span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>  seu,</span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection.method =</span> <span class="st">"vst"</span>,</span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>  <span class="at">nfeatures        =</span> <span class="dv">3000</span></span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise top HVGs</span></span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>top20 <span class="ot">&lt;-</span> <span class="fu">head</span>(<span class="fu">VariableFeatures</span>(seu), <span class="dv">20</span>)</span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">VariableFeaturePlot</span>(seu)</span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a><span class="fu">LabelPoints</span>(<span class="at">plot =</span> p, <span class="at">points =</span> top20, <span class="at">repel =</span> <span class="cn">TRUE</span>, <span class="at">xnudge =</span> <span class="dv">0</span>, <span class="at">ynudge =</span> <span class="dv">0</span>)</span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scaling</span></span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>Scaling centers each gene to mean 0 and variance 1 across cells,</span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>preventing highly expressed genes from dominating PCA.</span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: scale</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale only HVGs (faster; sufficient for PCA/UMAP)</span></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">VariableFeatures</span>(seu))</span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a><span class="co"># --- OR scale all genes (required for heatmaps showing non-HVG genes) ---</span></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>seu <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(seu, <span class="at">features =</span> <span class="fu">rownames</span>(seu))</span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>When using SCTransform, scaling is performed internally.</span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>Calling <span class="in">`ScaleData()`</span> again is not necessary for standard workflows.</span>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## Save Checkpoint</span></span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: save</span></span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(seu, <span class="st">"data/processed/seu_02_normalized.rds"</span>)</span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
+<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: session-info</span></span>
+<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
@@ -1325,7 +1328,7 @@ loaded via a namespace (and not attached):
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tipsarin/scOmics/edit/main/tutorials/scrna/02-normalization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tipsarin/scOmics/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>

@@ -1,0 +1,83 @@
+---
+title: "Test"
+author: "Sarintip"
+---
+
+## Setup
+```{r}
+#| label: setup
+library(ggplot2)
+library(patchwork)
+```
+
+## Scatter Plot
+```{r}
+#| label: scatter
+#| fig-cap: "Simulated UMAP-like scatter plot"
+#| fig-width: 7
+#| fig-height: 5
+
+set.seed(42)
+df <- data.frame(
+  UMAP1  = c(rnorm(200, -2), rnorm(200, 2), rnorm(200, 0)),
+  UMAP2  = c(rnorm(200, -2), rnorm(200, 2), rnorm(200, 3)),
+  cluster = rep(c("T cell", "B cell", "Monocyte"), each = 200)
+)
+
+ggplot(df, aes(x = UMAP1, y = UMAP2, color = cluster)) +
+  geom_point(size = 0.8, alpha = 0.7) +
+  scale_color_brewer(palette = "Set1") +
+  theme_classic() +
+  labs(title = "Simulated UMAP", color = "Cell Type")
+```
+
+## Violin Plot
+```{r}
+#| label: violin
+#| fig-cap: "Gene expression by cluster"
+#| fig-width: 7
+#| fig-height: 4
+
+df$expression <- c(
+  abs(rnorm(200, 2, 1)),
+  abs(rnorm(200, 4, 1)),
+  abs(rnorm(200, 1, 0.5))
+)
+
+ggplot(df, aes(x = cluster, y = expression, fill = cluster)) +
+  geom_violin(trim = FALSE, alpha = 0.8) +
+  geom_boxplot(width = 0.1, fill = "white", outlier.size = 0.5) +
+  scale_fill_brewer(palette = "Set1") +
+  theme_classic() +
+  labs(title = "Expression by Cell Type", 
+       x = NULL, y = "Normalized Expression") +
+  theme(legend.position = "none")
+```
+
+## Patchwork — combined plots
+```{r}
+#| label: combined
+#| fig-cap: "Combined layout with patchwork"
+#| fig-width: 12
+#| fig-height: 5
+
+p1 <- ggplot(df, aes(x = UMAP1, y = UMAP2, color = cluster)) +
+  geom_point(size = 0.8, alpha = 0.7) +
+  scale_color_brewer(palette = "Set1") +
+  theme_classic() +
+  theme(legend.position = "bottom")
+
+p2 <- ggplot(df, aes(x = cluster, y = expression, fill = cluster)) +
+  geom_violin(alpha = 0.8) +
+  scale_fill_brewer(palette = "Set1") +
+  theme_classic() +
+  theme(legend.position = "none")
+
+p1 | p2
+```
+
+## Session Info
+```{r}
+#| label: session
+sessionInfo()
+```
