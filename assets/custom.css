@@ -32,6 +32,18 @@ div.sourceCode {
   border-left: 3px solid #2c7a4b;
 }
 
+/* Body text size */
+.content p,
+.content li,
+.content td {
+  font-size: 0.92rem;
+}
+
+/* Headings */
+.content h1 { font-size: 1.7rem; }
+.content h2 { font-size: 1.3rem; }
+.content h3 { font-size: 1.1rem; }
+
 /* Code block font size */
 div.sourceCode, pre.sourceCode {
   font-size: 0.75rem;

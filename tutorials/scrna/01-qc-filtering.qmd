@@ -1,6 +1,7 @@
 ---
 title: "QC & Filtering"
 subtitle: "Assess and remove low-quality cells before downstream analysis"
+author: "Sarintip"
 categories: [scRNA-seq, Seurat, QC]
 ---
 

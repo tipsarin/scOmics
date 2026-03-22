@@ -34,6 +34,7 @@ book:
         - tutorials/scrna/02-normalization.qmd
         - tutorials/scrna/07-trajectory.qmd
         - tutorials/scrna/r_test.qmd
+        - tutorials/scrna/test2.qmd
         - tutorials/scrna/dandelion_test.ipynb
 
     - part: "**scATAC-seq**"
