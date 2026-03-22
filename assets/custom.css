@@ -39,6 +39,11 @@ div.sourceCode {
   font-size: 0.92rem;
 }
 
+/* Table text size */
+.content table {
+  font-size: 0.92rem;
+}
+
 /* Headings */
 .content h1 { font-size: 1.7rem; }
 .content h2 { font-size: 1.3rem; }
