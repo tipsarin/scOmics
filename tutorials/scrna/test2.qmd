@@ -8,6 +8,7 @@ format:
   html:
     code-fold: true   # Enables folding for code chunks
     code-tools: true
+    code-copy: true
     toc: true         # Adds a table of contents
     toc-depth: 4    # Set depth to 4 (includes H1 to H4)
 ---

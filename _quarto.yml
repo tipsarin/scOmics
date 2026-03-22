@@ -54,9 +54,6 @@ format:
       dark: darkly
     back-to-top-navigation: true
     css: assets/custom.css
-    code-fold: true
-    code-tools: true
-    code-copy: true
     code-line-numbers: false
     code-block-bg: true
     smooth-scroll: true
