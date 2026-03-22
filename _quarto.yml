@@ -14,6 +14,7 @@ book:
   repo-actions: [issue]
   sharing: [twitter, linkedin]
   search: true
+  back-to-top-navigation: true
 
   sidebar:
     style: floating
@@ -52,8 +53,10 @@ format:
     theme:
       light: flatly
       dark: darkly
-    back-to-top-navigation: true
     css: assets/custom.css
+    code-fold: true 
+    code-tools: true
+    code-copy: true
     code-line-numbers: false
     code-block-bg: true
     smooth-scroll: true
