@@ -495,6 +495,39 @@
     ]
   },
   {
+    "objectID": "tutorials/scrna/test2.html",
+    "href": "tutorials/scrna/test2.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Setup\nlibrary(Seurat)\nlibrary(ggplot2)\nlibrary(patchwork)\nlibrary(dplyr)\noptions(future.globals.maxSize = 100 * 1000 * 1024^2)\nExtend limit to access to certain global variables\n1GB = 1000 * 1024^2\nParallelization in Seurat with future\nCode\noptions(future.globals.maxSize = 100 * 1000 * 1024^2)\nChange the current plan to access parallelization\nCode\nplan(\"multicore\", workers = 20)\nplan()\nCode\nsample_name = \"B9rxn1\"\n\nscRNA.cellranger_path = paste0(\"~/All_projects/cellranger_outputs/GRCh38_2024A/v901/\", \"CVc\",\n                               sample_name,\n                               \"_GEX_v901_ref2024A_SC5P-R2_R126-R290_cell23000/outs/filtered_feature_bc_matrix\") \n\n\nscRNA.cellbender_path = paste0(\"~/All_projects/analysis_outputs/cellbender/GRCh38_ref2024A/learningrate1e-5/\", \"CVc\",\n                               sample_name, \"/\",\n                               \"CVc\", sample_name, \"_cb_v032_FPR_0.05_seurat.h5\") \n\nscRNA.demux_path = paste0(\"~/All_projects/demuxlet_outputs/GRCh38_ref2024A/demuxlet_\", \"CVc\",\n                          sample_name,\n                          \"_GEX.best\")\n\nscRNA.input_path = paste0(\"~/sc_covidvac/inputs/Meta/subsetted/\", \n                          \"CVc_scRNA_metadata_\", \n                          sample_name, \".csv\")\n\nscRNA.output_path = paste0(\"/mnt/vclab_storage_2025/scOmics/analysis_outputs/RNA/Preprocessing/\")\n\n############ Read table ############ \nscRNA.demux_meta &lt;- read.table(scRNA.demux_path, header = T)\nscRNA.demux_meta &lt;- select(scRNA.demux_meta, c(BARCODE, DROPLET.TYPE, SNG.BEST.GUESS))\n\nscRNA_meta &lt;- read.csv(scRNA.input_path, header = T, row.names = 1)\n\n#scRNA_meta$Sample_name[scRNA_meta$Sample_name == \"Ref_Lonza\"] \nscRNA.all_metadata &lt;- merge(scRNA.demux_meta, scRNA_meta, by.x = \"SNG.BEST.GUESS\", by.y = \"Sample_name\")\nrownames(scRNA.all_metadata) &lt;-  scRNA.all_metadata$BARCODE\nscRNA.all_metadata$BARCODE &lt;- NULL\n\nsample.batch_color &lt;- scRNA.all_metadata$Batch_color[1]",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Untitled</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/test2.html#setup",
+    "href": "tutorials/scrna/test2.html#setup",
+    "title": "Untitled",
+    "section": "",
+    "text": "Bypass argument when you running R script via bash script.\nargs &lt;- commandArgs(trailingOnly = TRUE)\nsample_name = args[1]",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Untitled</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/scrna/test2.html#load-data",
+    "href": "tutorials/scrna/test2.html#load-data",
+    "title": "Untitled",
+    "section": "Load Data",
+    "text": "Load Data\n\n\nCode\nprint(\"Load input data\")\nscRNA.data &lt;- Read10X(scRNA.cellranger_path)\n\nprint(\"Load cellbender data\")\nscRNA.data_cb &lt;- Read10X_h5(scRNA.cellbender_path, use.names = TRUE)\n\nlength(colnames(scRNA.data))\nlength(colnames(scRNA.data_cb))\n\nscRNA.data_cb &lt;- scRNA.data_cb[ ,colnames(scRNA.data)]\nlength(colnames(scRNA.data_cb))\n\nprint(\"Create Seurat object\")\nscRNA.obj &lt;- CreateSeuratObject(scRNA.data_cb,\n                                project = paste0(sample_name, \"_RNA\"),\n                                min.cells = 0, min.features = 300,\n                                meta.data = scRNA.all_metadata)\n\n\nscRNA.data &lt;- scRNA.data[ ,colnames(scRNA.obj)]\nlength(colnames(scRNA.data))\n# create a new assay to store ADT information\nori_assay &lt;- CreateAssay5Object(counts = scRNA.data)\n\n# add this assay to the previously created Seurat object\nscRNA.obj@assays[[\"ORI\"]] &lt;- ori_assay\n\n# Validate that the object now contains multiple assays\nAssays(scRNA.obj)\nscRNA.obj\n\n\n\n\nCode\nDefaultAssay(scRNA.obj) &lt;- \"RNA\"\n\n#Idents(scRNA.obj) &lt;- scRNA.obj$DROPLET.TYPE\n#scRNA.obj &lt;- subset(scRNA.obj, idents = c(\"SNG\", \"DBL\"))\n#Idents(scRNA.obj) &lt;- scRNA.obj$orig.ident\n\nscRNA.obj[[\"percent.mt\"]] &lt;- PercentageFeatureSet(scRNA.obj, pattern = \"^MT-\")\nscRNA.obj[[\"percent.rp\"]] &lt;- PercentageFeatureSet(scRNA.obj, pattern = \"^RPS|^RPL\")\nscRNA.obj[[\"percent.hsp\"]]  &lt;- PercentageFeatureSet(scRNA.obj, pattern = \"^HSP\")",
+    "crumbs": [
+      "**scRNA-seq**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Untitled</span>"
+    ]
+  },
+  {
     "objectID": "tutorials/scrna/dandelion_test.html",
     "href": "tutorials/scrna/dandelion_test.html",
     "title": "Clonal Analysis",
@@ -502,7 +535,7 @@
     "text": "Test",
     "crumbs": [
       "**scRNA-seq**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clonal Analysis</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Clonal Analysis</span>"
     ]
   },
   {
@@ -513,7 +546,7 @@
     "text": "Test\n\n\nCode\n# Cell 2 — Code cell\nimport scanpy as sc\nimport matplotlib.pyplot as plt\n\n\n\n\nCode\nsc.settings.verbosity = 3 # verbosity: errors (0), warnings (1), info (2), hints (3)\nsc.logging.print_versions()\n\n\n\n\n\n\n\nCode\n# Load example dataset (PBMC3k built-in)\nadata = sc.datasets.pbmc3k_processed()\n\n\ntry downloading from url\nhttps://raw.githubusercontent.com/chanzuckerberg/cellxgene/main/example-dataset/pbmc3k.h5ad\n... this may take a while but only happens once\n\n\n\n\n\n\n\nCode\n# UMAP colored by cell type\nsc.pl.umap(\n    adata,\n    color='louvain',\n    title='PBMC 3k — Cell Types',\n    frameon=False,\n    legend_loc='on data'\n)",
     "crumbs": [
       "**scRNA-seq**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clonal Analysis</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Clonal Analysis</span>"
     ]
   },
   {
@@ -524,7 +557,7 @@
     "text": "Overview\nMulti-omics · Chapter 02\nSignac extends Seurat to handle chromatin accessibility data. When paired with matched scRNA-seq (e.g., 10x Multiome), it enables joint analysis — linking open chromatin regions to gene expression at single-cell resolution.\nThis chapter covers:",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -535,7 +568,7 @@
     "text": "Creating a Signac object from a 10x Multiome dataset\nATAC-seq QC within Signac\nLSI dimensionality reduction\nJoint WNN embedding with matched RNA\nLinking peaks to genes",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -546,7 +579,7 @@
     "text": "Setup\n\n\nCode\nlibrary(Seurat)\nlibrary(Signac)\nlibrary(EnsDb.Hsapiens.v86)\nlibrary(BSgenome.Hsapiens.UCSC.hg38)\nlibrary(ggplot2)\nlibrary(patchwork)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -557,7 +590,7 @@
     "text": "Load 10x Multiome Data\n\n\nCode\n# Read Cell Ranger ARC output\ncounts &lt;- Read10X_h5(\"data/raw/pbmc_multiome/filtered_feature_bc_matrix.h5\")\n\n# Separate RNA and ATAC matrices\nrna_counts  &lt;- counts$`Gene Expression`\natac_counts &lt;- counts$Peaks\n\n# Load fragment file metadata\nfragpath &lt;- \"data/raw/pbmc_multiome/atac_fragments.tsv.gz\"",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -568,7 +601,7 @@
     "text": "Create Seurat + Signac Object\n\n\nCode\n# Genome annotation\nannotation &lt;- GetGRangesFromEnsDb(ensdb = EnsDb.Hsapiens.v86)\nseqlevels(annotation) &lt;- paste0(\"chr\", seqlevels(annotation))\n\n# Create chromatin assay\natac_assay &lt;- CreateChromatinAssay(\n  counts     = atac_counts,\n  sep        = c(\":\", \"-\"),\n  fragments  = fragpath,\n  annotation = annotation\n)\n\n# Build Seurat object with both modalities\nseu &lt;- CreateSeuratObject(counts = rna_counts, assay = \"RNA\")\nseu[[\"ATAC\"]] &lt;- atac_assay\n\nseu",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -579,7 +612,7 @@
     "text": "ATAC QC\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- NucleosomeSignal(seu)\nseu &lt;- TSSEnrichment(seu, fast = FALSE)\n\n# Filter\nseu &lt;- subset(\n  seu,\n  subset = nCount_ATAC &gt; 1000   &\n           nCount_ATAC &lt; 100000 &\n           nCount_RNA  &gt; 200    &\n           nCount_RNA  &lt; 25000  &\n           nucleosome_signal &lt; 2 &\n           TSS.enrichment &gt; 1\n)\n\n\n\n\nCode\nVlnPlot(\n  seu,\n  features = c(\"nCount_ATAC\", \"TSS.enrichment\", \"nucleosome_signal\"),\n  ncol = 3, pt.size = 0\n)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -590,7 +623,7 @@
     "text": "Process Each Modality\n\n\nCode\nDefaultAssay(seu) &lt;- \"RNA\"\nseu &lt;- SCTransform(seu, verbose = FALSE)\nseu &lt;- RunPCA(seu, npcs = 30)\n\n\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\nseu &lt;- RunTFIDF(seu)\nseu &lt;- FindTopFeatures(seu, min.cutoff = \"q0\")\nseu &lt;- RunSVD(seu)   # LSI",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -601,7 +634,7 @@
     "text": "Joint WNN Embedding\n\n\nCode\nseu &lt;- FindMultiModalNeighbors(\n  seu,\n  reduction.list = list(\"pca\", \"lsi\"),\n  dims.list      = list(1:30, 2:50),  # exclude LSI component 1 (correlated with depth)\n  modality.weight.name = \"RNA.weight\"\n)\n\nseu &lt;- RunUMAP(\n  seu,\n  nn.name    = \"weighted.nn\",\n  reduction.name = \"wnn.umap\",\n  reduction.key  = \"wnnUMAP_\"\n)\n\nseu &lt;- FindClusters(seu, graph.name = \"wsnn\", resolution = 0.8)\n\n\n\n\nCode\np1 &lt;- DimPlot(seu, reduction = \"wnn.umap\", label = TRUE) + NoLegend()\np2 &lt;- FeaturePlot(seu, features = \"RNA.weight\", reduction = \"wnn.umap\")\np1 | p2",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -612,7 +645,7 @@
     "text": "Link Peaks to Genes\n\n\nCode\nDefaultAssay(seu) &lt;- \"ATAC\"\n\nseu &lt;- LinkPeaks(\n  seu,\n  peak.assay = \"ATAC\",\n  expression.assay = \"SCT\",\n  genes.use  = VariableFeatures(seu, assay = \"SCT\")\n)\n\n\n\n\nCode\nCoveragePlot(\n  seu,\n  region     = \"MS4A1\",\n  features   = \"MS4A1\",\n  expression.assay = \"SCT\",\n  extend.upstream   = 500,\n  extend.downstream = 10000\n)",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -623,7 +656,7 @@
     "text": "Save\n\n\nCode\nsaveRDS(seu, \"data/processed/seu_multiome_signac.rds\")",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -634,7 +667,7 @@
     "text": "Session Info\n\n\nCode\nsessionInfo()\n\n\nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-pc-linux-gnu\nRunning under: Ubuntu 24.04.3 LTS\n\nMatrix products: default\nBLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 \nLAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       \n [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   \n [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          \n[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   \n\ntime zone: Asia/Bangkok\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    stats     graphics  grDevices utils     datasets  methods  \n[8] base     \n\nother attached packages:\n [1] patchwork_1.3.2                   ggplot2_4.0.1                    \n [3] BSgenome.Hsapiens.UCSC.hg38_1.4.5 BSgenome_1.78.0                  \n [5] rtracklayer_1.70.0                BiocIO_1.20.0                    \n [7] Biostrings_2.78.0                 XVector_0.50.0                   \n [9] GenomeInfoDb_1.46.2               EnsDb.Hsapiens.v86_2.99.0        \n[11] ensembldb_2.34.0                  AnnotationFilter_1.34.0          \n[13] GenomicFeatures_1.62.0            AnnotationDbi_1.72.0             \n[15] Biobase_2.70.0                    GenomicRanges_1.62.1             \n[17] Seqinfo_1.0.0                     IRanges_2.44.0                   \n[19] S4Vectors_0.48.0                  BiocGenerics_0.56.0              \n[21] generics_0.1.4                    Signac_1.16.0                    \n[23] Seurat_5.4.0                      SeuratObject_5.3.0               \n[25] sp_2.2-0                         \n\nloaded via a namespace (and not attached):\n  [1] RcppAnnoy_0.0.22            splines_4.5.2              \n  [3] later_1.4.4                 bitops_1.0-9               \n  [5] tibble_3.3.1                polyclip_1.10-7            \n  [7] XML_3.99-0.20               fastDummies_1.7.5          \n  [9] lifecycle_1.0.5             globals_0.18.0             \n [11] lattice_0.22-7              MASS_7.3-65                \n [13] magrittr_2.0.4              plotly_4.11.0              \n [15] rmarkdown_2.30              yaml_2.3.12                \n [17] httpuv_1.6.16               otel_0.2.0                 \n [19] sctransform_0.4.2           spam_2.11-3                \n [21] spatstat.sparse_3.1-0       reticulate_1.44.1          \n [23] cowplot_1.2.0               pbapply_1.7-4              \n [25] DBI_1.2.3                   RColorBrewer_1.1-3         \n [27] abind_1.4-8                 Rtsne_0.17                 \n [29] purrr_1.2.1                 RCurl_1.98-1.17            \n [31] ggrepel_0.9.6               irlba_2.3.5.1              \n [33] listenv_0.10.0              spatstat.utils_3.2-0       \n [35] goftest_1.2-3               RSpectra_0.16-2            \n [37] spatstat.random_3.4-3       fitdistrplus_1.2-4         \n [39] parallelly_1.46.1           codetools_0.2-20           \n [41] DelayedArray_0.36.0         RcppRoll_0.3.1             \n [43] tidyselect_1.2.1            UCSC.utils_1.6.0           \n [45] farver_2.1.2                matrixStats_1.5.0          \n [47] spatstat.explore_3.6-0      GenomicAlignments_1.46.0   \n [49] jsonlite_2.0.0              progressr_0.18.0           \n [51] ggridges_0.5.7              survival_3.8-3             \n [53] tools_4.5.2                 ica_1.0-3                  \n [55] Rcpp_1.1.1                  glue_1.8.0                 \n [57] gridExtra_2.3               SparseArray_1.10.8         \n [59] xfun_0.55                   MatrixGenerics_1.22.0      \n [61] dplyr_1.1.4                 withr_3.0.2                \n [63] fastmap_1.2.0               digest_0.6.39              \n [65] R6_2.6.1                    mime_0.13                  \n [67] scattermore_1.2             tensor_1.5.1               \n [69] dichromat_2.0-0.1           spatstat.data_3.1-9        \n [71] RSQLite_2.4.5               cigarillo_1.0.0            \n [73] tidyr_1.3.2                 data.table_1.17.8          \n [75] httr_1.4.7                  htmlwidgets_1.6.4          \n [77] S4Arrays_1.10.1             uwot_0.2.4                 \n [79] pkgconfig_2.0.3             gtable_0.3.6               \n [81] blob_1.2.4                  lmtest_0.9-40              \n [83] S7_0.2.1                    htmltools_0.5.9            \n [85] dotCall64_1.2               ProtGenerics_1.42.0        \n [87] scales_1.4.0                png_0.1-8                  \n [89] spatstat.univar_3.1-5       knitr_1.50                 \n [91] reshape2_1.4.5              rjson_0.2.23               \n [93] nlme_3.1-168                curl_7.0.0                 \n [95] zoo_1.8-15                  cachem_1.1.0               \n [97] stringr_1.6.0               KernSmooth_2.23-26         \n [99] parallel_4.5.2              miniUI_0.1.2               \n[101] restfulr_0.0.16             pillar_1.11.1              \n[103] grid_4.5.2                  vctrs_0.6.5                \n[105] RANN_2.6.2                  promises_1.5.0             \n[107] xtable_1.8-4                cluster_2.1.8.1            \n[109] evaluate_1.0.5              cli_3.6.5                  \n[111] compiler_4.5.2              Rsamtools_2.26.0           \n[113] rlang_1.1.7                 crayon_1.5.3               \n[115] future.apply_1.20.1         plyr_1.8.9                 \n[117] stringi_1.8.7               viridisLite_0.4.2          \n[119] deldir_2.0-4                BiocParallel_1.44.0        \n[121] lazyeval_0.2.2              spatstat.geom_3.6-1        \n[123] Matrix_1.7-4                RcppHNSW_0.6.0             \n[125] bit64_4.6.0-1               future_1.68.0              \n[127] KEGGREST_1.50.0             shiny_1.12.1               \n[129] SummarizedExperiment_1.40.0 ROCR_1.0-11                \n[131] igraph_2.2.2                memoise_2.0.1              \n[133] fastmatch_1.1-6             bit_4.6.0",
     "crumbs": [
       "**Multi-omics & Genotyping**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Signac: scRNA + scATAC Integration</span>"
     ]
   },
   {
@@ -644,7 +677,7 @@
     "section": "",
     "text": "Software & Tools\nSeurat (Hao et al., 2021) (GitHub)\nArchR (Granja et al., 2021) (GitHub | Docs)",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>References</span>"
     ]
   },
   {
@@ -654,7 +687,7 @@
     "section": "",
     "text": "Granja, J. M. et al. (2021). ArchR is a\nscalable software package for integrative single-cell chromatin\naccessibility analysis. Nature Genetics, 53, 403–411.\nhttps://doi.org/10.1038/s41588-021-00790-6\n\n\nHao, Y. et al. (2021). Integrated analysis\nof multimodal single-cell data. Cell, 184, 3573–3587.\nhttps://doi.org/10.1016/j.cell.2021.04.048",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>References</span>"
     ]
   }
 ]
