@@ -7,31 +7,43 @@ subtitle: "Installation, environment setup, and data download"
 
 These tutorials assume:
 
-- R ≥ 4.3.0 installed (or access to an HPC with R modules)
-- Familiarity with R syntax and Bioconductor
-- Basic understanding of single-cell library preparation
+-   R ≥ 4.3.0 installed (or access to an HPC with R modules)
+-   Familiarity with R syntax and Bioconductor
+-   Basic understanding of single-cell library preparation
 
----
+
+::: {.callout-note}
+## Note
+Most of the analysis in this tutorials running on **MAI HPC cluster** and **ICBS local server**.
+:::
+
+::: {.callout-warning}
+## Minimum System Requirement
+CPU: 32
+GPU: 1 (optional)
+Memory: 256G
+:::
+
+------------------------------------------------------------------------
 
 ## Environment Management with `renv`
 
-We strongly recommend using [`renv`](https://rstudio.github.io/renv/) to lock package versions per project,
-ensuring reproducibility across machines and time.
+We strongly recommend using [`renv`](https://rstudio.github.io/renv/) to lock package versions per project, ensuring reproducibility across machines and time.
 
-```r
+``` r
 install.packages("renv")
 renv::init()       # initialise in your project directory
 renv::snapshot()   # lock current package versions to renv.lock
 renv::restore()    # restore from renv.lock on another machine
 ```
 
----
+------------------------------------------------------------------------
 
 ## Install Core Packages
 
 ### Seurat + Harmony + Monocle3
 
-```r
+``` r
 # Seurat v5
 install.packages("Seurat")
 install.packages("SeuratData")
@@ -55,7 +67,7 @@ devtools::install_github("cole-trapnell-lab/monocle3")
 
 ### ArchR (scATAC-seq)
 
-```r
+``` r
 devtools::install_github(
   "GreenleafLab/ArchR",
   ref   = "master",
@@ -64,14 +76,13 @@ devtools::install_github(
 ArchR::installExtraPackages()
 ```
 
-::: {.callout-note}
-ArchR installation requires `devtools`. On HPC systems, you may need to load
-a `git` module before running `devtools::install_github()`.
+::: callout-note
+ArchR installation requires `devtools`. On HPC systems, you may need to load a `git` module before running `devtools::install_github()`.
 :::
 
 ### Signac (scATAC / Multi-omics)
 
-```r
+``` r
 BiocManager::install(c(
   "BSgenome.Hsapiens.UCSC.hg38",
   "EnsDb.Hsapiens.v86",
@@ -83,7 +94,7 @@ install.packages("Signac")
 
 ### Visualization
 
-```r
+``` r
 BiocManager::install("ComplexHeatmap")
 install.packages(c(
   "ggplot2", "patchwork", "ggrepel",
@@ -92,47 +103,45 @@ install.packages(c(
 ))
 ```
 
----
+------------------------------------------------------------------------
 
 ## Running on HPC
 
-If you are working on an HPC cluster (as most of these workflows require),
-load modules before starting R:
+If you are working on an HPC cluster (as most of these workflows require), load modules before starting R:
 
-```bash
+``` bash
 module load R/4.3.3
 module load gcc/11.2.0    # required for some package compilation
 module load hdf5           # required for ArchR / HDF5Array
 ```
 
-For memory-intensive steps (e.g., ArchR Arrow file creation, Harmony integration),
-request adequate resources:
+For memory-intensive steps (e.g., ArchR Arrow file creation, Harmony integration), request adequate resources:
 
-```bash
+``` bash
 # Example SLURM header
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=16
 #SBATCH --time=04:00:00
 ```
 
----
+------------------------------------------------------------------------
 
 ## Datasets Used in This Book
 
-| Dataset | Cells | Source | Used in |
-|---------|-------|--------|---------|
-| PBMC 3k | ~2,700 | 10x Genomics | scRNA-seq basics |
-| PBMC 10k Multiome | ~10,000 | 10x Genomics | Multi-omics, Signac |
-| Mouse Brain Visium | ~3,000 spots | 10x Genomics | Spatial |
-| PBMC ATAC 10k | ~10,000 | 10x Genomics | scATAC / ArchR |
+| Dataset            | Cells         | Source       | Used in             |
+|--------------------|---------------|--------------|---------------------|
+| PBMC 3k            | \~2,700       | 10x Genomics | scRNA-seq basics    |
+| PBMC 10k Multiome  | \~10,000      | 10x Genomics | Multi-omics, Signac |
+| Mouse Brain Visium | \~3,000 spots | 10x Genomics | Spatial             |
+| PBMC ATAC 10k      | \~10,000      | 10x Genomics | scATAC / ArchR      |
 
 Download scripts are provided at the start of each relevant tutorial.
 
----
+------------------------------------------------------------------------
 
 ## Recommended Project Structure
 
-```
+```         
 your-project/
 ├── data/
 │   ├── raw/              # Cell Ranger output, fragment files
@@ -146,12 +155,12 @@ your-project/
 └── README.md
 ```
 
-::: {.callout-tip}
+::: callout-tip
 ## Saving Seurat Objects Between Steps
-Use `saveRDS()` and `readRDS()` to persist Seurat objects between chapters,
-avoiding re-running expensive computations:
 
-```r
+Use `saveRDS()` and `readRDS()` to persist Seurat objects between chapters, avoiding re-running expensive computations:
+
+``` r
 # Save
 saveRDS(seu, "data/processed/seu_02_normalized.rds")
 

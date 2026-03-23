@@ -54,7 +54,7 @@
     "href": "getting-started.html#prerequisites",
     "title": "Getting Started",
     "section": "",
-    "text": "R ≥ 4.3.0 installed (or access to an HPC with R modules)\nFamiliarity with R syntax and Bioconductor\nBasic understanding of single-cell library preparation",
+    "text": "R ≥ 4.3.0 installed (or access to an HPC with R modules)\nFamiliarity with R syntax and Bioconductor\nBasic understanding of single-cell library preparation\n\n\n\n\n\n\n\nNoteNote\n\n\n\nMost of the analysis in this tutorials running on MAI HPC cluster and ICBS local server.\n\n\n\n\n\n\n\n\nWarningMinimum System Requirement\n\n\n\nCPU: 32 GPU: 1 (optional) Memory: 256G",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "getting-started.html#datasets-used-in-this-book",
     "title": "Getting Started",
     "section": "Datasets Used in This Book",
-    "text": "Datasets Used in This Book\n\n\n\nDataset\nCells\nSource\nUsed in\n\n\n\n\nPBMC 3k\n~2,700\n10x Genomics\nscRNA-seq basics\n\n\nPBMC 10k Multiome\n~10,000\n10x Genomics\nMulti-omics, Signac\n\n\nMouse Brain Visium\n~3,000 spots\n10x Genomics\nSpatial\n\n\nPBMC ATAC 10k\n~10,000\n10x Genomics\nscATAC / ArchR\n\n\n\nDownload scripts are provided at the start of each relevant tutorial.",
+    "text": "Datasets Used in This Book\n\n\n\n\n\n\n\n\n\nDataset\nCells\nSource\nUsed in\n\n\n\n\nPBMC 3k\n~2,700\n10x Genomics\nscRNA-seq basics\n\n\nPBMC 10k Multiome\n~10,000\n10x Genomics\nMulti-omics, Signac\n\n\nMouse Brain Visium\n~3,000 spots\n10x Genomics\nSpatial\n\n\nPBMC ATAC 10k\n~10,000\n10x Genomics\nscATAC / ArchR\n\n\n\nDownload scripts are provided at the start of each relevant tutorial.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started</span>"
     ]

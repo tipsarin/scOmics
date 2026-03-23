@@ -16,6 +16,7 @@ format:
 ## Setup
 
 ```{r}
+#| filename: "r"
 #| label: setup
 #| eval: true
 #| code-fold: false
@@ -24,7 +25,6 @@ library(Seurat)
 library(ggplot2)
 library(patchwork)
 library(dplyr)
-options(future.globals.maxSize = 100 * 1000 * 1024^2)
 ```
 
 **Extend limit to access to certain global variables**
@@ -34,6 +34,7 @@ options(future.globals.maxSize = 100 * 1000 * 1024^2)
 [Parallelization in Seurat with future](https://satijalab.org/seurat/archive/v3.0/future_vignette.html)
 
 ```{r}
+#| filename: "r"
 #| eval: false
 options(future.globals.maxSize = 100 * 1000 * 1024^2)
 ```
@@ -41,12 +42,14 @@ options(future.globals.maxSize = 100 * 1000 * 1024^2)
 **Change the current plan to access parallelization**
 
 ```{r}
+#| filename: "r"
 #| eval: false
 plan("multicore", workers = 20)
 plan()
 ```
 
-::: callout-Tips
+::: {.callout-tip}
+## Tip
 Bypass argument when you running R script via bash script.
 
 `args <- commandArgs(trailingOnly = TRUE)`
@@ -55,6 +58,7 @@ Bypass argument when you running R script via bash script.
 :::
 
 ```{r}
+#| filename: "r"
 #| label: argument
 #| eval: false
 sample_name = "B9rxn1"
