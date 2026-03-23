@@ -75,6 +75,35 @@ div.sourceCode, pre.sourceCode {
 }
 */
 
+/* 1. ตั้งค่ากล่องโค้ดให้เป็นจุดอ้างอิง */
+div.sourceCode {
+  position: relative;
+  margin-top: 1em;
+}
+
+/* 2. ดึงชื่อภาษามาแสดงไว้ที่มุมบน "ซ้าย" */
+div.sourceCode::before {
+  /* ค้นหาคลาสที่ขึ้นต้นด้วย sourceCode แล้วเอาชื่อนั้นมาแสดง */
+  content: attr(class); 
+  
+  position: absolute;
+  top: -18px;         /* ขยับขึ้นไปเหนือกล่องโค้ดนิดนึง */
+  left: 10px;         /* วางไว้ทางซ้าย */
+  
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #666;        /* สีตัวอักษรจางๆ */
+  text-transform: uppercase;
+  background: #f0f0f0; /* พื้นหลังป้ายชื่อภาษา */
+  padding: 0px 8px;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+/* 3. ตกแต่งให้สวยงาม (ลบคำว่า sourceCode ออกให้เหลือแต่ชื่อภาษา) */
+/* หมายเหตุ: CSS เพียวๆ ลบคำยาก ถ้าใน Class เขียนว่า "sourceCode r" 
+   มันจะโชว์คำว่า "sourceCode r" บนหน้าจอค่ะ */
+
 /* แสดงชื่อภาษาที่มุมขวาของ Code Block */
 /* ล้างค่า content เดิมออกก่อน */
 div.sourceCode::before { content: ""; }
