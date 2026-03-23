@@ -76,13 +76,29 @@ div.sourceCode, pre.sourceCode {
 */
 
 /* แสดงชื่อภาษาที่มุมขวาของ Code Block */
-div.sourceCode::before {
-  content: attr(class); /* ดึงชื่อ class เช่น 'sourceCode r' มาแสดง */
-  display: block;
-  text-align: right;
-  font-size: 0.7em;
-  color: #888;
-  text-transform: uppercase;
-  margin-bottom: -15px;
-  padding-right: 10px;
+/* ล้างค่า content เดิมออกก่อน */
+div.sourceCode::before { content: ""; }
+
+/* ถ้าเป็นภาษา R */
+div.sourceCode.r::before { content: "R Script"; color: #276CB8; }
+
+/* ถ้าเป็นภาษา Python */
+div.sourceCode.python::before { content: "Python"; color: #3776AB; }
+
+/* ถ้าเป็น Bash/Terminal */
+div.sourceCode.bash::before { content: "Terminal / Bash"; color: #4EAA25; }
+
+/* ตกแต่งตำแหน่งชื่อภาษา (ไว้ทางซ้าย) */
+div.sourceCode.r::before, 
+div.sourceCode.python::before, 
+div.sourceCode.bash::before {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 0.65rem;
+  font-family: sans-serif;
+  z-index: 5;
+  background: rgba(255,255,255,0.8);
+  padding: 2px 5px;
+  border-radius: 3px;
 }
