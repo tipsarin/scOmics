@@ -54,8 +54,12 @@ format:
       light: flatly
       dark: darkly
     css: assets/custom.css
-    code-fold: true 
-    code-tools: true
+    code-fold: true      # พับโค้ดราย Chunk
+    code-summary: "Show the code" # ข้อความบนปุ่มพับโค้ด
+    code-tools: 
+      source: false      # ปิดการโชว์ไฟล์ต้นฉบับ (ถ้าไม่จำเป็น)
+      toggle: true       # เปิดปุ่ม Show/Hide All Code (ตัวนี้แหละที่สำคัญ!)
+      caption: "Code"
     code-copy: true
     code-line-numbers: false
     code-annotations: select
