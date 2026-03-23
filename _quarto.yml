@@ -58,6 +58,7 @@ format:
     code-tools: true
     code-copy: true
     code-line-numbers: false
+    code-annotations: select
     code-block-bg: true
     smooth-scroll: true
     html-math-method: katex
